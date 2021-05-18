@@ -1181,15 +1181,14 @@ ul.dropdown-menu {
 	background-color: rgba(1, 39, 73, 0.9) !important;
 }
 </style>
-	<div style="display:none">page-brochureware.php</div>
+
 <!--div id="page" class="site"-->
 <div id="ibm-top" class="ibm-landing-page">
 	<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
 
-
   <div id="ibm-content-wrapper">
   	<header role="banner" aria-labelledby="ibm-pagetitle-h1">
-  		<!-- MASTHEAD_SITENAV_BEGIN -->
+
 <!-- MASTHEAD_SITENAV_BEGIN -->
 <div class="ibm-sitenav-menu-container">
   <div class="ibm-sitenav-menu-name">
@@ -1602,164 +1601,14 @@ ul.dropdown-menu {
 			</div>
 		</div>
 	</footer>
-</div><!-- #page -->
-
-<div class="gdpr-overlay"></div>
-<div class="gdpr gdpr-privacy-preferences">
-	<div class="gdpr-wrapper">
-		<form method="post" class="gdpr-privacy-preferences-frm" action="https://developer.ibm.com/zsystems/wp-admin/admin-post.php">
-			<input type="hidden" name="action" value="gdpr_update_privacy_preferences">
-			<input type="hidden" id="update-privacy-preferences-nonce" name="update-privacy-preferences-nonce" value="cddbbf61b5" /><input type="hidden" name="_wp_http_referer" />			<header>
-				<div class="gdpr-box-title">
-					<h3>Privacy Preference Center</h3>
-					<span class="gdpr-close"></span>
-				</div>
-			</header>
-			<div class="gdpr-mobile-menu">
-				<button type="button">Options</button>
-			</div>
-			<div class="gdpr-content">
-				<ul class="gdpr-tabs">
-					<li><button type="button" class="gdpr-tab-button gdpr-active" data-target="gdpr-consent-management">Consent Management</button></li>
-														</ul>
-				<div class="gdpr-tab-content">
-					<div class="gdpr-consent-management gdpr-active">
-						<header>
-							<h4>Consent Management</h4>
-						</header>
-						<div class="gdpr-info">
-							<p></p>
-													</div>
-					</div>
-														</div>
-				<input type="hidden" name="all_cookies" value="[]">
-			</div>
-			<footer>
-				<input type="submit" value="Save Preferences">
-							</footer>
-		</form>
-	</div>
 </div>
 
-<div class="gdpr gdpr-general-confirmation gdpr-delete-confirmation">
-	<div class="gdpr-wrapper">
-		<header>
-			<div class="gdpr-box-title">
-				<h3>Close your account?</h3>
-				<span class="gdpr-close"></span>
-			</div>
-		</header>
-		<div class="gdpr-content">
-			<p>Your account will be closed and all data will be permanently deleted and cannot be recovered. Are you sure?</p>
-		</div>
-		<footer>
-			<button class="gdpr-delete-account">Continue</button>
-			<button class="gdpr-cancel">Cancel</button>
-		</footer>
-	</div>
-</div>
 
-<script>
-        jQuery(document).ready(function($){
-          var dcName = 'zsystems';
-          // $('a').each(function(){
-          //   if(this.href.match('bluemix.net')){
-          //     if(this.search){
-          //       this.href = this.href + '&cm_sp=dw-bluemix-_-'+dcName+'-_-devcenter';
-          //     }else{
-          //       this.href = this.href + '?cm_sp=dw-bluemix-_-'+dcName+'-_-devcenter';
-          //     }
-          //   }
-          // });
 
-          jQuery('a[href*="bluemix.net"]').each(function(){
-            if(this.search){
-              this.href = this.href + '&cm_sp=dw-bluemix-_-'+dcName+'-_-devcenter';
-            }else{
-              this.href = this.href + '?cm_sp=dw-bluemix-_-'+dcName+'-_-devcenter';
-            }
-          });
-
-        });
-      </script><script type='text/javascript' src='wp-content/themes/boomer-v18/js/navigation.js'></script>
+<script type='text/javascript' src='wp-content/themes/boomer-v18/js/navigation.js'></script>
 <script type='text/javascript' src='wp-content/themes/boomer-v18/js/skip-link-focus-fix.js'></script>
 <script type='text/javascript' src='https://developer.ibm.com/about/'></script>
 
-
-<script>
-		(function($) {
-			$(document).ready(function(){
-				/* prevent the # links in the main menu from firing */
-				$('.ibm-sitenav-menu-list #primary-menu a').on('click.stopFakeLinks',function(e){
-					$this = $(this);
-					if($this.attr('href') === "#"){
-						return false;
-					}
-				});
-
-				/* bind the feedback click evnet */
-				jQuery('#dw-footer .ibm-feedbacklink a').on("click", function(evt) {
-			        evt.preventDefault();
-			        var iframeWidth = 970;
-			        if (window.innerWidth < 900) {
-			            iframeWidth = window.innerWidth - 80
-			        }
-			        IBMCore.common.widget.surveyccfintercept.initFeedback({
-			            survey: {
-			                height: 700,
-			                id: "web-exp",
-			                metaData: "",
-			                type: "medallia",
-			                width: iframeWidth
-			            }
-			        })
-			   });
-				//testing out the alpha helper
-				$('[data-alpha]').each(function(i){
-					$elm = $(this);
-					var bg = $elm.css('backgroundColor').replace(/[rgb(]/g,'').replace(/ /g,'').replace(/[)]/g,'');
-					var alpha = $elm.data('alpha')/100;
-					$elm.css("cssText", "background-color: rgba("+bg+","+alpha+") !important;");
-				})
-				//testing out the panel slider
-				$('.pn-sliding-panels').each(function(i){
-					$elm = $(this);
-					//get the width of the active panel
-					var activeWidth = $elm.data('openamount'),
-						panelCount = $elm.data('panelcount'),
-						inactiveWidth = ((100 - activeWidth) / (panelCount-1));
-					//set the first slide as active - later, allow it to be set
-					$elm.find('.pn-panel').each(function(i,item){
-						$panel = $(item);
-						$panel.data('closedwidth',inactiveWidth);
-						$panel.data('openwidth',activeWidth);
-						if(i == 0){
-							$panel.addClass('pn-panel__active').css({width:activeWidth+'%'});
-						}else{
-							$panel.css({width:inactiveWidth+'%'});
-						}
-					});
-
-					$elm.on('click.slide','.pn-panel',function(e){
-						$this = $(this);
-						//console.info('clicked')
-						if($this.hasClass('pn-panel__active')){
-							//allow for the links in the active panel to be clicked
-							//console.info('im open, let the links through')
-						}else{
-							e.preventDefault();
-							//set the width of the currently active panel to the closed amount
-							var $active = $this.parents('.pn-sliding-panels').find('.pn-panel__active');
-								$active.css({width:$active.data('closedwidth')+'%'}).removeClass('pn-panel__active');
-							$this.addClass('pn-panel__active').css({width:$this.data('openwidth')+'%'});
-						}
-
-					})
-				});
-
-			})
-		})( jQuery );
-	</script>
 
 
 </body>

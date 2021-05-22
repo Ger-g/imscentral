@@ -1,0 +1,219 @@
+/* Paired with 'landing.css' to recreate the hardcoded styles before & after navigation is rendered */
+
+.fade-in {
+    animation: fadeIn ease .4s;
+    -webkit-animation: fadeIn ease .4s;
+    -moz-animation: fadeIn ease .4s;
+    -o-animation: fadeIn ease .4s;
+    -ms-animation: fadeIn ease .4s;
+    }
+    @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+        .ibm-sitenav-menu-list li {
+            margin-left: 10px;
+            margin-right: 10px;
+            font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+            font-size: 12pt;
+            font-weight: bold;
+        }
+        .ibm-sitenav-menu-list>ul>li>a {
+            margin-left: 0px !important;
+        }
+        ul.dropdown-menu {
+            display:inline-block;
+            margin-top: -5px;
+        white-space: nowrap;
+            height: auto;
+            max-width: 160px;
+            border-style: none !important;
+            border-radius: .3em;
+            transition: 0.5s;
+            background-color: rgba(1, 39, 73, 0.9) !important;
+        }
+      .dark-button {
+        color: black;
+        background-color: #8c8c8c;
+        border: solid 1px #8c8c8c;
+      }
+      .zs-button-transparent {
+        width: 100%;
+      }
+      .ims-card-icon-small {
+        max-height: 35px;
+        max-width: 35px;
+    }
+      .ims-e-card .zs-action-card {
+        padding: 2em !important;
+      }
+      .ibm-btn-systems-purp{
+        background:#4a2490;
+        border-color:#4a2490}
+      .ibm-btn-systems-purp:focus, .ibm-btn-systems-purp:hover{
+        background:#4287f5;border-color:#4287f5;
+        display: inline-block;
+      }
+      .doc-btn {
+        transition: margin .5s ease-in-out;
+        margin-left:0px;
+      }
+      .doc-btn:hover {
+        transition: margin .5s ease-in-out;
+        transition: color .3 ease-in-out;
+        margin-left:15px;
+        color: #3c89ff;
+      }
+      .ims-e-card {
+        height:22em;
+        margin:0px 3px 5px 0px;
+        max-height: 40em;
+        min-height: 22em;
+        min-width:18em;
+      }
+      .card-linksec {
+        margin-top:15%;
+      }
+      .ims-t-card {
+        min-width:320px;
+        margin:1em;
+        min-height: 20em;
+        font-size: 12pt;
+        text-align: center;
+      }
+      .ims-t-card h4 {
+        font-size: 12pt !important;
+      }
+      .ims-m-card {
+        min-width:280px;
+        margin:1em;
+        min-height: 24em;
+      }
+      .ims-card-icon {
+        max-height: 75px;
+        max-width: 75px;
+        margin-bottom:20px;
+      }
+      .ims-icon {
+        display: inline-block !important;
+        margin: 0px 7% 20px 0px;
+        color:#054ada;
+        width:50px;
+        height:50px;
+        filter:gray;
+        -webkit-filter: grayscale(1);
+        -webkit-transition: all .1s ease-in-out;
+      }
+      .ims-icon:hover {
+        width:60px;
+        height:60px;
+        margin: 0px 4% 10px 0px;
+        filter: none;
+        -webkit-filter: grayscale(0) !important;
+        -webkit-transform: scale(1.01) !important;
+      }
+      .ibm-sitenav-menu-container {
+        background-color: #161616;
+        color: white;
+      }
+      .ibm-sitenav-menu-name a {
+        font-size: 15pt;
+        color:white;
+      }
+      .ibm-sitenav-menu-name a:hover {
+        color:#00b9eb;
+      }
+      .ims-addlinks-section a {
+        color:white;
+      }
+      .ims-addlinks-section a:hover {
+        color:#00b9eb;
+      }
+      .ibm-sitenav-menu-list a:hover {
+        color:#00b9eb;
+      }
+      .menu-item-type-taxonomy a:hover {
+        color:#00b9eb;
+      }
+      .ibm-sitenav-menu-container #primary-menu li:hover > a, .ibm-sitenav-menu-container #primary-menu li.focus > a {
+        color:#00b9eb;
+      }
+      .ibm-carousel__controls--light .slick-dots li button {
+        color:black;
+        border-color:black;
+      }
+      .ibm-carousel__controls--light .slick-dots li.slick-active button {
+        background:#0869ff;
+      }
+      .ibm-carousel__controls--light .ibm-carousel-controls, .ibm-carousel__controls--light .ibm-carousel-controls button, .ibm-carousel__controls--light .slick-dots button, .ibm-carousel__controls--light > button {
+        color:black;
+      }
+      .ibm-carousel__controls--light .ibm-carousel-controls button:focus, .ibm-carousel__controls--light .ibm-carousel-controls button:hover, .ibm-carousel__controls--light .ibm-carousel-controls:focus, .ibm-carousel__controls--light .ibm-carousel-controls:hover, .ibm-carousel__controls--light .slick-dots button:focus, .ibm-carousel__controls--light .slick-dots button:hover, .ibm-carousel__controls--light > button:focus, .ibm-carousel__controls--light > button:hover {
+        color:black;
+      }
+      .ibm-carousel__controls--light .ibm-carousel-controls button:hover, .ibm-carousel__controls--light .ibm-carousel-controls:hover, .ibm-carousel__controls--light .slick-dots button:hover, .ibm-carousel__controls--light > button:hover {
+        color:#0869ff;
+      }
+      .image-preview {
+        /* background: url(../../wp-content/introIMS.png); */
+        position: relative;
+        opacity: 1;
+        width: 100%;
+        height: auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .image-preview:hover {
+        position: relative;
+        opacity: 0;
+        width: 100%;
+        height: auto;
+        transition: .4s ease all;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .vid-preview {
+        position: absolute;
+        max-height: 340px;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        height: auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .vid-preview:hover {
+        /* background: url(../../wp-content/introIMSclip.gif); */
+        position: absolute;
+        max-height: 340px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        opacity: 1;
+        transition: .4s ease all;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }

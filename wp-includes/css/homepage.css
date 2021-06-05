@@ -148,6 +148,26 @@
         max-width: 75px;
         margin-bottom:20px;
       }
+      .blueg-bg {
+        color: white;
+        background-image: linear-gradient(to right, blue,black);
+      }
+      .blueg-bg h2,h3,h4{
+        color: white;
+      }
+      .blue-purp {
+        color: white;
+        background-image:linear-gradient(to right, #427ce4, #5543b9);
+      }
+      .blue-purp h2,h3,h4{
+        color: white;
+      }
+      .tr-bg {
+        background-image: url(wp-content/BG01.png) !important;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 20px;
+      }
       .ims-icon {
         display: inline-block !important;
         margin: 0px 7% 20px 0px;

@@ -1,4 +1,4 @@
-<html lang="en" style="background-color:white !important;">
+<html lang="en" style="padding-top:0px !important;padding-bottom: 0px !important;">
 
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -12,11 +12,11 @@
   <link rel='stylesheet' id='pagepost_css-css'  href='wp-content/themes/boomer-v18/css/pagepost.css' type='text/css' media='all' />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
+  <link rel="stylesheet" href="wp-includes/css/nav.css">
   <link rel='stylesheet' href='wp-includes/css/www.css' type='text/css' media='all' />
   <link rel="stylesheet" type="text/css" href="wp-includes/css/pure.css">
   <link href="wp-includes/css/custom.css" rel="stylesheet">
-
+  <link href="wp-includes/css/grid-fluid.css" rel="stylesheet">
 
   <link id="favicon"
       rel="shortcut icon"
@@ -27,45 +27,47 @@
 </head>
 
 
-<body id="body-text" style="background-color:white !important;">
+<body id="body-text">
 
-  <div class="ibm-sitenav-menu-container" style="margin-top:-60px;">
+  
+  <div class="ibm-sitenav-menu-container">
     <div class="ibm-sitenav-menu-name">
-      <a href="index.html" rel="home">IMS Central</a>
+      <img src="wp-content/IMS_logo_small.png" style="width: 25px;display: inline-block;margin:10px 5px 12px 0;" />
+      <a href="index.html" rel="home" style="display: inline-block;">IBM IMS <b>Central</b></a>
     </div>
       <style>#primary-menu > li:first-child{display:none !important;}</style>
-      <div class="ibm-sitenav-menu-list" ><ul id="primary-menu" class="menu"><li id="menu-item-4904" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-4058 current_page_item menu-item-4904"><a href="index.html">IMS Developer</a></li>
-  <li id="menu-item-20240" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2041" style="font-size: 150%;margin-top: 12px;margin-left: 25px;">|</li>
-
+      <div class="ibm-sitenav-menu-list" ><ul id="primary-menu" class="menu"><li id="menu-item-4904" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-4058 current_page_item menu-item-4904"><a href="index.html">Home</a></li>
+  <li id="menu-item-20240" class=" menu-item-type-taxonomy menu-item-object-category menu-item-2041" style="font-size: 150%;margin-top: 12px;margin-left: 30px;"></li>
+  <!-- Transform -->
   <li class="dropdown">
-  	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Transform <i class="fa fa-caret-down"></i></a>
-  	<ul class="dropdown-menu fade-in" style="width:100px !important;min-width:100px !important;">
-  		<li id="menu-item-2030" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2041"><a title="APIs" href="https://www.ibm.com/support/knowledgecenter/SS4SVW_3.0.0/overview/why-zosconnect.html">APIs</a></li>
-  		<li id="menu-item-2030" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2041"><a title="DevOps" href="ims-devops.html">DevOps</a></li>
-  		<li id="menu-item-2040" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2041"><a title="Java" href="ims-java.html">Java</a></li>
-  		<li id="menu-item-2030" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2041"><a title="Open Access" href="https://www.ibm.com/support/knowledgecenter/en/SSEPH2_15.1.0/com.ibm.ims15.doc.sk/ims_openacc_java.htm">Open Access</a></li>
-  	</ul>
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Transform <i class="fa "></i></a>
+    <ul class="dropdown-menu fade-in">
+      <li id="menu-item-2030" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2041"><a title="APIs" href="ims-apis.html">APIs</a></li>
+      <li id="menu-item-2030" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2041"><a title="DevOps" href="ims-devops.html">Automation</a></li>
+      <li id="menu-item-2040" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2041"><a title="Java" href="ims-java.html">Java</a></li>
+      <!-- <li id="menu-item-2030" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2041"><a title="Open Access" href="https://www.ibm.com/support/knowledgecenter/en/SSEPH2_15.1.0/com.ibm.ims15.doc.sk/ims_openacc_java.htm">Open Access</a></li> -->
+    </ul>
   </li>
-
+  <!-- Engage -->
   <li class="dropdown">
-  	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Engage <i class="fa fa-caret-down"></i></a>
-  	<ul class="dropdown-menu fade-in" style="width:120px;min-width:100px !important;">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Engage <i class="fa "></i></a>
+    <ul class="dropdown-menu fade-in">
       <li id="menu-item-2010" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2041"><a title="Gold" href="ims-gold.html">Gold</a></li>
       <li id="menu-item-2020" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2041"><a title="Makerspace" href="ims-makerspace.html">Makerspace</a></li>
-  		<!-- <li id="menu-item-1090" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2041"><a title="Internship" href="ims-internship.html">Internship</a></li> -->
-  	</ul>
+      <!-- <li id="menu-item-1090" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2041"><a title="Internship" href="ims-internship.html">Internship</a></li> -->
+    </ul>
   </li>
-
+  <!-- Learn -->
   <li class="dropdown">
-  	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Learn <i class="fa fa-caret-down"></i></a>
-  	<ul class="dropdown-menu fade-in" style="width:153px;min-width:100px !important;">
-  		<li id="menu-item-1091" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2041"><a title="Education" href="ims-education.html">Skills Launchpad</a></li>
-  		<li id="menu-item-4861" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4861"><a href="https://mediacenter.ibm.com/channel/IMS+Education+Videos/">Videos</a></li>
-  		<li id="menu-item-1090" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2041"><a title="IMS GitHub" href="ims-repos.html">IMS GitHub</a></li>
-  	</ul>
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Learn <i class="fa "></i></a>
+    <ul class="dropdown-menu fade-in">
+      <li id="menu-item-1091" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2041"><a title="Videos" href="ims-videos.html">IMS Videos</a></li>
+      <li id="menu-item-1091" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2041"><a title="Education" href="ims-education.html">IMS Courses</a></li>
+      <li id="menu-item-1090" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2041"><a title="IMS GitHub" href="ims-repos.html">IMS GitHub</a></li>
+    </ul>
   </li>
-
   </ul></div></div>
+    <head>
   <style type="text/css">
 
   .fade-in {
@@ -99,83 +101,51 @@
   0% {opacity:0;}
   100% {opacity:1;}
   }
-
-  .ibm-sitenav-menu-list li {
-    margin-left: 10px;
-    margin-right: 10px;
-    font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
-    font-size: 12pt;
-    font-weight: bold;
-  }
-  .ibm-sitenav-menu-list>ul>li>a {
-    margin-left: 0px !important;
-  }
-  ul.dropdown-menu {
-    display:inline-block;
-    margin-top: -5px;
-    white-space: nowrap;
-    height: auto;
-    max-width: 160px;
-    border-style: none !important;
-    border-radius: .3em;
-    transition: 0.5s;
-    background-color: rgba(1, 39, 73, 0.9) !important;
-  }
-  .dropdown-menu a {
-    color:white !important;
+  @media (max-width: 735px) {
+    .section-space {
+      margin-top: 500px;
+    }
+    .float-ims {
+      position:absolute;
+      right:15px !important;
+    }
   }
   .menu-item a {
-    font-weight:bold !important;
+    font-weight: bold !important;
   }
 
-  .ibm-sitenav-menu-container {
-    background-color: #152935;
-    color: white;
-  }
-  .ibm-sitenav-menu-name a {
-    font-size: 15pt;
-    color:white;
-  }
-  .ibm-sitenav-menu-name a:hover {
-    color:#00b9eb;
-  }
-  .ims-addlinks-section a {
-    color:white;
-  }
-  .ims-addlinks-section a:hover {
-    color:#00b9eb;
-  }
-  .ibm-sitenav-menu-list a:hover {
-    color:#00b9eb;
-  }
-  .menu-item-type-taxonomy a:hover {
-    color:#00b9eb;
-  }
-  .ibm-sitenav-menu-container #primary-menu li:hover > a, .ibm-sitenav-menu-container #primary-menu li.focus > a {
-    color:#00b9eb !important;
-  }
 
   </style>
+  
+	<link rel="stylesheet" type="text/css" href="wp-includes/css/pure.css">
+	<link rel="stylesheet" href="wp-includes/css/grids-responsive-min.css">
+	<link rel="stylesheet" type="text/css" href="wp-includes/css/homepage.css">
+</head>
 
-  <div class="container">
-    <div class="row header">
+<!-- Container -->
+  <div>
 
+    <!-- Banner / splash -->
+    <div class="row header blueg-bg">
+      <!-- Padding div -->
+      <div style="padding: 0 2.5em 0 2.5em;">
       <div class="col-md-5 col-sm-6 center-header">
-        <img id="ims-logo" src="wp-content/ims-blue-logo.png" />
-        <h4 id="ims-title"><b>IMS</b> GitHub</h4>
+        <h4 id="ims-title" style="color:white;margin-top: 1.5em;"><b>IMS</b> GitHub</h4>
         <!-- <img id="ims-logo" src="wp-content/github-logo.png" /> -->
-        <h1 class="welcome-header">Transaction processing that <br/ style="margin-bottom:10px;">the world depends on!</h1>
-        <p class="welcome-description">Accelerate your Java experience with IMS by using the samples provided in these repositories.<br /><br /> Want to contribute? Raise an issue to let us know.</p>
-        <!-- <div class="ims-button">
-          <a href="#findoutmore" id="link-clear">Find out more</a>
-        </div> -->
+        <h1 class="welcome-header" style="color:white">Transaction processing that <br/ style="margin-bottom:10px;">the world depends on!</h1>
+        <p class="welcome-description" style="color:white">Accelerate your Java experience with IMS by using the samples provided in these repositories.<br /><br /> Want to contribute? Raise an issue to let us know.</p>
+        <div class="col-sm-6 ibm-padding-top-1" style="margin-bottom: 30px;">
+          <a class="zs-button-transparent" href="" style="background-color:white;color:black">Explore</a>
+        </div>
       </div>
-      <div class="col-md-7 col-sm-6" id="svg-container">
-        <img id="ims-picture" class="float-ims" src="./wp-content/mainframer.png" style="margin-top:10px;" />
+      <div class="col-md-7 col-sm-6" style="margin-top: 110px;">
+        <img id="ims-picture" class="float-ims" src="./wp-content/mainframer.png" style="margin-top:10px;position: absolute;right:180px;" />
       </div>
     </div>
-    <div class="row section-space">
-      <h3 id="section-title">Available repositories</h3>
+    </div>
+    <div class="row section-space zs-section">
+      <h2 id="section-title" style="text-align: left;padding-left: 20px;color: black;font-size: 180%;">
+        Available repositories</h2>
       <center>
         <div style="margin-bottom:60px;">
         <a class="ibm-btn-sec ibm-btn-no-icon-link ibm-btn-systems-blue-6" href="https://github.com/imsdev">See all repositories on GitHub</a>
@@ -189,16 +159,81 @@
     </div>
   </div>
 
-  <!-- Leftover images -->
-  <!-- <img class="find-out-image" src="wp-content/ims-twitter.svg" /></a>
-  <img class="find-out-image" src="wp-content/ims-videos.svg" /></a>
-  <img class="find-out-image" src="wp-content/ims-dev-center.svg" /> -->
-
   
 
-  <div class="footer ibm-footer">
-    &copy;IBM&reg; 2021
-  </div>
+
+  <!-- =========================== Additional Support / Footer links =========================== -->
+<div class="zs-gray-section ims-addlinks-section" style="background-color:#161616;padding-bottom:30px;overflow:auto;">
+  <section class="zs-section">
+
+<!-- Static text summary -->
+    <div class="ibm-col-12-4 ibm-col-medium-12-12 ibm-padding-bottom-1" style="display:inline-block;color:white;">
+      <div id="intro-info" class="pure-u-1">
+        <h2 style="font-size: 1.5rem;margin-bottom: 15px;">Additional Support</h2>
+        <p>
+          Can&#8217;t find what you&#8217;re looking for?
+          <br/>See our other support channels for more.
+        </p>
+      </div>
+    </div>
+
+<!-- Services & Resources -->
+    <div class="ibm-col-12-4 ibm-col-medium-12-12 ibm-padding-bottom-1">
+          <h3 class="ibm-bold" style="color:white;font-size: 1.5rem;margin-bottom: 15px;">Product services</h3>
+          <ul class="ibm-plain-list ibm-textcolumns-small-2 ibm-ind-link">
+            <li><a class="ibm-forward-link" href="https://www.ibm.com/it-infrastructure/z/ims" target="_blank" rel="noopener noreferrer">IMS product Page</a></li>
+            <li><a class="ibm-forward-link" href="https://www.ibm.com/support/home/" target="_blank" rel="noopener noreferrer">IBM Support</a></li>
+            <li><a class="ibm-forward-link" href="https://www.ibm.com/support/knowledgecenter/en/SSEPH2_15.1.0/com.ibm.ims15.doc.rpg/ims_enhancements_container.htm" target="_blank" rel="noopener noreferrer">IMS CD enhancements</a></li>
+            <li><a class="ibm-forward-link" href="https://www.ibm.com/developerworks/rfe/execute?use_case=changeRequestLanding" target="_blank" rel="noopener noreferrer">RFEs</a></li>
+            <li><a class="ibm-forward-link" href="https://www.ibm.com/it-infrastructure/z/ims/tools" target="_blank" rel="noopener noreferrer">IMS Tools</a></li>
+          </ul>
+      </div>
+
+      <div class="ibm-col-12-4 ibm-col-medium-12-12 ibm-padding-bottom-1" 2aria-label="Connect with us">
+          <h3 class="ibm-bold" style="color:white;font-size: 1.5rem;margin-bottom: 15px;">Resources</h3>
+          <ul class="ibm-plain-list ibm-textcolumns-small-2 ibm-ind-link">
+            <li><a class="ibm-forward-link" href="https://www.ibm.com/mysupport/s/forumshome" target="_blank" rel="noopener noreferrer">Support Forums</a></li>
+            <li><a class="ibm-forward-link" href="http://imslistserv.bmc.com/scripts/wa-BMC.exe?SUBED1=IMS-L&amp;A=1" target="_blank" rel="noopener noreferrer">Listserv</a></li>
+            <li><a class="ibm-forward-link" href="https://github.com/imsdev" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a class="ibm-forward-link" href="https://stackoverflow.com/search?q=IBM+IMS" target="_blank" rel="noopener noreferrer">StackOverflow</a></li>
+            <li><a class="ibm-forward-link" href="https://www.reddit.com/r/mainframe/search/?q=IMS&amp;restrict_sr=1" target="_blank" rel="noopener noreferrer">Reddit</a></li>
+          </ul>
+      </div>
+    </div>
+
+	</div>
+</article>
+		</div>
+		</div><!-- #content -->
+	</div><!-- end of ibm-content-wrapper -->
+
+	<p class="ibm-ind-link ibm-nospacing ibm-icononly ibm-btt-auto ibm-hidden-small">
+		<a class="ibm-nospacing ibm-top-link" aria-label="Back to top" href="#top" tabindex="0">Back to top</a>
+	</p>
+
+	<footer role="contentinfo" aria-label="IBM" id="themeFooter" style="margin-bottom: -45px;">
+		<div id="boomer-footer" class="boomer_footer_menu"></div>
+		<div id="dw-footer" class="ibm-alternate ibm-padding-normal">
+			<div class="ibm-columns ibm-padding-bottom-0">
+				<div class="ibm-col-1-1">
+					<div class="ibm-footer-corporate-links">
+						<ul>
+              <li><a href="https://www.ibm.com/contact/us">Contact</a></li>
+              <li><a href="http://www.ibm.com/privacy/us/en/">Privacy</a></li>
+              <li><a href="https://www.ibm.com/legal?lnk=flg-tous-usen">Terms of use</a></li>
+              <li><a href="http://www.ibm.com/accessibility/us/en/">Accessibility</a></li>
+              <!-- <li class="ibm-feedbacklink"><a href="#">Feedback</a></li> -->
+              <!-- Switch to a feedback widget or survey later -->
+							<li><a href="https://github.com/imsdev/imsdev.github.io/issues">Report an issue</a></li>
+          	</ul>
+					</div>
+					<div id="ibm-footer-locale-selector"></div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div><!-- #page -->
+
 
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
 <script src="wp-includes/js/git.js" type="text/javascript"></script>
@@ -210,6 +245,7 @@
       $("#github-projects").loadRepositories("imsdev");
     });
   </script>
+
 
 </body>
 

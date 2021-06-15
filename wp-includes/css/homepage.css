@@ -134,8 +134,11 @@
         color: #0F62FE !important;
       }
       .white-links a {
-        color: white;
+        color: white !important;
         font-weight: bold;
+      }
+      .white-links a:visited {
+        color: lightgray !important;
       }
       .white-links a:hover {
         color: lightgray;

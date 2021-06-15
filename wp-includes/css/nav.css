@@ -134,8 +134,8 @@ nav.pure-menu-horizontal .pure-menu-heading {
 .zs-action-card:hover{
   box-shadow: 0 5px 10px 0 rgba(216,216,216,0.80);
   border-color: #2d74da;
-  -webkit-transform: translateY(-3px);
-  transform: translateY(-3px);
+  /* -webkit-transform: translateY(-3px);
+  transform: translateY(-3px); */
 }
 
 .zs-action-card svg {
@@ -768,7 +768,7 @@ body .pn-listing .pn-list__item .entry-content p {
 
 a, a:visited {
 	display: inline-block;
-	color: #007faf;
+	color: #0F62FE;
 	text-decoration: none;
 	line-height: 2em;
 /*border-bottom: 2px solid transparent;*/
@@ -776,7 +776,7 @@ a, a:visited {
 }
 
 a:hover {
-	border-color: #007faf;
+  border-color: #007faf;
   text-decoration:none !important;
 }
 

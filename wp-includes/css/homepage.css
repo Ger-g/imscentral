@@ -141,7 +141,7 @@
         color: lightgray !important;
       }
       .white-links a:hover {
-        color: lightgray;
+        color: lightgray  !important;
       }
       .ims-m-card {
         min-width:260px;

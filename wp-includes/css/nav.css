@@ -132,9 +132,9 @@ nav.pure-menu-horizontal .pure-menu-heading {
 }
 
 .zs-action-card:hover{
-  box-shadow: 0 5px 10px 0 rgba(216,216,216,0.80);
+  /* box-shadow: 0 5px 10px 0 rgba(216,216,216,0.80);
   border-color: #2d74da;
-  /* -webkit-transform: translateY(-3px);
+  -webkit-transform: translateY(-3px);
   transform: translateY(-3px); */
 }
 

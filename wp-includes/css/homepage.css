@@ -305,3 +305,16 @@
         background-size: contain;
         background-repeat: no-repeat;
       }
+      /* video margin for tablets */
+      @media screen and (min-width:1024px) and (max-width:1220px) {
+        .vid-margin {
+          margin-top: 20% !important;
+        }
+      }
+      /* take off the margin for smalller devices */
+      @media screen and (min-width:0px) and (max-width:1023px) {
+        .vid-margin {
+          margin-top: 15px !important;
+        }
+      }
+      @media screen and (min-width:0px) and (max-width:1452px)

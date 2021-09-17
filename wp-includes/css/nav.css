@@ -307,6 +307,23 @@ nav.pure-menu-horizontal .pure-menu-heading {
 	text-decoration: none;
 }
 
+.zs-w-button-transparent {
+	border: 1px solid #ffffff;
+	padding: 1em 1.5em;
+	color: black;
+    box-sizing: border-box;
+    background-color:white;
+    margin-right:1.25em;
+	line-height: 26px;
+	width: 100%;
+}
+
+.zs-w-button-transparent:hover {
+	background-color: #3181f1;
+	color: #ffffff;
+    border: 1px solid transparent;
+}
+
 .zs-button-transparent {
 	border: 1px solid #ffffff;
 	padding: 1em 1.5em;
@@ -589,6 +606,7 @@ a.zs-pic-tab {
 }
 
 .banner {
+width:100%;
 background-image:linear-gradient(to left, #427ce4, #5543b9);
 background-repeat:no-repeat;
 background-size:cover;

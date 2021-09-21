@@ -157,6 +157,19 @@
         transform: translateY(-3px); */
         background-color: white;
       }
+      .ims-c-card {
+        min-width:240px;
+        border: solid lightgray;
+        border-width: 2px;
+        /* transition: all .2s ease-in-out; */
+        /* cursor: pointer; */
+        background-color: white;
+      }
+      .ims-c-card:hover {
+        box-shadow: 0 5px 10px 0 rgba(216,216,216,0.80);
+        /* -webkit-transform: translateY(-3px);
+        transform: translateY(-3px); */
+      }
       .ims-m-card h3 {
         color: black;
       }

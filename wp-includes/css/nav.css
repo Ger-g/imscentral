@@ -607,7 +607,7 @@ a.zs-pic-tab {
 
 .banner {
 width:100%;
-background-image:linear-gradient(to left, #427ce4, #5543b9);
+background-color:#000000;
 background-repeat:no-repeat;
 background-size:cover;
 }

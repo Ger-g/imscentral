@@ -89,8 +89,8 @@
 		<!-- == Main navbar -->
 	  </label>
 	
-	  <!-- Dropdown menu options -->
-	  <nav class="menu1">
+    <!-- Dropdown menu options -->
+    <nav class="menu1">
 		<div class="pages pure-g">    
   
 		  <!-- Innovate -->
@@ -143,7 +143,8 @@
 			  </div>
 			</a>
 			<!-- 3 -->
-			<a title="IMS Community" href="https://community.ibm.com/community/user/ibmz-and-linuxone/groups/topic-home?CommunityKey=eba3ada3-db89-4dca-9154-328195f5e560">
+			<a title="IMS Community"  target="_blank" rel="noopener noreferrer"
+			href="https://community.ibm.com/community/user/ibmz-and-linuxone/groups/topic-home?CommunityKey=eba3ada3-db89-4dca-9154-328195f5e560">
 			  <div class="navcard">
 				<h5>IMS community</h5>
 				<img src="wp-content/Icon07.png" style="height: 25px; width: 25px;float:right"></img>
@@ -156,27 +157,27 @@
 		  <!-- Learn -->
 		  <div class="pure-u-1 pure-u-sm-1-4">
 			<h3>
-			  learn
+			  Learn
 			</h3>
 			<!-- cards/pages -->
 			<!-- 1 -->
 			<a title="IMS Videos" href="ims-videos.html">
 			  <div class="navcard">
-				<h5>IMS Videos</h5>
+				<h5>IMS videos</h5>
 				<p>Choose from hundreds of educational videos on IMS components, functions, and tools.</p>
 			  </div>
 			</a>
 			<!-- 2 -->
 			<a title="IMS Courses" href="ims-education.html">
 			  <div class="navcard">
-				<h5>IMS Courses</h5>
+				<h5>IMS courses</h5>
 				<p>Get in-depth IMS education with these self-paced courses and earn digital badges.</p>
 			  </div>
 			</a>
 			<!-- 3 -->
 			<a title="IMS Repos on GitHub" href="ims-repos.html">
 			  <div class="navcard">
-				<h5>IMS Repos on GitHub</h5>
+				<h5>IMS repos on GitHub</h5>
 				<p>Get code samples and tutorials on IMS components, workflows, Java, and more.</p>
 			  </div>
 			</a>
@@ -187,20 +188,20 @@
 		  <!-- Docs & Support -->
 		  <div class="pure-u-1 pure-u-sm-1-4">
 			<h3>
-			  Documentation & Support
+			  Documentation & support
 			</h3>
 			<!-- cards/pages -->
 			<!-- 1 -->
 			<a title="IMS Docs" href="ims-docs.html">
 			  <div class="navcard">
-				<h5>IMS Documentation</h5>
+				<h5>IMS documentation</h5>
 				<p>Find information on IMS, tools, and other IBM products.</p>
 			  </div>
 			</a>
 			<!-- 2 -->
 			<a title="IMS Support" href="ims-support.html">
 			  <div class="navcard">
-				<h5>IMS Support</h5>
+				<h5>IMS support</h5>
 				<p>Get help with IMS or other IBM products.</p>
 			  </div>
 			</a>
@@ -231,7 +232,7 @@
 <main class="zs-main" >
 <!-- =========================== IMS Java =========================== -->
 	<div class="banner" style="background-image: url(wp-content/BG01.png) !important; background-size:auto;">
-		<section id="intro-section" class="pure-g zs-section">
+		<section id="intro-section" class="pure-g zs-section" style="padding: 2em;">
 		  <div id="intro-header" class="pure-u-1">
 		  </div>
 		  <div id="intro-info" class="pure-u-1 pure-u-sm-1-2" style="margin-left: 30px;">
@@ -245,10 +246,7 @@
 <!-- =========================== Java inside =========================== -->
 <div class="zs-white-section" style="background-color:#ececec;padding-left: 3em;">
 <section id="intro-section"class="pure-g zs-section">
-	<div class="pure-u-1">
-        <h2 style="color:black"><span style="font-weight:normal;">
-			Run Java where you want</span></h2>
-    </div>
+
 
 	<div class="pure-u-1 pure-g ibm-padding-bottom-1">
 		<div class="pure-u-1 pure-u-md-1-6">
@@ -258,13 +256,17 @@
 		</div>
 
 		<div class="pure-u-1 pure-u-md-2-3">
+			<div class="pure-u-1" style="margin-bottom: 2em;">
+				<h2 style="color:black"><span style="font-weight:normal;">
+					Run Java where you want to</span></h2>
+			</div>
 			<h3 style="color: black;">Java inside IMS</h3>
 				<div style="color:black;">
-					<ul>
-						<li>Maintaining your IMS applications with Java means easy-to-find skills, lower development cost, abundant tools, and DevOps-pipeline readiness</li>
-						<li>Running Java inside IMS delivers the best performance, with application and data co-located on Z – no network latency!</li>
-						<li>Cost efficiency with Java on Z through offload to specialty engines</li>
-						<li>Over 15 years of Java support in IMS makes it more than production ready for the enterprise</li>
+					<ul style="list-style: none">
+						<p>Maintaining your IMS applications with Java means easy-to-find skills, lower development cost, abundant tools, and DevOps-pipeline readiness</p>
+						<p>Running Java inside IMS delivers the best performance, with application and data co-located on Z – no network latency!</p>
+						<p>Cost efficiency with Java on Z through offload to specialty engines</p>
+						<p>Over 15 years of Java support in IMS makes it more than production ready for the enterprise</p>
 					</ul>
 					<div class="pure-u-1 pure-u-1 pure-u-md-1-6">
 						<a target="_blank" rel="noopener noreferrer"
@@ -290,11 +292,10 @@
 	
 			<div class="pure-u-1 pure-u-md-2-3">
 				<h3 style="color: black;">Java outside IMS</h3>
-					<div style="color:black;">
-						<ul>
-							<li>Java applications can instantly access IMS transactions and data from anywhere, any platform</li>
-							<li>Use industry standards like JDBC and SQL to directly access IMS data</li>
-							<li>Expand your insights by giving Java analytics applications access to IMS data for data modeling</li>
+					<div style="color:black;line-height: 5px;">
+						<p>Java applications can instantly access IMS transactions and data from anywhere, any platform</p>
+						<p>Use industry standards like JDBC and SQL to directly access IMS data</p>
+						<p>Expand your insights by giving Java analytics applications access to IMS data for data modeling</p>
 						</ul>
 						<div class="pure-u-1 pure-u-1 pure-u-md-1-6">
 							<a target="_blank" rel="noopener noreferrer"
@@ -334,9 +335,9 @@
 		</p>
 		<div class="pure-u-1 pure-u-1 pure-u-md-1-4">
 			<a target="_blank" rel="noopener noreferrer"
-			href="https://mediacenter.ibm.com/playlist/details/1_owktz0jm/categoryId/122579632" class="zs-button-transparent" 
+			href="https://github.com/imsdev" class="zs-button-transparent" 
 			style="bottom:0;background-color:indigo;margin-bottom: 
-			10px;padding-top:8px;padding-bottom:8px;">Watch</a>
+			10px;padding-top:8px;padding-bottom:8px;">learn more</a>
 		</div>
 	</div>
 	<!-- Video preview -->
@@ -345,9 +346,9 @@
 		<div style="margin-top: 30px;position: relative;float: right;" class="vid-margin">
             <a href="https://mediacenter.ibm.com/media/Intro+to+IMS+-+What+is+IMSF/0_beoagp8k/139456202"
             style="width: 100%;" target="_blank" rel="noopener noreferrer" style="width: 100%;">
-              <img src="wp-content/introIMS.png" class="image-preview" 
+              <img src="wp-content/tracePreview.png" class="image-preview" 
               style="height: 100% !important;max-height: 300px !important;max-width: 590px !important;"></img>
-              <img src="wp-content/introIMSclip.gif" class="vid-preview" 
+              <img src="wp-content/traceVidPrev.gif" class="vid-preview" 
               style="height: 100% !important;max-height: 300px !important;max-width: 590px !important;"></img>
             </a>
           </div>

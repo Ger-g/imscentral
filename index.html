@@ -64,126 +64,22 @@
   })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 
-<!-- NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN -->
-
-<!-- Lunar js search -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://unpkg.com/lunr/lunr.js"></script>
-<script type="text/javascript">
-var lunrIndex,
-    $results,
-    pagesIndex;
-
-// Initialize lunrjs using our generated index file
-function initLunr() {
-    // First retrieve the index file
-    $.getJSON("PagesIndex.json")
-        .done(function(index) {
-            pagesIndex = index;
-            console.log("index:", pagesIndex);
-
-            // Set up lunrjs by declaring the fields we use
-            // Also provide their boost level for the ranking
-            lunrIndex = lunr(function() {
-                this.field("title", {
-                    boost: 10
-                });
-                // this.field("tags", {
-                //    boost: 5
-                //});
-                // this.field("content");
-
-                // ref is the result item identifier (I chose the page URL)
-                this.ref("href");
-            });
-
-            // Feed lunr with each file and let lunr actually index them
-            pagesIndex.forEach(function(page) {
-                lunrIndex.add(page);
-            });
-        })
-        .fail(function(jqxhr, textStatus, error) {
-            var err = textStatus + ", " + error;
-            console.error("Error getting Hugo index flie:", err);
-        });
-}
-
-// Nothing crazy here, just hook up a listener on the input field
-function initUI() {
-    $results = $("#results");
-    $("#search").keyup(function() {
-        $results.empty();
-
-        // Only trigger a search when 2 chars. at least have been provided
-        var query = $(this).val();
-        if (query.length < 8) {
-            return;
-        }
-
-        var results = search(query);
-
-        renderResults(results);
-    });
-}
-
-/**
- * Trigger a search in lunr and transform the result
- *
- * @param  {String} query
- * @return {Array}  results
- */
-function search(query) {
-    // Find the item in our index corresponding to the lunr one to have more info
-    // Lunr result: 
-    //  {ref: "/section/page1", score: 0.2725657778206127}
-    // Our result:
-    //  {title:"Page1", href:"/section/page1", ...}
-    return lunrIndex.search(query).map(function(result) {
-            return pagesIndex.filter(function(page) {
-                return page.href === result.ref;
-            })[0];
-        });
-}
-
-/**
- * Display the 10 first results
- *
- * @param  {Array} results to display
- */
-function renderResults(results) {
-    if (!results.length) {
-        return;
-    }
-
-    // Only show the ten first results
-    results.slice(0, 10).forEach(function(result) {
-        var $result = $("<li>");
-        $result.append($("<a>", {
-            href: result.href,
-            text: "» " + result.title + " "
-        }), result.content);
-        $results.append($result);
-    });
-}
-
-// Let's get started
-initLunr();
-
-$(document).ready(function() {
-    initUI();
-});
-</script>
-
 <!-- Additional styling for content after navigation -->
 
   <link rel="stylesheet" type="text/css" href="wp-includes/css/pure.css">
   <link rel="stylesheet" href="wp-includes/css/grids-responsive-min.css">
   <link rel="stylesheet" type="text/css" href="wp-includes/css/homepage.css">
   <script src="wp-includes/js/jquery.min.js"></script>
+
+<!-- TipueSearch -->
+  <link rel="stylesheet" href="jekyll-tipue-search/assets/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="jekyll-tipue-search/assets/tipuesearch/tipuesearch_content.js"></script>
+  <link rel="stylesheet" href="/jekyll-tipue-search/assets/tipuesearch/css/tipuesearch.css">
+  <script src="jekyll-tipue-search/assets/tipuesearch/tipuesearch_set.js"></script>
+  <script src="jekyll-tipue-search/assets/tipuesearch/tipuesearch.min.js"></script>
+
 </head>
-
-<!-- NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN -->
-
 
 
 <!-- MASTHEAD_SITENAV_BEGIN -->
@@ -211,30 +107,6 @@ $(document).ready(function() {
       </span>
       <!-- == Header wrapper -->
 
-      <!-- Search wrapper -->
-
-      <div id="search-bar" class="search-bar search-wrap">
-        <input id="search" type="search" placeholder="Search..."><br>
-      </div>
-    
-      
-      
-        <!-- <span class="search-wrap">
-          <form action="index.html">
-          <input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required>
-          <div style="clear: both;"></div>
-        </form>
-        <div id="tipue_search_content"></div>
-        <script>
-          $(document).ready(function() {
-            $('#tipue_search_input').tipuesearch();
-          });
-          </script>
-        </span> -->
-
-        
-
-      <!-- == search wrapper -->
 
       <!-- Burgie wrapper -->
       <label class="burg-wrap" for="toggle1">
@@ -247,6 +119,37 @@ $(document).ready(function() {
       <!-- == Burgie wrapper -->
       <!-- == Main navbar -->
     </label>
+
+    
+
+
+
+
+
+
+  <!-- Search wrapper -->
+
+    <form action="/jekyll-tipue-search/search/" style="margin-left: 35%;width: 30%;top: 0;margin-top: 15px; position: absolute;">
+        <div class="tipue_search_right"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="Search bar" style="width: 100%;text-align: center;" placeholder="Try searching for anything!" required></div>
+        <div style="clear: both;"></div>
+    </form>
+
+
+
+    <script>
+    $(document).ready(function() {
+    $('#tipue_search_input').tipuesearch();
+    });
+    </script>
+
+  <!-- == search wrapper -->
+
+
+
+
+
+
+
   
     <!-- Dropdown menu options -->
     <nav class="menu1">
@@ -369,9 +272,13 @@ $(document).ready(function() {
       </div>
     </nav>
 </nav>
+
+<div id="tipue_search_content" class="search_content" style="position: absolute"></div>
+
 </section>
 
 <!-- DROP NAV END -->
+
 </div>
 </header>
 
@@ -385,8 +292,6 @@ $(document).ready(function() {
 
 <div id="content" class="site-content">
   <main class="zs-main pure-g">
-
-    <div id="results" style="width: 100%;height:400px;background-color: white;"></div>
 
 <!-- Welcome banner -->
   <div class="banner" style="height:auto;padding:20px;">
@@ -714,6 +619,16 @@ style="background-image: url(wp-content/BG02.png) !important;width:100%">
 	</footer>
 </div><!-- #page -->
 
+<script>
+  $(function() {
+
+$(tipue_search_input).focusin(function() {
+    $(".search_content").show(0);
+}).focusout(function () {
+    $(".search_content").delay(70).hide(0);
+});
+});
+</script>
 
 </body>
 </html>

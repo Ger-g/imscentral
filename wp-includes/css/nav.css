@@ -837,3 +837,36 @@ a.zs-pg-nav-next:hover, a.zs-pg-nav-prev:hover {
   border-color: transparent;
   background-color: #55A8FD;
   text-decoration: none; }		
+
+/* Search stuff */
+
+div#tipue_search_content.search_content {
+	margin-left: 25%;
+	background-color: #252525;
+	color: white;
+	width: 50%;
+	opacity: 95%;
+  }
+
+div#tipue_search_content.search_content div {
+	margin-left: 1em;
+	margin-right: 1em;
+  }
+
+div#tipue_search_results_count {
+	text-align: center;
+	margin: 1em;
+}
+div#tipue_search_warning {
+	text-align: center;
+	margin: 1em;
+}
+.tipue_search_content_url {
+	font-size: 9pt;
+	padding-left: 2em;
+	margin-top: -10px;
+}
+.tipue_search_content_text {
+	margin-bottom: 1em;
+}
+

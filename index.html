@@ -624,6 +624,7 @@ style="background-image: url(wp-content/BG02.png) !important;width:100%">
 
 $(tipue_search_input).focusin(function() {
     $(".search_content").show(0);
+    $('#tipue_search_input').tipuesearch();
 }).focusout(function () {
     $(".search_content").delay(70).hide(0);
 });

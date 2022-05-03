@@ -17,7 +17,7 @@ var tipuesearch = {"pages": [{
   "title": "Java",
   "text": "Build Java applications to run inside or outside IMS..",
   "tags": "loremipsum",
-  "url": "ims_java.html"
+  "url": "imsdev.github.io/ims-java.html"
 },{
   "title": "IMS Gold",
   "text": "Bacon ipsum dolor sit amet flank sunt jerky dolore beef. Ut aute ham hock hamburger pork loin dolor esse ground round tenderloin consequat chicken veniam enim. Dolore kielbasa kevin andouille flank id consectetur chicken voluptate tenderloin. Jerky beef ribs tri-tip, kielbasa tail corned beef non. Sausage id ex kielbasa meatloaf sed drumstick ad kevin landjaeger ut. Consequat venison frankfurter, culpa swine aliquip turkey tempor beef. Prosciutto shank boudin leberkas pastrami.",

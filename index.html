@@ -644,8 +644,8 @@ style="background-image: url(wp-content/BG02.png) !important;width:100%">
 $(tipue_search_input).focusin(function() {
     $(toggle1).prop("checked", false);
     $(".search_content").show(0);
-    $('#tipue_search_input').tipuesearch();
-    $('#tipue_search_input').attr('style', 'color: white !important');
+
+    $('#tipue_search_input').attr('style', 'color: gray !important');
     $('#search-clr').attr("filter", "invert(100%)");
     $('#search-mag').attr("filter", "invert(100%)");
 }).focusout(function () {

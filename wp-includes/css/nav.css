@@ -880,6 +880,9 @@ div#tipue_search_warning {
 	 width: 100%;
 	 text-align: left;
 
+	 border-bottom: solid;
+	 border-width: 2px;
+	 border-color: #363636;
  }
  #tipue_search_input:focus {
 	border-bottom: solid;
@@ -904,6 +907,36 @@ div#tipue_search_warning {
 
 /* search results formatting */
 
- .tipue_search_content_title a {
+
+.tipue_search_content_text {
+	display: none;
+}
+
+#tipue_search_results_count {
+	display: none;
+}
+.tipue_search_content_title {
+	margin-bottom: 10px;
+}
+.tipue_search_content_title:hover {
+	font-weight: bold;
+}
+.tipue_search_content_title a {
 	color: white;
+	width: 100%;
  }
+.gap {
+	border: none !important;
+	height: 1px;
+	background: gray !important;
+	width: 95%;
+	margin-top: -2px !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+.tipue_search_content_title span {
+	 float: right;
+ }
+.search-link {
+	color: #00bbff;
+}

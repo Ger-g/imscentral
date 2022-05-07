@@ -14,7 +14,7 @@ var tipuesearch = {"pages": [{
   "tags": "automation ansible",
   "url": "ims-automation.html"
 },{
-  "title": "Java",
+  "title": "Java <span class=\"search-link\">MORE?</span>",
   "text": "Build Java applications to run inside or outside IMS..",
   "tags": "loremipsum",
   "url": "imsdev.github.io/ims-java.html"

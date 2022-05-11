@@ -12,7 +12,7 @@ var tipuesearch = {"pages": [{
   "title": "Automation",
   "text": "Learn how to automate your IBM Z IT infrastructure and applications by using Ansible.",
   "tags": "automation ansible",
-  "url": "ims-automation.html"
+  "url": "ims-devops.html"
 },{
   "title": "Java <span class=\"search-link\">MORE?</span>",
   "text": "Build Java applications to run inside or outside IMS..",

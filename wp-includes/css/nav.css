@@ -887,6 +887,7 @@ div#tipue_search_warning {
  #tipue_search_input:focus {
 	border-bottom: solid;
 	border-width: 2px;
+	border-color: gray;
  }
  #search-mag {
 	left: 10px;
@@ -897,6 +898,9 @@ div#tipue_search_warning {
 	position: absolute;
 	right: 15px;
 	top: 15px;
+ }
+ #search-clr:hover {
+	cursor: pointer;
  }
  .active-text {
 	color: white !important;
@@ -918,7 +922,11 @@ div#tipue_search_warning {
 .tipue_search_content_title {
 	margin-bottom: 10px;
 }
-.tipue_search_content_title:hover {
+.search-link {
+	transition: 350ms;
+}
+.search-link:hover {
+	transition: 350ms;
 	font-weight: bold;
 }
 .tipue_search_content_title a {

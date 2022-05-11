@@ -648,7 +648,7 @@ $(tipue_search_input).focusin(function() {
     $('#search-clr').attr("filter", "invert(100%)");
     $('#search-mag').attr("filter", "invert(100%)");
 }).focusout(function () {
-    // $(".search_content").delay(200).hide(0);
+    $(".search_content").delay(200).hide(0);
     $('#tipue_search_input').attr('style', 'color: gray !important');
     $('#search-mag').attr("filter", "invert(50%)");
     $('#search-clr').attr("filter", "invert(50%)");

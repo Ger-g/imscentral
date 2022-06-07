@@ -174,7 +174,6 @@ nav.pure-menu-horizontal .pure-menu-heading {
 	padding: 3em;
 	transition: all .2s ease-in-out;
 	cursor: pointer;
-
 }
 
 .zs-section-card:last-child {
@@ -229,7 +228,7 @@ nav.pure-menu-horizontal .pure-menu-heading {
 
 .zs-customer-card h2 {
 	transition: all .5s linear;
-  color: #25467a;
+  	color: #25467a;
 	font-size: 1.2em;
 	margin: 1em;
 }
@@ -892,7 +891,7 @@ div#tipue_search_warning {
  #search-mag {
 	left: 10px;
 	position: absolute;
-	margin-top: 15px;
+	margin-top: 13px;
  }
  #search-clr {
 	position: absolute;
@@ -923,7 +922,7 @@ div#tipue_search_warning {
 	margin-bottom: 10px;
 }
 .search-link {
-	transition: 350ms;
+	transition: 250ms;
 }
 .search-link:hover {
 	transition: 350ms;
@@ -947,4 +946,19 @@ div#tipue_search_warning {
  }
 .search-link {
 	color: #00bbff;
+}
+#tipue_search_foot_boxes {
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	display: table;
+}
+.tipue_search_foot_box:hover {
+	cursor: pointer;
+}
+ol > li::before, ul > li {
+	display: inline-block;
+}
+ol > li::before, ul > li::before {
+	display: none !important;
 }

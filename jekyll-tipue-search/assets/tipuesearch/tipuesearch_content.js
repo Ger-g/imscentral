@@ -1,5 +1,5 @@
 var tipuesearch = {"pages": [{
-  "title": "IMS Central",
+  "title": "IMS Central <span class=\"search-link\">HOME</span>",
   "text": "Build your skills, find documentation, get help, and engage with the IMS team.",
   "tags": "central home main_page",
   "url": "index.html"

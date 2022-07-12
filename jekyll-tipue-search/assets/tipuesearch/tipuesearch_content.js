@@ -33,7 +33,6 @@ var tipuesearch = {"pages": [{
   "text": "See the latest IMS blogs, engage in IMS forums, and more by visiting the IMS Community",
   "tags": "community engage blogs blog",
   "url": "https://community.ibm.com/community/user/ibmz-and-linuxone/groups/topic-home?CommunityKey=eba3ada3-db89-4dca-9154-328195f5e560"
-
 },{
   "title": "IMS Videos <span class=\"search-link\">WATCH</span>",
   "text": "Choose from hundreds of educational videos on IMS components, functions, and tools.",
@@ -59,4 +58,99 @@ var tipuesearch = {"pages": [{
   "text": "Find information on IMS, tools, and other IBM products.",
   "tags": "support ims_support ",
   "url": "ims-support.html"
+},{
+  "title": "Introduction to IMS <span class=\"search-link\">WATCH</span>",
+  "text": "Introduce yourself to the basics of IMS.",
+  "tags": "introduction basics ims_basics",
+  "url": "ims-videos.html#ims-intro"
+},{
+  "title": "Migrating to IMS 15 <span class=\"search-link\">WATCH</span>",
+  "text": "Learn how to migrate your IMS to version 15.",
+  "tags": "mig migration",
+  "url": "ims-videos.html#ims-mig"
+},{
+  "title": "Ansible for IMS <span class=\"search-link\">WATCH</span>",
+  "text": "Learn how to setup your IMS Ansible control node.",
+  "tags": "ansible ims_ansible",
+  "url": "ims-videos.html#ims-ansible"
+},{
+  "title": "IMS DBRC <span class=\"search-link\">WATCH</span>",
+  "text": "Learn about IMS DBRC.",
+  "tags": "dbrc ims_dbrc",
+  "url": "ims-videos.html#ims-dbrc"
+},{
+  "title": "IMS database organization <span class=\"search-link\">WATCH</span>",
+  "text": "Learn about how to organize your IMS databases.",
+  "tags": "db_organization db organization",
+  "url": "ims-videos.html#ims-db-org"
+},{
+  "title": "Intro to IMS Catalog <span class=\"search-link\">WATCH</span>",
+  "text": "Learn about IMS Catalog.",
+  "tags": "ims_catalog catalog",
+  "url": "ims-videos.html#ims-cat"
+},{
+  "title": "IMS DRD for MODBLKS <span class=\"search-link\">WATCH</span>",
+  "text": "Learn about IMS DRD for MDBLKS.",
+  "tags": "ims_drd drd mdblk",
+  "url": "ims-videos.html#ims-drd-mdblk"
+},{
+  "title": "IMS DRD for IMSRSC <span class=\"search-link\">WATCH</span>",
+  "text": "Learn about IMS DRD for IMSRSC.",
+  "tags": "ims_drd drd imsrsc",
+  "url": "ims-videos.html#ims-drd-imsrsc"
+},{
+  "title": "IMS dynamic commands <span class=\"search-link\">WATCH</span>",
+  "text": "Learn about IMS dynamic commands.",
+  "tags": "ims cmd cmds ims_commands commands",
+  "url": "ims-videos.html#ims-dyn-cmds"
+},{
+  "title": "IMS dynamic commands <span class=\"search-link\">WATCH</span>",
+  "text": "Learn about IMS High Availability.",
+  "tags": "ims_ha high_availability",
+  "url": "ims-videos.html#ims-ha"
+},{
+  "title": "Java in IMS <span class=\"search-link\">WATCH</span>",
+  "text": "Learn about Java programming in IMS.",
+  "tags": "ims_java java",
+  "url": "ims-videos.html#ims-java"
+},{
+  "title": "Database application programming <span class=\"search-link\">WATCH</span>",
+  "text": "Learn about database application programming in IMS.",
+  "tags": "ims_db database_programming drivers",
+  "url": "ims-videos.html#ims-db-prog"
+},{
+  "title": "IMS Explorer <span class=\"search-link\">WATCH</span>",
+  "text": "Learn about IMS Explorer for development.",
+  "tags": "ims_explorer explorer_for_development development",
+  "url": "ims-videos.html#ims-exp"
+},{
+  "title": "IMS Tools <span class=\"search-link\">WATCH</span>",
+  "text": "Review videos for IMS Tools.",
+  "tags": "ims_tools tools ",
+  "url": "ims-videos.html#ims-tools"
+},{
+  "title": "IMS Fundamentals <span class=\"search-link\">LEARN</span>",
+  "text": "Take an overview of IMS.",
+  "tags": "learn courses badges ims_fundamentals",
+  "url": "ims-education.html#ims-fundamentals"
+},{
+  "title": "IMS Diagnostics <span class=\"search-link\">LEARN</span>",
+  "text": "Take an overview of IMS diagnostic tools.",
+  "tags": "learn courses badges ims_diagnostics",
+  "url": "ims-education.html#ims-diagnostics"
+},{
+  "title": "IMS DBCTL <span class=\"search-link\">LEARN</span>",
+  "text": "Take an overview of IMS database control environment.",
+  "tags": "learn courses badges ims_diagnostics",
+  "url": "ims-education.html#ims-dbctl"
+},{
+  "title": "IMS shared queues <span class=\"search-link\">LEARN</span>",
+  "text": "Learn how shared queues work in IMS.",
+  "tags": "learn courses badges ims_shared_queues",
+  "url": "ims-education.html#ims-squeues"
+},{
+  "title": "IMS fast path implementation <span class=\"search-link\">LEARN</span>",
+  "text": "Learn how to implement fast path in IMS.",
+  "tags": "learn courses badges ims_fast_path",
+  "url": "ims-education.html#ims-fpimpl"
 }]};

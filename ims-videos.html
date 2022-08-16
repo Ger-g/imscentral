@@ -15,7 +15,7 @@
 	<link id="favicon"
 	rel="shortcut icon"
 	type="image/x-icon"
-	href="wp-content/uploads/sites/75/2019/09/ims-logo-favicon.png">
+	href="wp-content/IMS_logo_small.png">
 
 <!-- Pageittle -->
 <title>IMS Videos</title>
@@ -45,6 +45,23 @@
 <link href="wp-includes/css/www.css" rel="stylesheet" />
 <link href="wp-includes/css/grid-fluid.css" rel="stylesheet">
 <link href="wp-includes/css/tables.css" rel="stylesheet">
+
+<!-- Additional styling for content after navigation -->
+
+<link rel="stylesheet" type="text/css" href="wp-includes/css/pure.css">
+<link rel="stylesheet" href="wp-includes/css/grids-responsive-min.css">
+<link rel="stylesheet" type="text/css" href="wp-includes/css/homepage.css">
+<script src="wp-includes/js/jquery.min.js"></script>
+
+<!-- TipueSearch -->
+<link rel="stylesheet" href="jekyll-tipue-search/assets/main.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="jekyll-tipue-search/assets/tipuesearch/tipuesearch_content.js"></script>
+<link rel="stylesheet" href="/jekyll-tipue-search/assets/tipuesearch/css/tipuesearch.css">
+<script src="jekyll-tipue-search/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="jekyll-tipue-search/assets/tipuesearch/tipuesearch.min.js"></script>
+<!-- delayed search -->
+<script src="jekyll-tipue-search/assets/tipuesearch/delayedsearch.js"></script>
 
 </head>
 
@@ -89,10 +106,46 @@
 		<!-- == Burgie wrapper -->
 		<!-- == Main navbar -->
 	  </label>
+    	  <!-- Search wrapper -->
+
+          <form style="margin-left: 30%;width: 40%;top: 0;margin-top: 15px; position: absolute;" id="searchbar">
+            <div class="tipue_search_right">
+              <svg id="search-mag" xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" viewBox="0 0 32 32">
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: none;
+                    }
+                  </style>
+                </defs>
+                <path d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z" transform="translate(0 0)"/>
+                <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1" width="32" height="32"/>
+              </svg>
+              <input type="text" name="q" id="tipue_search_input"
+              pattern=".{3,}" title="Search bar"
+              placeholder="What are you looking for today?" autocomplete="off" required autofocus>
+              <svg id="search-clr" xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 0 329.26933 329" width="15px"><path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"/>
+              </svg>
+            </div>
+            <div style="clear: both;"></div>
+          </form>
+    
+    
+      <!-- On page-load activation -->
+        <script>
+        $(document).ready(function() {
+        $('#tipue_search_input').tipuesearch();
+        $(toggle1).prop("checked", false);
+        });
+        </script>
+    
+      <!-- == search wrapper -->
+      
+	
 	
     <!-- Dropdown menu options -->
     <nav class="menu1">
-      <div class="pages pure-g">
+      <div class="pages pure-g">    
 
         <!-- Innovate -->
         <div class="pure-u-1 pure-u-sm-1-4">
@@ -133,7 +186,7 @@
           <a title="Gold" href="ims-gold.html">
             <div class="navcard">
               <h5>IMS Gold</h5>
-              <p>Join the IMS client feedback program for the latest IMS news and engage with other customers.</p>
+              <p>Join the IMS client feedback program and get the latest news from the IMS team and engage with other customers.</p>
             </div>
           </a>
           <!-- 2 -->
@@ -147,8 +200,8 @@
           <a title="IMS Community"  target="_blank" rel="noopener noreferrer"
           href="https://community.ibm.com/community/user/ibmz-and-linuxone/groups/topic-home?CommunityKey=eba3ada3-db89-4dca-9154-328195f5e560">
             <div class="navcard">
-              <h5>IMS community<img src="wp-content/Icon07.png" style="height: 15px; width: 15px;margin-left:10px"></img>
-              </h5>
+              <h5>IMS community</h5>
+              <img src="wp-content/Icon07.png" style="height: 25px; width: 25px;float:right"></img>
               <p>See the latest IMS blogs, engage in IMS forums, and more by visiting the <b><u>IMS Community</u></b> website.</p>
             </div>
           </a>
@@ -206,11 +259,12 @@
               <p>Get help with IMS or other IBM products.</p>
             </div>
           </a>
-
-        </div>
-      </div>
-    </nav>
-</nav>
+  
+		  </div>
+		</div>
+	  </nav>
+  </nav>
+  <div id="tipue_search_content" class="search_content" style="position: absolute"></div>
   </section>
   
   <!-- DROP NAV END -->
@@ -242,9 +296,12 @@
 	  <div id="intro-header" class="pure-u-1">
 	  </div>
 	  <div id="intro-info" class="pure-u-1" style="margin-left: 30px;">
-		 <h1 style= "color:white">IMS Videos</h1>
-     <p style="font-weight: lighter;">Build your knowledge of IMS by viewing our 
+		 <h1 style= "color:white">IMS videos</h1>
+     <p style="font-weight: lighter;">Build your knowledge of IMS™ by viewing our 
       featured educational videos or by searching IBM MediaCenter.</p>
+      <p style="font-weight: lighter;">We would like your feedback. 
+        <br />Tell us about your IMS education requirements by taking our short 
+        <a style="color: white; font-weight: bold;text-decoration-line: underline;" href="https://survey.alchemer.com/s3/6858644/2022-IMS-Education-Survey-external">survey</a>!</p>
 	  </div>
 	</section>
 </div>
@@ -279,7 +336,7 @@ padding: 1em 5em 0em 5em !important;">
   
   <!-- Info cards container -->
 	<div class="pure-g" style="margin-left: auto;margin-right: auto;">
-  <div style="letter-spacing: normal;" id="ims-intro">
+  <div style="letter-spacing: normal;">
     <p>See all IMS videos on <a href="https://mediacenter.ibm.com/channel/IMS+Education+Videos/"><u>IBM MediaCenter</u></a>.</p>		
   </div>
 
@@ -301,7 +358,7 @@ padding: 1em 5em 0em 5em !important;">
 							</p>
 						</div>
 						<div style="text-align:center;margin-top:15%;">
-						<a class="ibm-btn-pri ibm-btn-systems-blue-6" alt="IMS Diagnostics" id="ims-mig"
+						<a class="ibm-btn-pri ibm-btn-systems-blue-6" alt="IMS Diagnostics" 
 						title="IMS Diagnostics" target="_blank" rel="noopener noreferrer" 
 						href="https://mediacenter.ibm.com/channel/Intro+to+IMS+Series/139456202" 
 						style="position: relative;bottom:0;margin-bottom:30px;text-align: left;">Watch
@@ -329,8 +386,8 @@ padding: 1em 5em 0em 5em !important;">
 							</p>
 						</div>
 						<div style="text-align:center;margin-top:15%;">
-						<a class="ibm-btn-pri ibm-btn-systems-blue-6" alt="IMS Diagnostics" id="ims-ansible"
-						title="Migrating to IMS 15" target="_blank" rel="noopener noreferrer" 
+						<a class="ibm-btn-pri ibm-btn-systems-blue-6" alt="IMS Diagnostics" 
+						title="IMS Diagnostics" target="_blank" rel="noopener noreferrer" 
 						href="https://mediacenter.ibm.com/playlist/dedicated/122579632/1_4iev4osi/1_mq67d39n" 
 						style="position: relative;bottom:0;margin-bottom:30px;text-align: left;">Watch
             <img src="wp-content/Icon07.png" style="height: 15px; width: 15px;margin: 5px 0 0 5px;"></img>
@@ -346,29 +403,29 @@ padding: 1em 5em 0em 5em !important;">
           <div class="ims-c-card">
 					<div class="pure-u-1 pure-u-md-19-24" style="padding:2em;margin-right: -10px;">
             <h2 style="font-size: 1.65rem !important;">Set Up Your Ansible Control Node for Getting Started with Ansible for IBM Z</h2>
-						<p>Get an overview of how to set up your Red Hat Ansible control node to get started automating processes for IBM Z with Ansible.</p>		
+						<p>Get an overview of how to set up your Red Hat® Ansible® control node to get started automating processes for IBM Z® with Ansible.</p>		
 					</div>
 					<div class="pure-u-1 pure-u-md-5-24">
 						<div style="margin-left:3.5em;margin-top:15%;">
 							<p>
-								<b>Level</b>: Experienced
+								<b>Level</b>: Beginner
 								<br>
 								<b>Time</b>: 6 minutes
 							</p>
 						</div>
 						<div style="text-align:center;margin-top:15%;">
-						<a class="ibm-btn-pri ibm-btn-systems-blue-6" alt="IMS Diagnostics" id="ims-dbrc"
+						<a class="ibm-btn-pri ibm-btn-systems-blue-6" alt="IMS Diagnostics" 
 						title="IMS Diagnostics" target="_blank" rel="noopener noreferrer" 
 						href="https://mediacenter.ibm.com/media/Set%20up%20your%20Ansible%20control%20node%20for%20getting%20started%20with%20Ansible%20for%20IBM%20Z/1_r9g0duq3" 
 						style="position: relative;bottom:0;margin-bottom:30px;text-align: left;">Watch
             <img src="wp-content/Icon07.png" style="height: 15px; width: 15px;margin: 5px 0 0 5px;"></img>
-            </a>
+          </a>
 						</div>
 					</div>
 				</div>
 			</div>
 
-<h3 id="ims-db" style="letter-spacing:normal;margin-top:30px;color: black;">IMS database</h3>
+<h3 id="imsdb" style="letter-spacing:normal;margin-top:30px;color: black;">IMS database</h3>
 
       <!-- card 1 -->
 				<div class="pure-u-1">
@@ -388,7 +445,7 @@ padding: 1em 5em 0em 5em !important;">
 							</p>
 						</div>
 						<div style="text-align:center;margin-top:15%;">
-						<a class="ibm-btn-pri ibm-btn-systems-blue-6" alt="IMS Diagnostics" id="ims-db-org"
+						<a class="ibm-btn-pri ibm-btn-systems-blue-6" alt="IMS Diagnostics" 
 						title="IMS Diagnostics" target="_blank" rel="noopener noreferrer" 
 						href="https://mediacenter.ibm.com/playlist/dedicated/122579632/1_2u1jbohk/1_iuk10dee" 
 						style="position: relative;bottom:0;margin-bottom:30px;text-align: left;">Watch
@@ -416,7 +473,7 @@ padding: 1em 5em 0em 5em !important;">
 							</p>
 						</div>
 						<div style="text-align:center;margin-top:15%;">
-						<a class="ibm-btn-pri ibm-btn-systems-blue-6" alt="IMS Diagnostics" id="ims-cat"
+						<a class="ibm-btn-pri ibm-btn-systems-blue-6" alt="IMS Diagnostics" 
 						title="IMS Diagnostics" target="_blank" rel="noopener noreferrer" 
 						href="https://mediacenter.ibm.com/playlist/dedicated/122579632/0_qq6xjgsm/" 
 						style="position: relative;bottom:0;margin-bottom:30px;text-align: left;">Watch
@@ -444,7 +501,7 @@ padding: 1em 5em 0em 5em !important;">
             </p>
           </div>
           <div style="text-align:center;margin-top:15%;">
-          <a class="ibm-btn-pri ibm-btn-systems-blue-6" alt="IMS Diagnostics" id="ims-drd-mdblk"
+          <a class="ibm-btn-pri ibm-btn-systems-blue-6" alt="IMS Diagnostics" 
           title="IMS Diagnostics" target="_blank" rel="noopener noreferrer" 
           href="https://mediacenter.ibm.com/playlist/details/1_6yvvheln/categoryId/122579632" 
           style="position: relative;bottom:0;margin-bottom:30px;text-align: left;">Watch
@@ -474,7 +531,7 @@ padding: 1em 5em 0em 5em !important;">
             </p>
           </div>
           <div style="text-align:center;margin-top:15%;">
-          <a class="ibm-btn-pri ibm-btn-systems-blue-6" alt="IMS Diagnostics" id="ims-drd-imsrsc"
+          <a class="ibm-btn-pri ibm-btn-systems-blue-6" alt="IMS Diagnostics" 
           title="IMS Diagnostics" target="_blank" rel="noopener noreferrer" 
           href="https://mediacenter.ibm.com/media/IMS+DRD+for+MODBLKS+with+RDDSA+An+Introduction/1_aipk8k94" 
           style="position: relative;bottom:0;margin-bottom:30px;text-align: left;">Watch
@@ -502,7 +559,7 @@ padding: 1em 5em 0em 5em !important;">
             </p>
           </div>
           <div style="text-align:center;margin-top:15%;">
-          <a class="ibm-btn-pri ibm-btn-systems-blue-6" alt="IMS Diagnostics" id="ims-dyn-cmds"
+          <a class="ibm-btn-pri ibm-btn-systems-blue-6" alt="IMS Diagnostics" 
           title="IMS Diagnostics" target="_blank" rel="noopener noreferrer" 
           href="https://mediacenter.ibm.com/media/IMS%20DRD%20for%20IMSRSC%20repository%3A%20Details%20and%20Best%20Practices/1_jtei2eev" 
           style="position: relative;bottom:0;margin-bottom:30px;text-align: left;">Watch
@@ -531,7 +588,7 @@ padding: 1em 5em 0em 5em !important;">
               </p>
             </div>
             <div style="text-align:center;margin-top:15%;">
-            <a class="ibm-btn-pri ibm-btn-systems-blue-6" alt="IMS Diagnostics" id="ims-ha"
+            <a class="ibm-btn-pri ibm-btn-systems-blue-6" alt="IMS Diagnostics" 
             title="IMS Diagnostics" target="_blank" rel="noopener noreferrer" 
             href="https://mediacenter.ibm.com/media/IMS%20Dynamic%20Commands%3A%20An%20Introduction/1_nro46ai0" 
 						style="position: relative;bottom:0;margin-bottom:30px;text-align: left;">Watch
@@ -559,7 +616,7 @@ padding: 1em 5em 0em 5em !important;">
             </p>
           </div>
           <div style="text-align:center;margin-top:15%;">
-          <a class="ibm-btn-pri ibm-btn-systems-blue-6" alt="IMS Diagnostics" id="ims-java" 
+          <a class="ibm-btn-pri ibm-btn-systems-blue-6" alt="IMS Diagnostics" 
           title="IMS Diagnostics" target="_blank" rel="noopener noreferrer" 
           href="https://mediacenter.ibm.com/playlist/dedicated/122579632/0_7sqlrzc1/0_n2dehfzn" 
           style="position: relative;bottom:0;margin-bottom:30px;text-align: left;">Watch
@@ -578,7 +635,7 @@ padding: 1em 5em 0em 5em !important;">
         <div class="pure-u-1 pure-u-md-19-24" style="padding:2em;margin-right: -10px;">
           <h2 style="font-size: 1.65rem !important;">Java in IMS</h2>
           <p></p>
-          <p>Watch these short demos showing how to build Java applications for IMS.</p>		
+          <p>Watch these short demos showing how to build Java™ applications for IMS.</p>		
         </div>
         <div class="pure-u-1 pure-u-md-5-24">
           <div style="margin-left:3.5em;margin-top:15%;">
@@ -589,7 +646,7 @@ padding: 1em 5em 0em 5em !important;">
             </p>
           </div>
           <div style="text-align:center;margin-top:15%;">
-          <a class="ibm-btn-pri ibm-btn-systems-blue-6" alt="IMS Diagnostics" id="ims-db-prog"
+          <a class="ibm-btn-pri ibm-btn-systems-blue-6" alt="IMS Diagnostics" 
           title="IMS Diagnostics" target="_blank" rel="noopener noreferrer" 
           href="https://mediacenter.ibm.com/playlist/dedicated/122579632/1_owktz0jm/1_ye4uoner" 
           style="position: relative;bottom:0;margin-bottom:30px;text-align: left;">Watch
@@ -617,7 +674,7 @@ padding: 1em 5em 0em 5em !important;">
             </p>
           </div>
           <div style="text-align:center;margin-top:15%;">
-          <a class="ibm-btn-pri ibm-btn-systems-blue-6" alt="IMS Diagnostics" id="ims-exp"
+          <a class="ibm-btn-pri ibm-btn-systems-blue-6" alt="IMS Diagnostics" 
           title="IMS Diagnostics" target="_blank" rel="noopener noreferrer" 
           href="https://mediacenter.ibm.com/playlist/dedicated/122579632/0_4fixix6b/0_0xh8ykt7" 
           style="position: relative;bottom:0;margin-bottom:30px;text-align: left;">Watch
@@ -645,7 +702,7 @@ padding: 1em 5em 0em 5em !important;">
             </p>
           </div>
           <div style="text-align:center;margin-top:15%;">
-          <a class="ibm-btn-pri ibm-btn-systems-blue-6" alt="IMS Diagnostics" id="ims-tools"
+          <a class="ibm-btn-pri ibm-btn-systems-blue-6" alt="IMS Diagnostics" 
           title="IMS Diagnostics" target="_blank" rel="noopener noreferrer" 
           href="https://mediacenter.ibm.com/playlist/dedicated/122579632/0_3n5xj4z6/0_ky5ochli" 
           style="position: relative;bottom:0;margin-bottom:30px;text-align: left;">Watch
@@ -711,7 +768,7 @@ padding: 1em 5em 0em 5em !important;">
               <li><a href="http://www.ibm.com/privacy/us/en/">Privacy</a></li>
               <li><a href="https://www.ibm.com/legal?lnk=flg-tous-usen">Terms of use</a></li>
               <li><a href="http://www.ibm.com/accessibility/us/en/">Accessibility</a></li>
-			  <li><a href="https://github.com/imsdev/imsdev.github.io/issues">Report an issue</a></li>
+			        <li><a href="https://github.com/imsdev/imsdev.github.io/issues">Report an issue</a></li>
           	</ul>
 					</div>
 					<div id="ibm-footer-locale-selector"></div>
@@ -720,7 +777,11 @@ padding: 1em 5em 0em 5em !important;">
 		</div>
 	</footer>
 </div><!-- #page -->
+<!-- Search box functions -->
+<script src="jekyll-tipue-search/assets/tipuesearch/searchBox.js"></script>
 
+<!-- post-load actions/listeners -->
+<script src="jekyll-tipue-search/assets/tipuesearch/postLoad.js"></script>
 
 </body>
 </html>

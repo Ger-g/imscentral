@@ -39,7 +39,7 @@ a {
   #toggle1 {
     display: none;
   }
-  
+
   #toggle1:checked + .hamburger1 .top {
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
@@ -58,7 +58,7 @@ a {
   }
   
   #toggle1:checked ~ .menu1 {
-    height: 400px;
+    height: 450px;
   }
   
 
@@ -100,6 +100,7 @@ a {
       padding: 5px 20px 0px 20px;
       color: white;
       line-height: 1.5 !important;
+      transition: 0.3s;
   }
 
   .navcard:hover {
@@ -118,6 +119,11 @@ a {
 
   .pages {
       padding: 2em;
+      margin-bottom: -40px;
+  }
+  .pages > div > a {
+    width: 100%;
+    min-height: 115px !important;
   }
 
   .sitename-wrap {
@@ -129,14 +135,24 @@ a {
     color: white;
     font-family: "ibm-plex-sans","Helvetica Neue",Arial,sans-serif;
     margin-top: inherit;
+    /* background: linear-gradient(to right, #171717 0%,#282828  100%);
+    background-position: -190px;
+    transition: .3s;
+    background-repeat: no-repeat; */
+  }
+  .sitename-wrap:hover {
+    background-position: center;
+  }
+  .sitename-wrap h4 {
+    color: black !important;
   }
 
   .search-wrap {
-      justify-self: center;
       position: absolute;
       margin-top: inherit;
       padding: 10px;
       width: 30%;
+      transform: translateX(110%);
   }
 
   .burg-wrap {
@@ -166,15 +182,28 @@ a {
     text-align: center;
   }
 
+  #left-bar-brand {
+    width: 3%;
+    padding: 7px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
   @media (max-width: 1200px) {
     .ibm-landing-page {
       width: 95% !important;
       margin-left: 5% !important;
     }
+    #left-bar-brand {
+      width:5% !important;
+    }
   }
   @media (max-width: 800px) {
     .ibm-landing-page {
-      width: 91% !important;
-      margin-left: 9% !important;
+      width: 92% !important;
+      margin-left: 8% !important;
+    }
+    #left-bar-brand {
+      width:8% !important;
     }
   }

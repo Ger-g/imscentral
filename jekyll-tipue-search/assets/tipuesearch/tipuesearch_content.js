@@ -9,7 +9,7 @@ var tipuesearch = {"pages": [{
   "tags": "api apis IMS-apis",
   "url": "ims-apis.html"
 },{
-  "title": "Automation <span class=\"search-link\">LEARN MORE</span>",
+  "title": "Automation with Ansible <span class=\"search-link\">LEARN MORE</span>",
   "text": "Learn how to automate your IBM Z IT infrastructure and applications by using Ansible.",
   "tags": "automation ansible",
   "url": "ims-devops.html"
@@ -19,12 +19,12 @@ var tipuesearch = {"pages": [{
   "tags": "Java java_solution",
   "url": "ims-java.html"
 },{
-  "title": "IMS Gold <span class=\"search-link\">SIGN UP</span>",
+  "title": "IMS Gold: Feedback program <span class=\"search-link\">SIGN UP</span>",
   "text": "Join the IMS client feedback program for the latest IMS news and engage with other customers.",
   "tags": "gold ims_gold customer sponsor",
   "url": "ims-gold.html"
 },{
-  "title": "IMS Makerspace <span class=\"search-link\">SIGN UP</span>",
+  "title": "IMS Makerspace: Collaborate with IMS <span class=\"search-link\">SIGN UP</span>",
   "text": "Sign up to interact with a specialized IMS team who can help you solve real-world business challenges.",
   "tags": "makerspace ims_makerspace",
   "url": "ims-makerspace.html"
@@ -50,11 +50,11 @@ var tipuesearch = {"pages": [{
   "url": "ims-repos.html"
 },{
   "title": "IMS Documentation <span class=\"search-link\">BROWSE</span>",
-  "text": "Find information on IMS, tools, and other IBM products.",
-  "tags": "docs ims_docs documentation",
+  "text": "Find information on IMS, tools, and other IBM products. Search among dfs sql abend parameters parm jcl logs",
+  "tags": "docs ims_docs documentation dfs sql abend parameters parm jcl logs",
   "url": "ims-docs.html"
 },{
-  "title": "IMS Documentation <span class=\"search-link\">BROWSE</span>",
+  "title": "IMS Support <span class=\"search-link\">BROWSE</span>",
   "text": "Find information on IMS, tools, and other IBM products.",
   "tags": "support ims_support ",
   "url": "ims-support.html"

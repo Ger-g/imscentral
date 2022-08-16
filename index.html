@@ -15,7 +15,7 @@
 	<link id="favicon"
 	rel="shortcut icon"
 	type="image/x-icon"
-	href="wp-content/uploads/sites/75/2019/09/ims-logo-favicon.png">
+	href="wp-content/IMS_logo_small.png">
 
 <!-- Pageittle -->
 <title>IMS Central</title>
@@ -51,6 +51,7 @@
 <link href="wp-includes/css/grid-fluid.css" rel="stylesheet">
 <link href="wp-includes/css/tables.css" rel="stylesheet">
 
+
 <!-- Hotjar Tracking Code for ibm.com/demos &  githhub -->
 <script>
   (function(h,o,t,j,a,r){
@@ -65,28 +66,29 @@
 
 <!-- Additional styling for content after navigation -->
 
-  <link rel="stylesheet" type="text/css" href="wp-includes/css/pure.css">
-  <link rel="stylesheet" href="wp-includes/css/grids-responsive-min.css">
-  <link rel="stylesheet" type="text/css" href="wp-includes/css/homepage.css">
-  <script src="wp-includes/js/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="wp-includes/css/pure.css">
+<link rel="stylesheet" href="wp-includes/css/grids-responsive-min.css">
+<link rel="stylesheet" type="text/css" href="wp-includes/css/homepage.css">
+<script src="wp-includes/js/jquery.min.js"></script>
 
 <!-- TipueSearch -->
-  <link rel="stylesheet" href="jekyll-tipue-search/assets/main.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="jekyll-tipue-search/assets/tipuesearch/tipuesearch_content.js"></script>
-  <link rel="stylesheet" href="/jekyll-tipue-search/assets/tipuesearch/css/tipuesearch.css">
-  <script src="jekyll-tipue-search/assets/tipuesearch/tipuesearch_set.js"></script>
-  <script src="jekyll-tipue-search/assets/tipuesearch/tipuesearch.min.js"></script>
+<link rel="stylesheet" href="jekyll-tipue-search/assets/main.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="jekyll-tipue-search/assets/tipuesearch/tipuesearch_content.js"></script>
+<link rel="stylesheet" href="/jekyll-tipue-search/assets/tipuesearch/css/tipuesearch.css">
+<script src="jekyll-tipue-search/assets/tipuesearch/tipuesearch_set.js"></script>
+<script src="jekyll-tipue-search/assets/tipuesearch/tipuesearch.min.js"></script>
 <!-- delayed search -->
-  <script src="jekyll-tipue-search/assets/tipuesearch/delayedsearch.js"></script>
+<script src="jekyll-tipue-search/assets/tipuesearch/delayedsearch.js"></script>
 
 </head>
-
 
 <!-- MASTHEAD_SITENAV_BEGIN -->
 <body id="ibm-com" class="ibm-com ibm-type group-blog" style="background-color: #171717;">
 <div class="ibm-landing-page" style="width: 97%; margin-left: 3%; position: relative;background: #282828 !important;">
-  <img src="wp-content/IMS_logo_small.png" style="width: 30px;display: inline-block;margin:10px 5px 12px 0;margin: 10px 5px 12px 8px; position: fixed; left: 0;" />
+  <img src="wp-content/IMS_logo_small.png" 
+  style="display: inline-block;margin:10px 5px 12px 5px; position: fixed; left: 0;" 
+  id="left-bar-brand"/>
 	<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
   <div id="ibm-content-wrapper" class="sticky-nav">
   	<header role="banner" aria-labelledby="ibm-pagetitle-h1">
@@ -108,7 +110,6 @@
       </span>
       <!-- == Header wrapper -->
 
-
       <!-- Burgie wrapper -->
       <label class="burg-wrap" for="toggle1">
         <span class="burg-bars">
@@ -121,16 +122,9 @@
       <!-- == Main navbar -->
     </label>
 
-    
+      <!-- Search wrapper -->
 
-
-
-
-
-
-  <!-- Search wrapper -->
-
-    <form style="margin-left: 30%;width: 40%;top: 0;margin-top: 15px; position: absolute;" id="searchbar">
+      <form style="margin-left: 30%;width: 40%;top: 0;margin-top: 15px; position: absolute;" id="searchbar">
         <div class="tipue_search_right">
           <svg id="search-mag" xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" viewBox="0 0 32 32">
             <defs>
@@ -143,8 +137,8 @@
             <path d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z" transform="translate(0 0)"/>
             <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1" width="32" height="32"/>
           </svg>
-          <input type="text" name="q" id="tipue_search_input" 
-          pattern=".{3,}" title="Search bar" 
+          <input type="text" name="q" id="tipue_search_input"
+          pattern=".{3,}" title="Search bar"
           placeholder="What are you looking for today?" autocomplete="off" required autofocus>
           <svg id="search-clr" xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 0 329.26933 329" width="15px"><path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"/>
           </svg>
@@ -162,13 +156,6 @@
     </script>
 
   <!-- == search wrapper -->
-
-
-
-
-
-
-
   
     <!-- Dropdown menu options -->
     <nav class="menu1">
@@ -291,17 +278,13 @@
       </div>
     </nav>
 </nav>
-
 <div id="tipue_search_content" class="search_content" style="position: absolute"></div>
-
 </section>
 
 <!-- DROP NAV END -->
 
 </div>
 </header>
-
-
 
 <div id="content" class="site-content">
 <div class="content-area" id="content-area">
@@ -312,9 +295,31 @@
 <div id="content" class="site-content">
   <main class="zs-main pure-g">
 
+    <!-- Banner notification -->
+    <div class="banner-notification pure-g" style="width: 100%;z-index: 30;">
+      <a class="pure-u-md-1-2 pure-u-sm-1 pure-u-1" 
+      href="https://community.ibm.com/community/user/ibmz-and-linuxone/blogs/deepak-kohli/2022/06/03/ims-zddl-intro" target="_blank" rel="noopener noreferrer" >      
+      <span>  
+        <div style="background-color: #42a7ec;padding-top: 12px;">
+        <img src="wp-content/blog.svg" alt="Blog graphic" style="width: 35px;margin: 0 15px 5px 15px;filter: invert(100%);">
+        <p style="display:inline-block;position: absolute; color: white; margin-top:3px;"> New for 15.3:<b>
+          IMS Native z/OS DDL utility</b></p> 
+      </div>
+    </span>
+      </a>
+      <a class="pure-u-md-1-2 pure-u-sm-1 pure-u-1" href="ims-gold.html"  target="_blank" rel="noopener noreferrer" >
+      <div style="background-color: #168ddf;padding-top: 12px;">
+          <img src="wp-content/webapp.svg" 
+          alt="Web application graphic" style="display: inline-block; width: 35px;margin: 0 15px 5px 15px;filter: invert(100%);">
+        <p style="display:inline-block;position: absolute; color: white; margin-top:3px;">Upcoming IMS event! - IMS Gold <b>Meet the Lab</b>!
+        </p> 
+      </div>
+      </a>
+    </div>
+
 <!-- Welcome banner -->
   <div class="banner" style="height:auto;padding:20px;">
-    <section id="intro-section" class="zs-section" style="margin-top:-40px;margin-bottom:-35px;">
+    <section id="intro-section" class="zs-section" style="margin-top:-60px;margin-bottom:-35px;">
 
 <!-- Splash section container -->
       <div>
@@ -324,12 +329,10 @@
 
             <h1 class="pure-u-4-6 pure-u-lg-2-3" style="color:white;display:inline-block;">IBM IMS <b>Central</b></h1>
             <p style="color:white" class="zs-margin-section pure-u-5-6 pure-u-lg-4-5">
-              Welcome to IMS Central.
+              Welcome to IMS™ Central.
               <br><br>
               Build your skills, find documentation, get help, and engage with the IMS team.
               <div class="pure-u-1">
-
-                <a href="test.pdf">Link to PDF</a>
 
                 <!-- <a class="pure-u-2-5 ibm-btn-pri ibm-btn-systems-purp" href="ims-gold.html" alt="IMS Gold program" title="IMS client feedback program" target="_blank" rel="noopener noreferrer">
                   IMS GOLD</a>
@@ -375,7 +378,7 @@
     </div>
 
 
-    <div class="pure-u-lg-2-24"></div>
+    <div class="pure-u-lg-2-24" style="margin-left:-21px;"></div>
 
 <!-- Innovate cards -->
 <div class="pure-u-lg-16-24 pure-u-1" style="text-align:center;">
@@ -394,7 +397,7 @@
           <h3 style="text-align:left;">APIs</h3>
           <p>
             Not sure how the mainframe and APIs mix? 
-            Learn how to enable your IMS applications to provide or consume data by using APIs. 
+            Learn how to create consumable IMS APIs in minutes. 
           </p>
           <a href="ims-apis.html" class="zs-button-transparent" style="position: absolute;bottom:0;background-color:indigo;width:70%;margin-bottom: 10px;margin-top: 10px;">Learn more</a>
         </div>
@@ -408,7 +411,7 @@
             <img class="ims-card-icon" src="wp-content/uploads/sites/75/2019/08/card-icons-07.png">
             <h3 style="text-align:left;">Automation</h3>
             <p>
-              See how Ansible helps you automate z/OS applications and IT 
+              See how Ansible® helps you automate z/OS® applications and IT 
               infrastructure as part of your enterprise automation strategy by using a proven and consistent approach. 
             </p>
             <a href="ims-devops.html" class="zs-button-transparent" style="position: absolute;bottom:0;background-color:indigo;width:70%;margin-bottom: 10px;margin-top: 10px;">Learn more</a>
@@ -420,15 +423,15 @@
     <!-- 2nd 2x2 block -->
   <!-- <div style="display:inline-block !important;" class="pure-u-sm-1 pure-u-md-1 pure-u-lg-1-2"> -->
 
-    <!-- Java -->
+    <!-- Java  -->
       <div class="pure-u-1 pure-u-md-11-24 pure-u-lg-8-24 ibm-left ims-m-card">
         <!-- <a href="ims-java.html" target="_blank" rel="noopener noreferrer"> -->
         <div class="ibm-card__content" style="flex: 0 100%; height: 100%; position: relative;">
           <img class="ims-card-icon" src="wp-content/uploads/sites/75/2019/08/card-icons-10.png">
           <h3 style="text-align:left;">Java</h3>
           <p>
-            With over 15 years of support, Java has become the lifeblood of modern
-            IMS applications. Get started with our Java essentials.
+            With over 15 years of support, Java™ has become the quintessential language of modern
+            IMS applications. Get started with our Java offerings.
           </p>
           <a href="ims-java.html" class="zs-button-transparent" style="position: absolute;bottom:0;background-color:indigo;width:70%;margin-bottom: 10px;margin-top: 10px;">Learn more</a>
         </div>
@@ -447,7 +450,7 @@
 <!-- Parallax BG needs specification here to override styles -->
 <div class="zs-gray-section ibm-background-white-core imsc-learn-section pure-g" 
 style="background-image: url(wp-content/BG02.png) !important;width:100%">
-  <section class="zs-section">
+  <section class="zs-section" style="margin-bottom: -50px;">
 
 <!--Header -->
     <div class="pure-u-1 pure-u-sm-1 pure-u-lg-6-24 ibm-padding-bottom-1">
@@ -476,7 +479,7 @@ style="background-image: url(wp-content/BG02.png) !important;width:100%">
       <div>
         <h3>Makerspace</h3>
         <p>We want to understand your business scenarios and goals,
-          and brainstorm on suture solutions. We'll use design thinking to help
+          and brainstorm on future solutions. We'll use design thinking to help
           you prototype solutions to solve business challenges.
         </p>
         <a href="ims-makerspace.html"><u>Learn more</u></a>
@@ -488,7 +491,7 @@ style="background-image: url(wp-content/BG02.png) !important;width:100%">
       <div>
         <h3>Blogs and forums</h3>
         <p>
-          Join the IMS Community and get updates on events, join, IMS forums, learn about other Z software products, and more.</a>
+          Join the IMS Community and get updates on events, join IMS forums, learn about other Z software products, and more.</a>
         </p>
         <a target="_blank" rel="noopener noreferrer" href="https://community.ibm.com/community/user/ibmz-and-linuxone/groups/topic-home?CommunityKey=eba3ada3-db89-4dca-9154-328195f5e560">
           <u>Learn more</u></a>
@@ -514,11 +517,16 @@ style="background-image: url(wp-content/BG02.png) !important;width:100%">
         <h2>Learn</h2>
         <p>Build your IMS skills through courses, videos, and code repos.</p>
     </div>
-    <div class="pure-u-lg-2-24"></div>
+    <div class="pure-u-lg-2-24" style="margin-right: -22px;"></div>
+
+
+<!-- Selection container -->
+<div class="pure-u-lg-16-24 pure-u-1">
+  <div class="pure-g" style="display:inline-block;">
 
   <!-- IBM Videos -->
-    <div class="pure-u-1 pure-u-sm-1 pure-u-lg-5-24" style="padding-right: 2.5em;margin-bottom:3em;">
-      <div>
+    <div class="pure-u-1 pure-u-sm-1 pure-u-lg-8-24" style="padding-right: 2.5em;margin-bottom:3em;">
+      <div style="padding: 15px;">
         <img src="wp-content/Videos.png" alt="Information booklet icon" style="margin-bottom:15px;height: 40px;">
         <h3 style="color: black;">IMS videos</h3>
         <p>Check out IMS educational videos on Java, version migration, 
@@ -529,8 +537,8 @@ style="background-image: url(wp-content/BG02.png) !important;width:100%">
       </div>
     
   <!-- Skills Launchpad -->
-    <div class="pure-u-1 pure-u-sm-1 pure-u-lg-5-24" style="padding-right: 2.5em;margin-bottom:3em;">
-      <div>
+    <div class="pure-u-1 pure-u-sm-1 pure-u-lg-8-24" style="padding-right: 2.5em;margin-bottom:3em;">
+      <div style="padding: 15px;">
         <img src="wp-content/Courses.png" alt="Information booklet icon" style="margin-bottom:15px;height: 40px;">
         <h3 style="color: black;">IMS courses</h3>
         <p>Your education portal for role-based, self-paced learning. See the latest 
@@ -541,8 +549,8 @@ style="background-image: url(wp-content/BG02.png) !important;width:100%">
     </div>
 
    <!-- IBM GitHub -->
-    <div class="pure-u-1 pure-u-sm-1 pure-u-lg-5-24" style="padding-right: 2.5em;margin-bottom:3em;">
-      <div>
+    <div class="pure-u-1 pure-u-sm-1 pure-u-lg-8-24" style="padding-right: 2.5em;margin-bottom:3em;">
+      <div style="padding: 15px;">
         <img src="wp-content/Github.png" alt="Information booklet icon" style="margin-bottom:15px;height: 40px;">
         <h3 style="color: black;">IMS GitHub</h3>
         <p>See the IMS GitHub repositories to grab sample code, learn 
@@ -554,25 +562,32 @@ style="background-image: url(wp-content/BG02.png) !important;width:100%">
         </div>
       </div>
 
+</div>
+</div>
 
   </section>
 </div>
 
 <!-- =========================== Doc / Support =========================== -->
 <div class="zs-gray-section ibm-background-white-core" style="color:white;background-image: linear-gradient(to left, #427ce4, #5543b9);">
-  <section class="zs-section">
+  <section class="zs-section" style="padding-bottom: 2em !important;">
 
 <!--Header -->
     <div class="pure-u-1 pure-u-sm-1 pure-u-lg-6-24 ibm-padding-bottom-1">
-        <h2>Documentation and support</h2>
+        <h2>Docs and Support</h2>
         <p>Find IMS documentation or get help with IMS.</p>
     </div>
-    <div class="pure-u-lg-2-24"></div>
+    <div class="pure-u-lg-2-24" style="margin-right: -22px;"></div>
+
+
+<!-- Selection container -->
+<div class="pure-u-lg-16-24 pure-u-1">
+  <div class="pure-g" style="display:inline-block;">
 
     <!-- IBM Docs -->
-    <div class="pure-u-1 pure-u-sm-1 pure-u-lg-5-24" style="padding-right: 2.5em;margin-bottom:3em;">
+    <div class="pure-u-1 pure-u-sm-1 pure-u-lg-8-24" style="padding-right: 2.5em;padding-left: 1em;margin-bottom:3em;">
       <div>
-        <h3 style="color: white;">IBM documentation</h3>
+        <h3 style="color: white;">IBM Documentation</h3>
         <p>The home for IMS, IMS Tools, and other IBM product documentation.
         </p>
         <a  target="_blank" rel="noopener noreferrer" 
@@ -581,11 +596,11 @@ style="background-image: url(wp-content/BG02.png) !important;width:100%">
       </div>
 
    <!-- IBM Doc Buddy -->
-    <div class="pure-u-1 pure-u-sm-1 pure-u-lg-5-24" style="padding-right: 2.5em;margin-bottom:3em;">
+    <div class="pure-u-1 pure-u-sm-1 pure-u-lg-8-24" style="padding-right: 2.5em;padding-left: 1em;margin-bottom:3em;">
       <div>
         <h3 style="color: white;">IBM Doc Buddy</h3>
         <p>Download this handy app to quickly search for error messages,
-           documentation, and more for IBM Z products.
+           documentation, and more for IBM Z® products.
         </p>
         <a  target="_blank" rel="noopener noreferrer" 
         href="https://ibmdocbuddy.mybluemix.net/" style="color: white;"><u>Learn more</u></a>
@@ -594,7 +609,7 @@ style="background-image: url(wp-content/BG02.png) !important;width:100%">
 
       
    <!-- Get help -->
-    <div class="pure-u-1 pure-u-sm-1 pure-u-lg-5-24" style="padding-right: 2.5em;margin-bottom:3em;">
+    <div class="pure-u-1 pure-u-sm-1 pure-u-lg-8-24" style="padding-right: 2.5em;padding-left: 1em;margin-bottom:3em;">
       <div>
         <h3 style="color: white;">Get help</h3>
         <p>Contact IBM Support, open an RFE, or check out the IMS support forum.
@@ -602,6 +617,9 @@ style="background-image: url(wp-content/BG02.png) !important;width:100%">
         <a  target="_blank" rel="noopener noreferrer" 
         href="https://ibmdocbuddy.mybluemix.net/" style="color: white;"><u>Learn more</u></a>
         </div>
+      </div>
+
+      </div>
       </div>
 
     </section>
@@ -626,8 +644,6 @@ style="background-image: url(wp-content/BG02.png) !important;width:100%">
               <li><a href="http://www.ibm.com/privacy/us/en/">Privacy</a></li>
               <li><a href="https://www.ibm.com/legal?lnk=flg-tous-usen">Terms of use</a></li>
               <li><a href="http://www.ibm.com/accessibility/us/en/">Accessibility</a></li>
-              <!-- <li class="ibm-feedbacklink"><a href="#">Feedback</a></li> -->
-              <!-- Switch to a feedback widget or survey later -->
 							<li><a href="https://github.com/imsdev/imsdev.github.io/issues">Report an issue</a></li>
           	</ul>
 					</div>
@@ -637,40 +653,11 @@ style="background-image: url(wp-content/BG02.png) !important;width:100%">
 		</div>
 	</footer>
 </div><!-- #page -->
-
-
 <!-- Search box functions -->
-<script>
-  $(function() {
-$(tipue_search_input).focusin(function() {
-    $(toggle1).prop("checked", false);
-    $(".search_content").show(0);
-    $('#tipue_search_input').attr('style', 'color: #F4F4F4 !important');
-    $('#search-clr').attr("filter", "invert(100%)");
-    $('#search-mag').attr("filter", "invert(100%)");
-}).focusout(function () {
-    $(".search_content").delay(200).hide(0);
-    $('#tipue_search_input').attr('style', 'color: gray !important');
-    $('#search-mag').attr("filter", "invert(50%)");
-    $('#search-clr').attr("filter", "invert(50%)");
-});
-$('#search-clr').click(function() {
-  $('#tipue_search_input').val("");
-  $("#searchbar").submit();
-});
-
-});
-</script>
+<script src="jekyll-tipue-search/assets/tipuesearch/searchBox.js"></script>
 
 <!-- post-load actions/listeners -->
-<script>
-  $(function() {
-    $('#tipue_search_input').attr('style', 'color: #F4F4F4 !important');
-    $('#search-clr').attr("filter", "invert(100%)");
-    $('#search-mag').attr("filter", "invert(100%)");
-    $("#tipue_search_input").bindWithDelay("keypress", function(){$("#searchbar").submit();}, 1000);
-  });
-</script>
+<script src="jekyll-tipue-search/assets/tipuesearch/postLoad.js"></script>
 
 </body>
 </html>

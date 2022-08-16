@@ -174,6 +174,7 @@ nav.pure-menu-horizontal .pure-menu-heading {
 	padding: 3em;
 	transition: all .2s ease-in-out;
 	cursor: pointer;
+
 }
 
 .zs-section-card:last-child {
@@ -228,7 +229,7 @@ nav.pure-menu-horizontal .pure-menu-heading {
 
 .zs-customer-card h2 {
 	transition: all .5s linear;
-  	color: #25467a;
+  color: #25467a;
 	font-size: 1.2em;
 	margin: 1em;
 }
@@ -297,7 +298,9 @@ nav.pure-menu-horizontal .pure-menu-heading {
 	transition: .3s ease all;
 }
 
-
+.navigation {
+	background-color: white !important;
+}
 
 .zs-button-secondary:hover {
 	border: 1px solid transparent;
@@ -837,18 +840,13 @@ a.zs-pg-nav-next:hover, a.zs-pg-nav-prev:hover {
   background-color: #55A8FD;
   text-decoration: none; }		
 
-/* Search stuff */
+  /* Search stuff */
 
 div#tipue_search_content.search_content {
 	margin-left: 33%;
 	background-color: #282828;
 	color: white;
 	width: 34%;
-  }
-
-div#tipue_search_content.search_content div {
-	margin-left: 1em;
-	margin-right: 1em;
   }
 
 div#tipue_search_results_count {
@@ -871,22 +869,36 @@ div#tipue_search_warning {
 /* Search window appearence */
  #tipue_search_input {
 	 height: 44px;
-	 background-color: #282828;
+	 background-color: white;
 	 font-size: 110%;
 	 border: 0;
 	 outline: none;
 	 text-indent: 60px;
 	 width: 100%;
 	 text-align: left;
-
 	 border-bottom: solid;
 	 border-width: 2px;
 	 border-color: #363636;
+	 transition: .2s;
+
  }
- #tipue_search_input:focus {
-	border-bottom: solid;
+ /* #tipue_search_input:focus {
+
 	border-width: 2px;
 	border-color: gray;
+ } */
+ .tipue_search_right > #tipue_search_input {
+	border: solid;
+	border-radius: 2px;
+	border-width: 2px;
+	transition: .3s;
+	border-color: lightgray;
+ }
+ .tipue_search_right > #tipue_search_input:focus {
+	border: solid;
+	border-width: 2px;
+	border-color: #42a7ec;
+
  }
  #search-mag {
 	left: 10px;
@@ -932,9 +944,20 @@ div#tipue_search_warning {
 	color: white;
 	width: 100%;
  }
+.result {
+	padding: 10px 20px 2px 20px;
+	border-bottom: solid;
+	border-width: 1.5px;
+	border-color: gray;
+	transition: .2s;
+}
+.result:hover {
+    box-shadow: black;
+    background-color: #424242;
+} 
 .gap {
 	border: none !important;
-	height: 1px;
+	height: .5px;
 	background: gray !important;
 	width: 95%;
 	margin-top: -2px !important;
@@ -956,9 +979,9 @@ div#tipue_search_warning {
 .tipue_search_foot_box:hover {
 	cursor: pointer;
 }
-ol > li::before, ul > li {
+.search_content ol > li::before, ul:first-child > li {
 	display: inline-block;
 }
-ol > li::before, ul > li::before {
+.search_content ol > li::before, ul:first-child > li::before {
 	display: none !important;
 }

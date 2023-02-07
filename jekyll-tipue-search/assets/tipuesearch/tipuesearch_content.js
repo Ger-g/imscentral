@@ -104,7 +104,7 @@ var tipuesearch = {"pages": [{
   "tags": "ims cmd cmds ims_commands commands",
   "url": "ims-videos.html#ims-dyn-cmds"
 },{
-  "title": "IMS dynamic commands <img class=\"search-icon\" src=\"wp-content/Video.svg\"></img>",
+  "title": "IMS High Availability and Resiliency <img class=\"search-icon\" src=\"wp-content/Video.svg\"></img>",
   "text": "Learn about IMS High Availability.",
   "tags": "ims_ha high_availability",
   "url": "ims-videos.html#ims-ha"

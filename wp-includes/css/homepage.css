@@ -146,6 +146,9 @@
       ._hj-hRovs__styles__form {
         background-color: red !important;
       }
+      ._hj-PZjqr__styles__surveyBranding {
+        display: none !important;
+      }
       .ims-m-card {
         min-width:240px;
         max-width:450px;

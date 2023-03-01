@@ -143,6 +143,9 @@
       .white-links a:hover {
         color: lightgray  !important;
       }
+      ._hj-hRovs__styles__form {
+        background-color: red !important;
+      }
       .ims-m-card {
         min-width:240px;
         max-width:450px;

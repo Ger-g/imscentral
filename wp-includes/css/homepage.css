@@ -56,6 +56,25 @@
           transition: 0.5s;
           background-color: rgba(255, 255, 255, 0.9) !important;
       }
+
+    div[id*="hotjar-survey"] {
+      --hjFeedbackAccentColor: #ee10af;
+      --hjFeedbackAccentHoverColor: #8a0557;
+      --hjFeedbackAccentActiveColor: #990a5d;
+    }
+    div[class*="surveyContainer"] {
+      background-color: #f4f4f4 !important;
+    }
+    div[class*="surveyContainer"] img {
+      width: 0px !important;
+    }
+    div[class*="surveyActions"] {
+      width: 100% !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+    
+
     .dark-button {
       color: black;
       background-color: #8c8c8c;

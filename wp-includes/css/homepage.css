@@ -62,17 +62,21 @@
       --hjFeedbackAccentHoverColor: #8a0557 !important;
       --hjFeedbackAccentActiveColor: #990a5d !important;
     }
+    div[class*="surveyContainer"] label {
+      --hjFeedbackAccentColor: #ee10af !important;
+      --hjFeedbackAccentHoverColor: #8a0557 !important;
+      --hjFeedbackAccentActiveColor: #990a5d !important;
+    }
     div[class*="surveyContainer"] {
       background-color: #f4f4f4 !important;
     }
-    div[class*="styles__openStateToggle"] {
+    button[class*="styles__openStateToggle"] {
       background-color: #f4f4f4 !important;
     }
     div[class*="surveyContainer"] img {
       width: 0px !important;
     }
     div[class*="surveyActions"] {
-      width: 100% !important;
       margin-left: auto !important;
       margin-right: auto !important;
     }

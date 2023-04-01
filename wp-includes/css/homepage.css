@@ -58,14 +58,17 @@
       }
 
     div[id*="hotjar-survey"] {
-      --hjFeedbackAccentColor: #ee10af !important;
-      --hjFeedbackAccentHoverColor: #8a0557 !important;
-      --hjFeedbackAccentActiveColor: #990a5d !important;
+      --hjFeedbackAccentColor: #6130bd !important;
+      --hjFeedbackAccentHoverColor: #4a2490 !important;
+      --hjFeedbackAccentActiveColor: #4a2490 !important;
     }
     div[class*="surveyContainer"] label {
-      --hjFeedbackAccentColor: #ee10af !important;
-      --hjFeedbackAccentHoverColor: #8a0557 !important;
-      --hjFeedbackAccentActiveColor: #990a5d !important;
+      --hjFeedbackAccentColor: #6130bd !important;
+      --hjFeedbackAccentHoverColor: #4a2490 !important;
+      --hjFeedbackAccentActiveColor: #4a2490 !important;
+    }
+    a[class*="surveySignupButton"] {
+      display: none !important;
     }
     div[class*="surveyContainer"] {
       background-color: #f4f4f4 !important;

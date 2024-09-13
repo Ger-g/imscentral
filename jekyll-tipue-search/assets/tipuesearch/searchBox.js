@@ -31,6 +31,13 @@ $(function() {
       $('#tipue_search_input').val("");
       $("#searchbar").submit();
     });
+    // clear contents with keyboard via enter key
+    $('#search-clr').on('keydown', function(event) {
+      if (event.which === 13) {
+        $('#tipue_search_input').val("");
+        $("#searchbar").submit();
+      }
+    });
     // static listener
     // $(".cordion").click(function() {
     //     $(this).parent().next('.tipue_search_content_text').toggleClass('search_content_drop');

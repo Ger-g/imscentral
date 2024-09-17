@@ -219,9 +219,9 @@
       width: 100%;
       margin-left: 15px;
     }
-    #video-card-header {
+    .video-card-header {
       color: black;
-      font-weight: normal;
+      font-weight: normal !important;
     }
     .video-card-link {
       /* position: relative; */
@@ -230,6 +230,9 @@
       /* text-align: left; */
       position: absolute;
       bottom: 10%;
+    }
+    .hide-label {
+      visibility: hidden;
     }
     #anchor-link-menu {
       padding: 1em 5em 0em 5em;

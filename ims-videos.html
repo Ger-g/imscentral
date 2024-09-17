@@ -90,16 +90,19 @@
       
       <!-- MASTHEAD AND SITE NAV BAR -->
       <div id="ibm-content-wrapper" class="sticky-nav">
-        <header role="banner" aria-labelledby="ibm-pagetitle-h1">
+        <header role="banner" id="ibm-pageheader" aria-label="Site Navigation Bar">
           <section class="p-menu1">
-            <nav id="navbar" class="navigation" role="navigation">
+            <nav id="navbar" class="navigation" role="navigation" aria-labelledby="ibm-pageheader">
             
             <!-- Header wrapper -->
             <span class="sitename-wrap">
               <a href="index.html" style="float: left;">
-              <img src="wp-content/IMS_logo_small.png"
-              style="z-index:900;" 
-              id="left-bar-brand"/>
+                <img src="wp-content/IMS_logo_small.png"
+                  style="z-index:900;" 
+                  id="left-bar-brand"
+                  alt="IMS logo"
+                  aria-label="Return to Homepage"
+                />
               </a>
               <a href="index.html" style="float: left;">
               <h4 style="line-height: 2; display: inline-block;">
@@ -126,7 +129,7 @@
               <input type="text" name="q" id="tipue_search_input"
                 pattern=".{3,}" title="Search bar"
                 placeholder="What are you looking for today?" autocomplete="off" required autofocus>
-              <svg id="search-clr" tabindex="0" xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 0 329.26933 329" width="15px"><path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"/>
+              <svg id="search-clr" aria-label="Clear Search" role="button" tabindex="0" xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 0 329.26933 329" width="15px"><path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"/>
               </svg>
               </div>
               <div style="clear: both;"></div>
@@ -144,20 +147,21 @@
             <!-- == Search wrapper -->
         
             <!-- Hamburger dropdown menu -->
-            <input type="checkbox" tabindex="0" id="toggle1" class="support-enter" aria-label="Hamburger Menu"/>
+            <input type="checkbox" tabindex="0" id="toggle1" class="support-enter" aria-label="Dropdown Navigation Menu"/>
             <label class="hamburger1">
+              <span class="hide-label">Label for input</span>
               <!-- Burgie wrapper -->
               <label class="burg-wrap" for="toggle1">
-              <span class="burg-bars">
-                <div class="top"></div>
-                <div class="meat"></div>
-                <div class="bottom"></div>
-              </span>
+                <span class="burg-bars">
+                  <div class="top"></div>
+                  <div class="meat"></div>
+                  <div class="bottom"></div>
+                </span>
               </label>
             </label>
             
             <!-- Dropdown menu options -->
-            <nav class="menu1">
+            <nav class="menu1" aria-label="Dropdown Menu Options">
             <div class="pages pure-g">
               <!-- Innovate -->
               <div class="pure-u-1 pure-u-sm-1-4">
@@ -215,7 +219,7 @@
               <a title="IMS Community" class="nav-item" tabindex="-1" target="_blank" rel="noopener noreferrer"
                 href="https://community.ibm.com/community/user/ibmz-and-linuxone/groups/topic-home?CommunityKey=eba3ada3-db89-4dca-9154-328195f5e560">
                 <div class="navcard">
-                <h5>IMS community<img src="wp-content/Icon07.png" style="height: 15px; width: 15px;margin-left:10px"/></h5>
+                <h5>IMS community<img src="wp-content/Icon07.png" alt="External Page Icon" style="height: 15px; width: 15px;margin-left:10px"/></h5>
                 <p>See the latest IMS blogs, engage in IMS forums, and more by visiting the <b><u>IMS Community</u></b> website.</p>
                 </div>
               </a>
@@ -294,7 +298,6 @@
         <div class="content-area" id="content-area">
           <article id="post-3305" class="post-3305 page type-page status-publish has-post-thumbnail hentry tag-agile tag-design-thinking tag-feedback tag-gold tag-ims tag-qpp">
             <div class="entry-content">
-              <div aria-role="presentation">
                 <main class="zs-main" >
 
                   <!-- =========================== IMS Courses banner =========================== -->
@@ -302,7 +305,7 @@
                     <section id="intro-section" class="pure-g zs-section white-bg2" style="padding: 2em;">
                       <div id="intro-header" class="pure-u-1"></div>
                       <div class="pure-u-3-25">
-                        <img class="ims-card-icon" src="wp-content/Icon_Managed ACBs_IMS DatabasePage.svg" style="margin-top: 65px;height: 30px;"/>
+                        <img class="ims-card-icon" src="wp-content/Icon_Managed ACBs_IMS DatabasePage.svg" alt="" style="margin-top: 65px;height: 30px;"/>
                       </div>
                       <div id="intro-info" class="pure-u-1 pure-u-sm-1-2" style="margin-left: 30px;">
                         <h6 style="padding:0 !important; color: #555555;">Learn</h6>
@@ -344,7 +347,7 @@
                           <div style="position: absolute; margin-top:-60px;" id="ims-comm"></div>
                           <div class="ims-c-card">
                             <div class="pure-u-1 pure-u-md-1 ims-c-card-content">
-                              <h3 id="video-card-header">IMS Community Calls</h3>
+                              <h3 class="video-card-header">IMS Community Calls</h3>
                               <p>These calls cover the latest in what's going on in the world of IMS.</p>
                               <div class="pure-u-1 pure-u-md-1">
                                 <div>
@@ -364,7 +367,7 @@
                           <div style="position: absolute; margin-top:-60px;" id="ims-intro"></div>
                           <div class="ims-c-card">
                             <div class="pure-u-1 pure-u-md-1 ims-c-card-content">
-                              <h3 id="video-card-header">Introduction to IMS</h3>
+                              <h3 class="video-card-header">Introduction to IMS</h3>
                               <p></p>
                               <p>If you're new to IMS, watch these short, high-level videos on IMS, database, transaction management, and application development.</p>		
                               <div class="pure-u-1 pure-u-md-1">
@@ -392,7 +395,7 @@
                           <div style="position: absolute; margin-top:-60px;" id="ims-ansible"></div>
                           <div class="ims-c-card">
                             <div class="pure-u-1 pure-u-md-1 ims-c-card-content">
-                              <h3 id="video-card-header">Getting Started with Ansible for IBM Z</h3>
+                              <h3 class="video-card-header">Getting Started with Ansible for IBM Z</h3>
                               <p>Get an overview of how to set up your Red Hat® Ansible® control node to get started automating processes for IBM Z® with Ansible.</p>		
                               <div class="pure-u-1 pure-u-md-1">
                                 <div>
@@ -419,7 +422,7 @@
                           <div style="position: absolute; margin-top:-60px;" id="ims-insights"></div>
                           <div class="ims-c-card">
                             <div class="pure-u-1 pure-u-md-1 ims-c-card-content">
-                              <h3 id="video-card-header">IMS Insights Series</h3>
+                              <h3 class="video-card-header">IMS Insights Series</h3>
                               <p>These webinars cover timely topics such as new customer perspectives on IMS and managed ACBs.</p>		
                               <div class="pure-u-1 pure-u-md-1">
                                 <div>
@@ -446,7 +449,7 @@
                           <div style="position: absolute; margin-top:-60px;" id="ims-tools"></div>
                           <div class="ims-c-card">
                             <div class="pure-u-1 pure-u-md-1 ims-c-card-content">
-                              <h3 id="video-card-header">IMS Tools</h3>
+                              <h3 class="video-card-header">IMS Tools</h3>
                               <p></p>
                               <p>Review the various videos on IMS Tools.</p>		
                               <div class="pure-u-1 pure-u-md-1">
@@ -477,7 +480,7 @@
                           <div style="position: absolute; margin-top:-60px;" id="ims-macb"></div>
                           <div class="ims-c-card">
                             <div class="pure-u-1 pure-u-md-1 ims-c-card-content">
-                              <h3 id="video-card-header">IMS Managed ACBs and IMS Catalog</h3>
+                              <h3 class="video-card-header">IMS Managed ACBs and IMS Catalog</h3>
                               <p>Check out this video series that describes the IMS catalog, how to implement it, and how to implement managed ACBs.</p>		
                               <div class="pure-u-1 pure-u-md-1">
                                 <div>
@@ -504,7 +507,7 @@
                           <div style="position: absolute; margin-top:-60px;" id="ims-cat-db"></div>
                           <div class="ims-c-card">
                             <div class="pure-u-1 pure-u-md-1 ims-c-card-content">
-                              <h3 id="video-card-header">IMS Catalog Database Repair and Recovery</h3>
+                              <h3 class="video-card-header">IMS Catalog Database Repair and Recovery</h3>
                               <p>Learn how to repair and recover the IMS catalog database, which is an IMS high availability large database (HALDB).</p>		
                               <div class="pure-u-1 pure-u-md-1">
                                 <div>
@@ -531,7 +534,7 @@
                           <div style="position: absolute; margin-top:-60px;" id="ims-ff-log"></div>
                           <div class="ims-c-card">
                             <div class="pure-u-1 pure-u-md-1 ims-c-card-content">
-                              <h3 id="video-card-header">IMS Full-Function Log Record Analysis</h3>
+                              <h3 class="video-card-header">IMS Full-Function Log Record Analysis</h3>
                               <p>These videos describe log records associated with input and output message flows, application scheduling, and full-function database updates.</p>		
                               <div class="pure-u-1 pure-u-md-1">
                                 <div>
@@ -558,7 +561,7 @@
                           <div style="position: absolute; margin-top:-60px;" id="ims-reorg-dbrc"></div>
                           <div class="ims-c-card">
                             <div class="pure-u-1 pure-u-md-1 ims-c-card-content">
-                              <h3 id="video-card-header">How to Reorganize the IMS DBRC RECON Data Sets</h3>
+                              <h3 class="video-card-header">How to Reorganize the IMS DBRC RECON Data Sets</h3>
                               <p>These videos show you the general steps for reorganizing IMS DBRC RECON data sets.</p>		
                               <div class="pure-u-1 pure-u-md-1">
                                 <div>
@@ -585,7 +588,7 @@
                           <div style="position: absolute; margin-top:-60px;" id="ims-buffers"></div>
                           <div class="ims-c-card">
                             <div class="pure-u-1 pure-u-md-1 ims-c-card-content">
-                              <h3 id="video-card-header">Managing IMS Buffers</h3>
+                              <h3 class="video-card-header">Managing IMS Buffers</h3>
                               <p>Check out these three playlists on VSAM, OSAM, and dynamic full-function databases buffers.</p>		
                               <div class="pure-u-1 pure-u-md-1">
                                 <div>
@@ -624,7 +627,7 @@
                           <div style="position: absolute; margin-top:-60px;" id="ims-ddl-util"></div>
                           <div class="ims-c-card">
                             <div class="pure-u-1 pure-u-md-1 ims-c-card-content">
-                              <h3 id="video-card-header">IMS z/OS Native DDL Utility</h3>
+                              <h3 class="video-card-header">IMS z/OS Native DDL Utility</h3>
                               <p>Get an overview of a new IMS utility that submits SQL data definition language (DDL) statements against an IMS database.</p>		
                               <div class="pure-u-1 pure-u-md-1">
                                 <div>
@@ -654,7 +657,7 @@
                           <div style="position: absolute; margin-top:-60px;" id="ims-sec-aud"></div>
                           <div class="ims-c-card">
                             <div class="pure-u-1 pure-u-md-1 ims-c-card-content">
-                              <h3 id="video-card-header">IMS Security Audits: Gathering the Right Documentation</h3>
+                              <h3 class="video-card-header">IMS Security Audits: Gathering the Right Documentation</h3>
                               <p>Learn what information to obtain and what some important settings and parameters mean when you need to do an IMS security health check.</p>		
                               <div class="pure-u-1 pure-u-md-1">
                                 <div>
@@ -681,7 +684,7 @@
                           <div style="position: absolute; margin-top:-60px;" id="ims-mon-rep"></div>
                           <div class="ims-c-card">
                             <div class="pure-u-1 pure-u-md-1 ims-c-card-content">
-                              <h3 id="video-card-header">IMS Monitor Reports</h3>
+                              <h3 class="video-card-header">IMS Monitor Reports</h3>
                               <p>The IMS Monitor is a no-cost tool provided with IMS. The IMS Monitor can create many types of reports, including buffer pool statistics program, program I/O, and message queuing.</p>		
                               <div class="pure-u-1 pure-u-md-1">
                                 <div>
@@ -708,7 +711,7 @@
                           <div style="position: absolute; margin-top:-60px;" id="shared-queue-log-reports"></div>
                           <div class="ims-c-card">
                             <div class="pure-u-1 pure-u-md-1 ims-c-card-content">
-                              <h3 id="video-card-header">z/OS Logger Reports IMS Shared Queues</h3>
+                              <h3 class="video-card-header">z/OS Logger Reports IMS Shared Queues</h3>
                               <p>Learn to use the z/OS Logger so that you can monitor the performance of an IMS shared queues environment.</p>		
                               <div class="pure-u-1 pure-u-md-1">
                                 <div>
@@ -735,7 +738,7 @@
                           <div style="position: absolute; margin-top:-60px;" id="ims-dis-env"></div>
                           <div class="ims-c-card">
                             <div class="pure-u-1 pure-u-md-1 ims-c-card-content">
-                              <h3 id="video-card-header">IMS and Distributed Environment Security</h3>
+                              <h3 class="video-card-header">IMS and Distributed Environment Security</h3>
                               <p>Learn how to secure frontend or distributed environments as they relate to IMS.</p>		
                               <div class="pure-u-1 pure-u-md-1">
                                 <div>
@@ -762,7 +765,7 @@
                           <div style="position: absolute; margin-top:-60px;" id="xcf-shared-queues"></div>
                           <div class="ims-c-card">
                             <div class="pure-u-1 pure-u-md-1 ims-c-card-content">
-                              <h3 id="video-card-header">XCF and Support of IMS Facilities for Shared Queues</h3>
+                              <h3 class="video-card-header">XCF and Support of IMS Facilities for Shared Queues</h3>
                               <p>Learn about the z/OS cross-system coupling facility (XCF) that offers a set of communication services that you use for IMS shared queues.</p>		
                               <div class="pure-u-1 pure-u-md-1">
                                 <div>
@@ -789,7 +792,7 @@
                           <div style="position: absolute; margin-top:-60px;" id="ims-scheduling-pwfi"></div>
                           <div class="ims-c-card">
                             <div class="pure-u-1 pure-u-md-1 ims-c-card-content">
-                              <h3 id="video-card-header"><b>Coming soon:</b> Tuning IMS Scheduling using PWFI</h3>
+                              <h3 class="video-card-header"><b>Coming soon:</b> Tuning IMS Scheduling using PWFI</h3>
                               <p>Learn about IMS scheduling parameters such as PARLIM, PROCLIM, and regions WFI and PWFI to help you run transactions more efficiently.</p>		
                               <div class="pure-u-1 pure-u-md-1">
                                 <div>
@@ -819,7 +822,7 @@
                           <div style="position: absolute; margin-top:-60px;" id="ims-java"></div>
                           <div class="ims-c-card">
                             <div class="pure-u-1 pure-u-md-1 ims-c-card-content">
-                              <h3 id="video-card-header">Java in IMS demos</h3>
+                              <h3 class="video-card-header">Java in IMS demos</h3>
                               <p>Watch these short demos showing how to build Java™ applications for IMS.</p>		
                               <div class="pure-u-1 pure-u-md-1">
                                 <div>
@@ -846,7 +849,7 @@
                           <div style="position: absolute; margin-top:-60px;" id="ims-exp"></div>
                           <div class="ims-c-card">
                             <div class="pure-u-1 pure-u-md-1 ims-c-card-content">
-                              <h3 id="video-card-header">IMS Explorer</h3>
+                              <h3 class="video-card-header">IMS Explorer</h3>
                               <p>Learn about the Eclipse-based graphical tool that simplifies common IMS tasks that are related to IMS application development.</p>		
                               <div class="pure-u-1 pure-u-md-1">
                                 <div>
@@ -873,7 +876,7 @@
                           <div style="position: absolute; margin-top:-60px;" id="ims-javaims"></div>
                           <div class="ims-c-card">
                             <div class="pure-u-1 pure-u-md-1 ims-c-card-content">
-                              <h3 id="video-card-header">Java and IMS</h3>
+                              <h3 class="video-card-header">Java and IMS</h3>
                               <p>This introductory video series helps you learn how to create Java applications for IMS.</p>		
                               <div class="pure-u-1 pure-u-md-1">
                                 <div>
@@ -900,7 +903,7 @@
                           <div style="position: absolute; margin-top:-60px;" id="ims-interop"></div>
                           <div class="ims-c-card">
                             <div class="pure-u-1 pure-u-md-1 ims-c-card-content">
-                              <h3 id="video-card-header">Modernize Legacy Applications with 31-bit COBOL and 64-bit Java interoperability</h3>
+                              <h3 class="video-card-header">Modernize Legacy Applications with 31-bit COBOL and 64-bit Java interoperability</h3>
                               <p>This video shows you how to make 31-bit COBOL interoperable with 64-bit Java applications.</p>		
                               <div class="pure-u-1 pure-u-md-1">
                                 <div>
@@ -929,19 +932,17 @@
                   <!-- =========================== back to top =========================== -->
                   <div>
                     <img id="btt" src="wp-content/Icon_Back_to_top.svg" alt="back to top">
+                    <!-- Accessibility code for back to top button -->
+                    <p class="ibm-ind-link ibm-nospacing ibm-icononly ibm-btt-auto ibm-hidden-small">
+                      <a class="ibm-nospacing ibm-top-link" aria-label="Back to top" href="#top" tabindex="0">Back to top</a>
+                    </p>
                   </div>
 
                 </main>
-              </div>
             </div> <!-- .entry-content -->
           </article> <!-- #post-## -->
         </div> <!-- .content-area -->
       </div> <!-- #content -->
-
-      <!-- Accessibility code for back to top button -->
-      <p class="ibm-ind-link ibm-nospacing ibm-icononly ibm-btt-auto ibm-hidden-small">
-        <a class="ibm-nospacing ibm-top-link" aria-label="Back to top" href="#top" tabindex="0">Back to top</a>
-      </p>
 
       <!-- FOOTER -->
       <footer role="contentinfo" aria-label="IBM" id="themeFooter">

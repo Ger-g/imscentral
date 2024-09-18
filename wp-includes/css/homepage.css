@@ -194,7 +194,7 @@
       min-width:240px;
       min-height: 270px;
       /* height: 90%; */
-      height: 350px;
+      /* height: 350px; */
       margin: 1em;
       background-color: #f4f4f4;
       border-width: 2px;
@@ -202,6 +202,25 @@
       /* transition: all .2s ease-in-out; */
       /* cursor: pointer; */
     }
+
+    @media (width <= 1020px) {
+      .ims-c-card {
+        height: 300px;
+      }
+    }
+
+    @media (1020px < width < 1440px) {
+      .ims-c-card {
+        height: 480px;
+      }
+    }
+
+    @media (width >= 1440px) {
+      .ims-c-card {
+        height: 350px;
+      }
+    }
+
     .ims-c-card:hover {
       /* background-color: #e3e3e3; */
       /* box-shadow: 0 5px 10px 0 rgba(83, 69, 69, 0.8); */

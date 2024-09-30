@@ -194,7 +194,7 @@
       min-width:240px;
       min-height: 270px;
       /* height: 90%; */
-      /* height: 350px; */
+      height: 350px;
       margin: 1em;
       background-color: #f4f4f4;
       border-width: 2px;
@@ -202,7 +202,12 @@
       /* transition: all .2s ease-in-out; */
       /* cursor: pointer; */
     }
-
+    .ims-c-card:hover {
+      /* background-color: #e3e3e3; */
+      /* box-shadow: 0 5px 10px 0 rgba(83, 69, 69, 0.8); */
+      /* -webkit-transform: translateY(-3px);
+      transform: translateY(-3px); */
+    }
     @media (width <= 1020px) {
       .ims-c-card {
         height: 300px;
@@ -221,12 +226,6 @@
       }
     }
 
-    .ims-c-card:hover {
-      /* background-color: #e3e3e3; */
-      /* box-shadow: 0 5px 10px 0 rgba(83, 69, 69, 0.8); */
-      /* -webkit-transform: translateY(-3px);
-      transform: translateY(-3px); */
-    }
     .ims-c-card-content {
       padding: 2em;
       margin-right: -10px;
@@ -249,9 +248,6 @@
       /* text-align: left; */
       position: absolute;
       bottom: 10%;
-    }
-    .hide-label {
-      visibility: hidden;
     }
     #anchor-link-menu {
       padding: 1em 5em 0em 5em;
@@ -291,6 +287,10 @@
     .ims-card-icon {
       max-height: 75px;
       max-width: 75px;
+      margin-bottom:20px;
+    }
+    .ims-card-icon-lg {
+      max-height: 75px;
       margin-bottom:20px;
     }
     .blueg-bg {
@@ -433,10 +433,6 @@
       transition: .4s ease all;
       background-size: contain;
       background-repeat: no-repeat;
-    }
-
-    .banner p {
-      font-size: 16pt !important;
     }
 
     .ibm-footer-corporate-links div {

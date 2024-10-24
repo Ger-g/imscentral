@@ -110,7 +110,7 @@
 			  <!-- Search wrapper -->
 			  <form id="searchbar" aria-label="Search">
 				<div class="tipue_search_right">
-				  <svg id="search-mag" xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" viewBox="0 0 32 32">
+				  <svg id="search-mag" alt="Search magnifying glass" xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" viewBox="0 0 32 32">
 					<defs>
 					  <style> .cls-1 { fill: none; } </style>
 					</defs>
@@ -214,7 +214,7 @@
 						<h5>IMS community
 						  <img src="wp-content/Icon07.png" alt="External link" style="height: 15px; width: 15px;margin-left:10px"></img>
 						</h5>
-						<p>See the latest IMS blogs, engage in IMS forums, and more by visiting the <b><u>IMS Community</u></b> website.</p>
+						<p>See the latest IMS blogs, engage in IMS forums, and more by visiting the <b><em>IMS Community</em></b> website.</p>
 					  </div>
 					</a>
 					<!-- 4 -->
@@ -284,7 +284,7 @@
 						<a href="mailto:deepakk@us.ibm.com"
 						  class="nav-item" 
 						  tabindex="-1">
-						  <u>deepakk@us.ibm.com</u>
+						  <em>deepakk@us.ibm.com</em>
 						</a>.
 					  </p>
 					</div>
@@ -306,7 +306,7 @@
 			<div class="content-area" id="content-area">
 				<article id="post-3524" class="post-3524 page type-page status-publish hentry">
 					<div class="entry-content">
-						<main class="zs-main" >
+						<main class="zs-main" id="main">
 
 							<!-- =========================== IMS Makerspace =========================== -->
 							<div class="banner engage-bg" style="padding: 20px;">
@@ -324,7 +324,7 @@
 									education assets, design thinking exercises, a potential proof of concept, and production delivery.</p>
 									<div class="pure-u-1" style="max-width: 180px;margin-top: 20px;">
 										<a class="zs-w-button-transparent" target="_blank" rel="noopener noreferrer" onfocus="closeNavMenu()"
-										href="https://www.surveygizmo.com/s3/4453456/IMS-Makerspace-Enrollment-Form">
+										href="https://www.surveygizmo.com/s3/4453456/IMS-Makerspace-Enrollment-Form" aria-label="Enroll now into the IMS Makerspace framework">
 											Enroll now →</a>
 									</div>
 								</div>
@@ -413,21 +413,25 @@
 									<div class="pure-u-sm-1 pure-u-md-16-24">
 										<div class="pure-u-sm-1 pure-u-md-10-24" style="margin: 1em;">
 											<img src="wp-content/Icon_01_IMS MakerspacePage.svg" alt="" style="height: 40px; width: 40px;">
-											<p><b>APIs:</b><br>Open IMS transaction and database access as APIs</p>
+											<p><b>APIs:</b></p>
+											<p>Open IMS transaction and database access as APIs</p>
 										</div>
 										<div class="pure-u-sm-2-24"></div>
 										<div class="pure-u-sm-1 pure-u-md-10-24" style="margin: 1em;">
 											<img src="wp-content/Icon_02_IMS MakerspacePage.svg" alt="" style="height: 40px; width: 40px;">
-											<p><b>DevOps:</b><br>Integrate IMS assets into enterprise DevOps pipeline</p>
+											<p><b>DevOps:</b></p>
+											<p>Integrate IMS assets into enterprise DevOps pipeline</p>
 										</div>
 										<div class="pure-u-sm-1 pure-u-md-10-24" style="margin: 1em;">
 											<img src="wp-content/Icon_03_IMS MakerspacePage.svg" alt="" style="height: 40px; width: 40px;">
-											<p><b>Open database:</b><br>Access via JDBC and SQL, administer IMS database with the catalog and DDL</p>
+											<p><b>Open database:</b></p>
+											<p>Access via JDBC and SQL, administer IMS database with the catalog and DDL</p>
 										</div>
 										<div class="pure-u-sm-2-24"></div>
 										<div class="pure-u-sm-1 pure-u-md-10-24" style="margin: 1em;">
 											<img src="wp-content/Icon_04_IMS MakerspacePage.svg" alt="" style="height: 40px; width: 40px;">
-											<p><b>Java:</b><br>Extend existing applications or develop new IMS applications with Java™</p>
+											<p><b>Java:</b></p>
+											<p>Extend existing applications or develop new IMS applications with Java™</p>
 										</div>
 									</div>
 								</section>
@@ -458,11 +462,8 @@
 
 							<!-- =========================== back to top =========================== -->
 							<div>
-								<img id="btt" src="wp-content/Icon_Back_to_top.svg" alt="Back to top">
-								<p class="ibm-ind-link ibm-nospacing ibm-icononly ibm-btt-auto ibm-hidden-small">
-								<a class="ibm-nospacing ibm-top-link" aria-label="Back to top" href="#top" tabindex="0">Back to top</a>
-								</p>
-							</div>
+								<img id="btt" src="wp-content/Icon_Back_to_top.svg" alt="Back to top" tabindex="0" role="button">
+							  </div>
 
 						</main>
 					</div><!-- .entry-content -->

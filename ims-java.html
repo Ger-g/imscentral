@@ -108,7 +108,7 @@
 			  <!-- Search wrapper -->
 			  <form id="searchbar" aria-label="Search">
 				<div class="tipue_search_right">
-				  <svg id="search-mag" xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" viewBox="0 0 32 32">
+				  <svg id="search-mag" alt="Search magnifying glass" xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" viewBox="0 0 32 32">
 					<defs>
 					  <style> .cls-1 { fill: none; } </style>
 					</defs>
@@ -212,7 +212,7 @@
 						<h5>IMS community
 						  <img src="wp-content/Icon07.png" alt="External link" style="height: 15px; width: 15px;margin-left:10px"></img>
 						</h5>
-						<p>See the latest IMS blogs, engage in IMS forums, and more by visiting the <b><u>IMS Community</u></b> website.</p>
+						<p>See the latest IMS blogs, engage in IMS forums, and more by visiting the <b><em>IMS Community</em></b> website.</p>
 					  </div>
 					</a>
 					<!-- 4 -->
@@ -282,7 +282,7 @@
 						<a href="mailto:deepakk@us.ibm.com"
 						  class="nav-item" 
 						  tabindex="-1">
-						  <u>deepakk@us.ibm.com</u>
+						  <em>deepakk@us.ibm.com</em>
 						</a>.
 					  </p>
 					</div>
@@ -303,7 +303,7 @@
 		<div id="content" class="site-content">
 			<div class="content-area" id="content-area">
 				<div class="entry-content">
-					<main class="zs-main" >
+					<main class="zs-main" id="main">
 
 						<!-- =========================== IMS Java =========================== -->
 						<div class="banner white-bg">
@@ -345,7 +345,7 @@
 												<p>Over 15 years of Java support in IMS makes it more than production ready for the enterprise</p>
 												<div class="pure-u-1 pure-u-1 pure-u-md-1-5">
 													<a target="_blank" rel="noopener noreferrer" onfocus="closeNavMenu()"
-													style="color: #0F62FE;"
+													style="color: #0F62FE;" aria-label="Learn more about Java inside IMS"
 													href="https://www.ibm.com/docs/en/ims/latest?topic=ims-solutions-java-development-overview" >
 													Learn more →</a>
 												</div>
@@ -364,7 +364,7 @@
 											</ul>
 											<div class="pure-u-1 pure-u-1 pure-u-md-1-5">
 												<a target="_blank" rel="noopener noreferrer"
-												style="color: #0F62FE;"
+												style="color: #0F62FE;" aria-label="Learn more about Java outside IMS"
 												href="https://www.ibm.com/docs/en/ims/latest?topic=apis-java-programming-reference" >
 												Learn more →</a>
 											</div>
@@ -392,7 +392,7 @@
 								</p>
 								<div class="pure-u-1 pure-u-1 pure-u-md-1-3" style="margin-bottom: 15px;">
 									<a target="_blank" rel="noopener noreferrer"
-									style="color: #0F62FE;"
+									style="color: #0F62FE;" aria-label="Watch this playlist on JDBC universal drivers"
 									href="https://mediacenter.ibm.com/playlist/details/1_owktz0jm/categoryId/122579632">
 									Watch →</a>
 								</div>
@@ -401,7 +401,7 @@
 								</p>
 								<div class="pure-u-1 pure-u-1 pure-u-md-1-3">
 									<a target="_blank" rel="noopener noreferrer"
-									style="color: #0F62FE;"
+									style="color: #0F62FE;" aria-label="Learn more about Java code examples in GitHub"
 									href="https://github.com/imsdev">Learn more →</a>
 								</div>
 							</div>
@@ -430,22 +430,22 @@
 									Java can save you time, money, and headaches</span></h2>
 							</div>
 							<div class="pure-u-md-1-24"></div>
-							<div class="pure-u-1 pure-u-md-6-24">
-								<img src="wp-content/Icon_Cost_Java and IMSPage.svg" alt="" class="center" style="max-height: 60px;">
+								<div class="pure-u-1 pure-u-md-6-24 benefits-card">
+								<img src="wp-content/Icon_Cost_Java and IMSPage.svg" alt="" class="center">
 								<h3 >Cost</h3>
-								<p>Java processing can be <br> offloaded to specialty engines, <br> which means you just saved <br> some money.</p>
+								<p>Java processing can be offloaded to specialty engines, which means you just saved some money.</p>
 								</div>
 
-								<div class="pure-u-1 pure-u-md-6-24">
-								<img src="wp-content/Icon_Application agility_Java and IMSPage.svg" alt="" class="center" style="max-height: 60px;">
+								<div class="pure-u-1 pure-u-md-6-24 benefits-card">
+								<img src="wp-content/Icon_Application agility_Java and IMSPage.svg" alt="" class="center">
 								<h3 >Application agility</h3>
-								<p>Choosing Java means you<br> have access to millions of</br> skilled developers who can write IMS applications. </p>
+								<p>Choosing Java means you have access to millions of skilled developers who can write IMS applications.</p>
 								</div>
 
-								<div class="pure-u-1 pure-u-md-6-24">
-								<img src="wp-content/Icon_Co-location_Java and IMSPage.svg" alt="" class="center" style="max-height: 60px;">
+								<div class="pure-u-1 pure-u-md-6-24 benefits-card">
+								<img src="wp-content/Icon_Co-location_Java and IMSPage.svg" alt="" class="center">
 								<h3 >Co-location</h3>
-								<p>Running Java on z/OS, where <br> your data resides, just saved<br> you some time.</p>
+								<p>Running Java on z/OS, where your data resides, just savedyou some time.</p>
 								</div>
 
 							</section>
@@ -542,18 +542,15 @@
   
 						<!-- =========================== back to top =========================== -->
 						<div>
-							<img id="btt" src="wp-content/Icon_Back_to_top.svg" alt="Back to top">
-							<p class="ibm-ind-link ibm-nospacing ibm-icononly ibm-btt-auto ibm-hidden-small">
-							<a class="ibm-nospacing ibm-top-link" aria-label="Back to top" href="#top" tabindex="0">Back to top</a>
-							</p>
-						</div>
+							<img id="btt" src="wp-content/Icon_Back_to_top.svg" alt="Back to top" tabindex="0" role="button">
+						  </div>
 
 					</main>
 				</div><!-- .entry-content -->
 			</div><!-- #content -->
 		</div><!-- end of ibm-content-wrapper -->
 
-		<footer role="contentinfo" aria-label="IBM" id="themeFooter">
+		<footer aria-label="IBM" id="themeFooter">
 			<div id="boomer-footer" class="boomer_footer_menu"></div>
 			<div id="dw-footer" class="ibm-alternate ibm-padding-normal">
 			<div class="ibm-columns ibm-padding-bottom-0">

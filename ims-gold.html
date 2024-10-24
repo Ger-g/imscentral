@@ -120,7 +120,7 @@
 				<!-- Search wrapper -->
 				<form id="searchbar" aria-label="Search">
 					<div class="tipue_search_right">
-					<svg id="search-mag" xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" viewBox="0 0 32 32">
+					<svg id="search-mag" alt="Search magnifying glass" xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" viewBox="0 0 32 32">
 						<defs>
 						<style> .cls-1 { fill: none; } </style>
 						</defs>
@@ -224,7 +224,7 @@
 							<h5>IMS community
 							<img src="wp-content/Icon07.png" alt="External link" style="height: 15px; width: 15px;margin-left:10px"></img>
 							</h5>
-							<p>See the latest IMS blogs, engage in IMS forums, and more by visiting the <b><u>IMS Community</u></b> website.</p>
+							<p>See the latest IMS blogs, engage in IMS forums, and more by visiting the <b><em>IMS Community</em></b> website.</p>
 						</div>
 						</a>
 						<!-- 4 -->
@@ -294,7 +294,7 @@
 							<a href="mailto:deepakk@us.ibm.com"
 							class="nav-item" 
 							tabindex="-1">
-							<u>deepakk@us.ibm.com</u>
+							<em>deepakk@us.ibm.com</em>
 							</a>.
 						</p>
 						</div>
@@ -315,7 +315,7 @@
 			<div id="content" class="site-content">
 				<div class="content-area" id="content-area">
 					<div class="entry-content">
-						<main class="zs-main" >
+						<main class="zs-main" id="main">
 
 							<!-- =========================== IMS Gold =========================== -->
 							<div class="banner engage-bg" style="padding: 20px;">
@@ -331,7 +331,7 @@
 									<h1>IMS Gold</h1>
 									<p id="p-style">A client feedback program shaping the future of IMS™.</p>
 									<div class="pure-u-1" style="max-width: 180px;margin-top: 20px;">
-										<a class="zs-w-button-transparent" onfocus="closeNavMenu()" href="#enroll" target="_blank" rel="noopener noreferrer">
+										<a class="zs-w-button-transparent" onfocus="closeNavMenu()" aria-label="Enroll now in the IMS Gold program" href="#enroll" target="_blank" rel="noopener noreferrer">
 											Enroll now</a>
 									</div>
 									</div>
@@ -389,7 +389,7 @@
 									<div class="pure-g">
 									<div class="pure-u-1-3" >
 										<div class="pure-u-1-8"><img src="wp-content/Icon_03_IMS GoldPage.svg" alt="" style="height: 25px;float:left;"></div>
-										<div class="pure-u-3-4"><p>Status on new and in-progress IMS <br/>enhancements</p></div>
+										<div class="pure-u-3-4"><p>Status on new and in-progress IMS enhancements</p></div>
 									</div>
 
 									<!-- mid contents -->
@@ -470,7 +470,7 @@
 									<img src="wp-content/Icon_EMail_White.svg" alt="Contact" style="height: 20px; width: 30px;margin-top: 10px;margin-right: 15px;">
 									<p style="display:inline-block;position: absolute; color: white;font-size:20px;">
 										For questions contact Amanda Stephens at: 
-										<a href="mailto:amanda.stephens@ibm.com" style="color: white;"><b><u>amanda.stephens@ibm.com</u></b></a>
+										<a href="mailto:amanda.stephens@ibm.com" style="color: white;"><b><em>amanda.stephens@ibm.com</em></b></a>
 										</p> 
 								</div>
 								</span>
@@ -478,11 +478,8 @@
 
 							<!-- =========================== back to top =========================== -->
 							<div>
-								<img id="btt" src="wp-content/Icon_Back_to_top.svg" alt="Back to top">
-								<p class="ibm-ind-link ibm-nospacing ibm-icononly ibm-btt-auto ibm-hidden-small">
-								<a class="ibm-nospacing ibm-top-link" aria-label="Back to top" href="#top" tabindex="0">Back to top</a>
-								</p>
-							</div>
+								<img id="btt" src="wp-content/Icon_Back_to_top.svg" alt="Back to top" tabindex="0" role="button">
+							  </div>
 
 						</main>
 					</div><!-- .entry-content -->

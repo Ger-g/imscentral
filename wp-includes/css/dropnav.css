@@ -368,9 +368,30 @@ div#tipue_search_warning {
     -webkit-transform: scale(0);
             transform: scale(0);
   }
-  
-  #toggle1:checked ~ .menu1 {
-    height: 450px;
+
+  /* Drop-down menu height */
+  @media screen and (max-width: 890px) {
+    #toggle1:checked ~ .menu1 {
+      height: 800px;
+    }
+  }
+
+  @media screen and (min-width: 890px) {
+    #toggle1:checked ~ .menu1 {
+      height: 650px;
+    }
+  }
+
+  @media screen and (min-width: 1430px) {
+    #toggle1:checked ~ .menu1 {
+      height: 490px;
+    }
+  }
+
+  @media screen and (min-width: 1460px) {
+    #toggle1:checked ~ .menu1 {
+      height: 450px;
+    }
   }
 
   .burg-wrap {
@@ -399,13 +420,11 @@ div#tipue_search_warning {
   /* --------------- Dropdown Menu --------------- */
   .menu1 {
     position: absolute;
-    width: 100% !important;
     background-color: #282828;
     margin: 0;
     padding: 0;
     list-style: none;
     clear: both;
-    width: auto;
     text-align: left;
     height: 0px;
     overflow: hidden;

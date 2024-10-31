@@ -378,19 +378,19 @@ div#tipue_search_warning {
 
   @media screen and (min-width: 890px) {
     #toggle1:checked ~ .menu1 {
-      height: 650px;
+      height: 640px;
     }
   }
 
-  @media screen and (min-width: 1430px) {
+  @media screen and (min-width: 1060px) {
     #toggle1:checked ~ .menu1 {
-      height: 490px;
+      height: 560px;
     }
   }
 
   @media screen and (min-width: 1460px) {
     #toggle1:checked ~ .menu1 {
-      height: 450px;
+      height: 475px;
     }
   }
 

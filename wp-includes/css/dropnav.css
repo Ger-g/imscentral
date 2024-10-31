@@ -370,6 +370,7 @@ div#tipue_search_warning {
   }
 
   /* Drop-down menu height */
+<<<<<<< HEAD
   @media screen and (max-width: 740px) {
     #toggle1:checked ~ .menu1 {
       height: 1150px;
@@ -377,12 +378,19 @@ div#tipue_search_warning {
   }
 
   @media screen and (min-width: 740px) {
+=======
+  @media screen and (max-width: 890px) {
+>>>>>>> d56829ad9fb515fc46d5ee869a3e38d552e65921
     #toggle1:checked ~ .menu1 {
       height: 800px;
     }
   }
 
+<<<<<<< HEAD
   @media screen and (min-width: 900px) {
+=======
+  @media screen and (min-width: 890px) {
+>>>>>>> d56829ad9fb515fc46d5ee869a3e38d552e65921
     #toggle1:checked ~ .menu1 {
       height: 640px;
     }
@@ -426,13 +434,11 @@ div#tipue_search_warning {
   /* --------------- Dropdown Menu --------------- */
   .menu1 {
     position: absolute;
-    width: 100% !important;
     background-color: #282828;
     margin: 0;
     padding: 0;
     list-style: none;
     clear: both;
-    width: auto;
     text-align: left;
     height: 0px;
     overflow: hidden;

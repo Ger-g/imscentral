@@ -369,10 +369,6 @@ div#tipue_search_warning {
             transform: scale(0);
   }
   
-  /* #toggle1:checked ~ .menu1 {
-    height: 450px;
-  } */
-
   /* Drop-down menu height */
   @media screen and (max-width: 740px) {
     #toggle1:checked ~ .menu1 {
@@ -386,13 +382,13 @@ div#tipue_search_warning {
     }
   }
 
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 920px) {
     #toggle1:checked ~ .menu1 {
       height: 640px;
     }
   }
 
-  @media screen and (min-width: 1060px) {
+  @media screen and (min-width: 1200px) {
     #toggle1:checked ~ .menu1 {
       height: 560px;
     }
@@ -400,7 +396,7 @@ div#tipue_search_warning {
 
   @media screen and (min-width: 1460px) {
     #toggle1:checked ~ .menu1 {
-      height: 475px;
+      height: 500px;
     }
   }
 

@@ -316,7 +316,7 @@
 
 						<!-- =========================== Learn more =========================== -->
 						<section class="zs-gray-section ibm-background-white-core lm-section">
-							<div class="pure-u-1"><h2>Learn more about IMS Transaction Manager</h2></div>
+							<div class="pure-u-1"><h2>Introducing IMS Transaction Manager</h2></div>
 							<div class="pure-g">
 								<div class="pure-u-1 lm-vid-sec">
 									<div class="pure-g">
@@ -409,14 +409,15 @@
 										<div class="pure-u-1-3">
 												<div class="pure-u-3-4">
 													<h3>Speedy transactions</h3>
-													<p>The IMS Transaction Manager receives messages from any platform, usually via TCP/IP through IMS Connect, 
-														and puts them on the message queue where an application program can retrieve it. An application might then 
-														send a response message back to the caller or another destination.
+													<p>
+														The IMS Transaction Manager receives messages from any platform, usually via TCP/IP through IMS Connect, 
+														puts them on the message queue where an application program can retrieve it.
 													</p>
-													<p>Think about getting money from an ATM or bank. The bank uses IMS TM to process transactions and IMS DB 
-														(in this case) to store customer account data.
+													<p>
+														Think about getting money from an ATM or bank. The bank uses IMS DB to store customer data and IMS TM to 
+														quickly process deposits, withdrawals, and queries.
 													</p>
-													<img src="wp-content/tm/speedy-transactions.png" alt="Diagram of IMS TM transaction processing">
+													<img src="wp-content/tm/speedy-transactions-c.png" alt="Diagram of IMS TM transaction processing">
 													<a href="https://www.ibm.com/docs/en/ims/15.5.0?topic=network-ims-tm-overview" 
 													target="_blank" rel="noopener noreferrer" aria-label="Learn more about IMS TM speedy transactions">Learn more →</a>
 												</div>
@@ -425,10 +426,13 @@
 										<div class="pure-u-1-3">
 											<div class="pure-u-3-4">
 												<h3>Ways to work</h3>
-												<p>Use Red Hat® Ansible® and Red Hat® OpenShift® through digitally transformed ways of working, developing, 
-													and updating critical data-driven applications. The Ansible® for IBM Z® product offers more and 
-													more use cases, capabilities, and tools to automate many functions of IMS; for example, DBRC administration, 
-													IMS catalog management, and other configuration management all by using scripted Ansible playbooks.
+												<p>
+													Use Red Hat® Ansible® and Red Hat® OpenShift® through digitally transformed ways of working, developing, 
+													and updating critical data-driven applications. 
+												</p>
+												<p>
+													The Ansible® for IBM Z® product offers lots of use cases, capabilities, and tools to automate functions of IMS, 
+													such as DBRC administration or IMS catalog management, all by using scripted Ansible playbooks.
 												</p>
 												<img src="wp-content/tm/ways-to-work.png" alt="Customers in line">
 												<a href="https://imsdev.github.io/ims-devops.html" 
@@ -439,7 +443,11 @@
 										<div class="pure-u-1-3">
 											<div class="pure-u-3-4">
 												<h3>Ways to connect</h3>
-												<p>Take advantage of not just TCP/IP but RESTful APIs that can access IMS™ applications and data in minutes.</p>
+												<p>Take advantage of not just TCP/IP but RESTful APIs that access IMS™ applications and data in minutes. 
+													Transactions might be issued from z/OS environments or distributed applications that use TCP/IP to communicate 
+													with IMS. Use IMS Connect to provide high performance TCP/IP communications between one or more IMS Connect 
+													clients and one or more IMS systems.
+												</p>
 												<img src="wp-content/tm/ways-to-connect.png" alt="Diagram of IMS application ecosystem">
 												<a href="https://imsdev.github.io/ims-apis.html" 
 												target="_blank" rel="noopener noreferrer" aria-label="Learn more about how to connect to IMS TM">Learn more →</a>
@@ -452,27 +460,22 @@
 
 						<!-- =========================== Hone your skills =========================== -->
 						<section class="zs-gray-section ibm-background-white-core hs-section">
-							<div class="pure-u-1"><h4>Hone your skills with IMS Transaction Manager</h4></div>
+							<div class="pure-u-1"><h2>Hone your skills with IMS Transaction Manager</h2></div>
 							<div class="pure-g">
 								<div class="pure-u-22-24">
-									<h2>The basics</h2>
+									<h4>The basics</h4>
 									<!-- Introducing IBM Information Management System (IMS) -->
 									<div class="course-card">
 										<div class="pure-u-1">
 											<div class="pure-u-1 pure-u-md-6-24">
-												<img src="wp-content/tm/video-cover-intro-ibm-ims.png" alt="IMS Fundamentals badge">
+												<img src="wp-content/tm/tm-intro-ims-video-cover.png" alt="IMS Fundamentals badge">
 											</div>
 											<div class="pure-u-1 pure-u-md-18-24 course-desc">
 												<h3>Introducing IBM Information Management System (IMS)</h3>
 												<p>
 													This video gives a quick overview of IBM IMS, its main components, and IMS application processing.
 												</p>	
-												<div class="pure-u-1 pure-u-md-1 course-info">
-													<p>
-														<b>Level</b>: Beginner
-														&ensp;
-														<b>Time</b>: 15 minutes
-													</p>
+												<div class="pure-u-1 pure-u-md-1">
 													<a aria-label="Watch the video introducing IBM IMS" target="_blank" rel="noopener noreferrer" 
 														href="https://mediacenter.ibm.com/media/Introducing+IBM+Information+Management+System+%28IMS%29/1_jy8lv5f5">
 														Watch the video →
@@ -492,21 +495,10 @@
 												<p>
 													Learn about the main components of IBM IMS: IMS Database Manager (IMS DB), 
 													IMS Transaction Manager (IMS TM), and common system services for IMS DB and IMS TM. 
-													Learn how these components work and interact with applications, how IMS databases differ from each other 
-													and differ from relational databases message types, security, maintenance, troubleshooting, and more.
 												</p>	
-												<div class="pure-u-1 pure-u-md-1 course-info">
-													<p>
-														<b>Level</b>: Beginner
-														&ensp;
-														<b>Cost</b>: None
-														&ensp;
-														<b>Badge</b>: Yes
-														&ensp;
-														<b>Time</b>: 32 hours
-													</p>
+												<div class="pure-u-1 pure-u-md-1">
 													<a aria-label="Learn more about IMS Fundamentals" target="_blank" rel="noopener noreferrer" 
-														href="https://learn.ibm.com/course/view.php?id=8829">
+														href="https://imsdev.github.io/ims-education.html#ims-fundamentals">
 														Learn more →
 													</a>
 												</div>
@@ -515,7 +507,7 @@
 									</div>
 								</div>
 								<div class="pure-u-22-24">
-									<h2>Intermediate and advanced training</h2>
+									<h4>Intermediate and advanced training</h4>
 									<!-- IMS System Programming in a DBCTL Environment -->
 									<div class="course-card">
 										<div class="pure-u-1">
@@ -525,23 +517,12 @@
 											<div class="pure-u-1 pure-u-md-18-24 course-desc">
 												<h3>IMS System Programming in a DBCTL Environment</h3>
 												<p>Learn about the IMS database control (DBCTL) environment, which provides access between CICS and
-													IMS-managed databases. Learn  how to install, configure, maintain, troubleshoot, and support
-													an IMS DBCTL system, and understand the IMS architecture that applies to database management and attaching 
-													to CICS systems and transactions.
+													IMS-managed databases.
 												</p>	
-												<div class="pure-u-1 pure-u-md-1 course-info">
-													<p>
-														<b>Level</b>: Intermediate
-														&ensp;
-														<b>Cost</b>: None
-														&ensp;
-														<b>Badge</b>: Yes
-														&ensp;
-														<b>Time</b>: 12 hours
-													</p>
+												<div class="pure-u-1 pure-u-md-1">
 													<a aria-label="Learn more about IMS System Programming in a DBCTL Environment"
 														target="_blank" rel="noopener noreferrer" 
-														href="https://learn.ibm.com/course/view.php?id=8352">
+														href="https://imsdev.github.io/ims-education.html#ims-dbctl">
 														Learn more →
 													</a>
 												</div>
@@ -562,19 +543,10 @@
 													components, commands, processes, parameters, and more to ensure that the 
 													IMS TM system is running as efficiently as possible.
 												</p>	
-												<div class="pure-u-1 pure-u-md-1 course-info">
-													<p>
-														<b>Level</b>: Advanced
-														&ensp;
-														<b>Cost</b>: None
-														&ensp;
-														<b>Badge</b>: Yes
-														&ensp;
-														<b>Time</b>: 11 hours
-													</p>
+												<div class="pure-u-1 pure-u-md-1">
 													<a aria-label="Learn more about IMS TM Performance Analysis"
 														target="_blank" rel="noopener noreferrer" 
-														href="https://www.ibm.com/training/course/ims-transaction-manager-performance-analysis-DL00962G">
+														href="https://imsdev.github.io/ims-education.html#ims-tm-performance">
 														Learn more →
 													</a>
 												</div>
@@ -594,19 +566,10 @@
 													application programs that use Data Language One (DL/I) to process
 													terminal input and output messages in an IMS Transaction manager system.
 												</p>	
-												<div class="pure-u-1 pure-u-md-1 course-info">
-													<p>
-														<b>Level</b>: Intermediate
-														&ensp;
-														<b>Cost</b>: None
-														&ensp;
-														<b>Badge</b>: Yes
-														&ensp;
-														<b>Time</b>: 14 hours
-													</p>
+												<div class="pure-u-1 pure-u-md-1">
 													<a aria-label="Learn more about IMS TM Application Programming"
 														target="_blank" rel="noopener noreferrer" 
-														href="https://learn.ibm.com/course/view.php?id=13017">
+														href="https://imsdev.github.io/ims-education.html#ims-tm-prog">
 														Learn more →
 													</a>
 												</div>

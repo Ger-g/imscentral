@@ -17,6 +17,10 @@
     padding:0 !important
 }
 
+.tm-hero p {
+    line-height: 1.75;
+}
+
 /* LEARN MORE SECTION */
 
 .lm-section {
@@ -97,12 +101,12 @@
 }
 
 .hs-section h2 {
-    margin-top: 10px;
+    margin-top: 40px;
 }
 
 .hs-section h4 {
     color: black;
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
 .course-card {
@@ -114,24 +118,21 @@
 }
 
 .course-card img {
-    width: 75%;
+    width: 60%;
     height:100%;
     max-height: 250px;
+    margin-bottom: 10px;
 }
 
 .course-desc {
-    margin-right: -10px;
+    margin: 10px 0px 10px -40px;
 }
 
 .course-desc h3 {
     color: black;
 }
 
-.course-info {
-    margin-top: 15px;
-}
-
-.course-info a {
+.course-desc a {
     position: relative;
     bottom: 0;
     margin-bottom: 30px;

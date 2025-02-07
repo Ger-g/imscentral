@@ -71,6 +71,7 @@
 
   .dark-gray-bg a {
     color: var(--light-blue-02);
+    font-size: var(--plex-18);
   }
 
   .dark-gray-bg h4 {
@@ -196,6 +197,10 @@
 
   .highlight-link {
     padding-bottom: 1rem;
+  }
+
+  .dark-gray-bg h4 {
+    font-size: var(--plex-20) !important;
   }
 }
 /* -------------------------------------------------------- */

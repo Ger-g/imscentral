@@ -6,7 +6,8 @@
   --black: #000;
   --blue: #0f62fe;
     /* Background Color */
-    --bg-light-gray: #f4f4f4;
+    --bg-light-gray: #F9F9F9;
+    --bg-gray: #f4f4f4;
     --bg-dark-gray-01: #1c1c1c;
     --bg-dark-gray-02: #2c2c2c;
     --bg-dark-blue: #003A6D;
@@ -40,6 +41,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  color: var(--white);
 }
 
 .blur-bg {
@@ -50,6 +52,15 @@
   background-image: url(../../wp-content/backgrounds/Engage_HomepageBG.png);
   background-repeat: no-repeat;
   background-size: cover;
+  color: var(--white);
+}
+
+.learn-bg {
+  background-image: url(../../wp-content/backgrounds/Learn_HomepageBG.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  color: var(--black);
 }
 
 .white-bg {
@@ -61,11 +72,23 @@
   }
 
 .gray-bg {
+  background-color: var(--bg-gray);
+}
+
+.light-gray-bg {
   background-color: var(--bg-light-gray);
 }
 
-  .gray-bg h3, .gray-bg h4 {
+  .gray-bg a, .light-gray-bg a {
+    color: var(--blue);
+  }
+
+  .gray-bg h3, .gray-bg h4, .light-gray-bg h3, .light-gray-bg h4 {
     color: var(--black);
+  }
+
+  .gray-bg a {
+    color: var(--blue)
   }
 
 .blue-bg {
@@ -100,10 +123,12 @@
   margin-bottom: 1.25em;
 }
 
-.icon-md {
-  max-height: var(--plex-72);
-  max-width: var(--plex-72);
-  
+.icon-lg {
+  height: var(--plex-28);
+}
+
+.icon-xl {
+  height: var(--plex-36);
 }
 
 .icon {
@@ -194,10 +219,13 @@
   padding: 3em;
 }
 
+.hero div:nth-child(2) {
+  padding-left: 1em;
+}
+
 .main-content section:first-child {
   width: 100%;
   background-color:var(--bg-dark-gray-01);
-  color: white;
 }
 
 .main-content section:first-child p {
@@ -225,6 +253,16 @@
 } 
 
 .section-header {
+  padding-right: 2em;
+}
+
+/* Targets all section containing card grid (ex. videos, course, etc.) */
+.card-section {
+  padding: 2em 4em !important;
+}
+
+.card-section-header {
+  margin-left: 1em;
   padding-right: 2em;
 }
 
@@ -291,14 +329,16 @@
 }
 
 .quote-blk {
-  background-color: var(--bg-dark-blue);
+  background-color: var(--bg-gray);
   margin: 0.2em;
   padding: 2em;
+  color: var(--black);
+  font-size: var(--plex-18);
 }
 
 .quote-blk p {
-  margin: 1em 0em;
-  font-size: var(--plex-14);
+  margin-top: 1em;
+  font-size: var(--plex-16);
 }
 /* -------------------------------------------------------- */
 
@@ -307,6 +347,16 @@
 /* For links under headers */
 .highlight-link {
   font-size: var(--plex-20);
+}
+
+/* Spacer between sections */
+.spacer {
+  height: 0.3125em;
+}
+
+/* Hero section subtext */
+.subtext {
+  font-weight: 300;
 }
 /* -------------------------------------------------------- */
 
@@ -324,21 +374,35 @@
     padding: 2em;
   } 
 
+  /* Decrease card section padding for smaller screens */
+  .card-section {
+    padding: 1em !important;
+  }
+
+  /* Decrease padding for smaller screens */
   .pure-g-pad > div {
     padding: 0.4em;
   }
 
+  /* Decrease highlight link padding for smaller screens */
   .highlight-link {
     padding-bottom: 1rem;
   }
 
+  /* Decrease font size for smaller screens */
   .dark-gray-bg h4 {
     font-size: var(--plex-20) !important;
+  }
+
+  /* Remove padding from hero content for smaller screens */
+  .hero div:nth-child(2) {
+    padding-left: 0em;
   }
 }
 
 /* 1024px and above screen sizes */
 @media  screen and (min-width: 64em) {
+  /* Resize quote block to full height for larger screens */
   .quote-blk {
     height: 100%;
   }

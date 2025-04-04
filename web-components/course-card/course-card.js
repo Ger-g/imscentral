@@ -11,10 +11,16 @@ function createComponent(html) {
         selector.textContent = content;
     }
 
-    function setLink(cssSelector, url, name, shadow) {
+    function setLink(cssSelector, url, name, linkText, shadow) {
         const link = shadow.querySelector(cssSelector);
         link.href = url;
         link.setAttribute('aria-label', `Learn more about ${name}`);
+        link.textContent = linkText;
+    }
+
+    function hideContent(cssSelector, shadow) {
+        const selector = shadow.querySelector(cssSelector);
+        selector.style.display = 'none';
     }
 
     // Web component class
@@ -28,7 +34,7 @@ function createComponent(html) {
 
         // Return array of properties to observe
         static get observedAttributes() {
-            return ['name', 'desc', 'imgsrc', 'selfpaced', 'level', 'cost', 'badge', 'time', 'link'];
+            return ['name', 'session', 'desc', 'imgsrc', 'selfpaced', 'level', 'cost', 'badge', 'time', 'start', 'end', 'link'];
         }
 
         // Called when an attribute is defined or changed
@@ -47,9 +53,15 @@ function createComponent(html) {
             const courseImg = shadow.querySelector('.course-img');
             courseImg.src = this.imgsrc;
             courseImg.setAttribute('alt', `${this.name} badge`);
+            if (this.selfpaced != 'true') {
+                const courseCard = shadow.querySelector('.course-card');
+                courseCard.style.alignItems = 'flex-start';
+            }
 
             // Set course name
             setContent('.course-name', this.name, shadow);
+            // Set session for live course
+            setContent('.live-session', this.session, shadow);
             // Set course desc
             setContent('.course-desc', this.desc, shadow);
             // Set course level
@@ -61,28 +73,30 @@ function createComponent(html) {
             setContent('.course-cost', this.cost, shadow);
             // Set course badge
             setContent('.course-badge', this.badge, shadow);
-            // Set course time
-            setContent('.course-time', this.time, shadow);
-            // Set course link
-            setLink('.course-link', this.link, this.name, shadow);
 
-            // Hide live course if not available
-            // if (this.livelevel == undefined) {
-            //     const liveCourse = shadow.querySelector('.live-course');
-            //     const liveCourseLink = shadow.querySelector('.live-link');
-            //     liveCourse.style.display = liveCourseLink.style.display = "none";
-            // } else {
-            //     // Set course level
-            //     setContent('.live-level', this.livelevel, shadow);
-            //     // Set course cost
-            //     setContent('.live-cost', this.livecost, shadow);
-            //     // Set course badge
-            //     setContent('.live-badge', this.livebadge, shadow);
-            //     // Set course time
-            //     setContent('.live-time', this.livetime, shadow);
-            //     // Set course link
-            //     setLink('.live-link', this.livelink, this.name, shadow);
-            // }
+            var linkText;
+            // Change card content based on self-paced vs live course
+            if (this.selfpaced == 'true') {
+                // Set course time
+                setContent('.course-time', this.time, shadow);
+                // Hide course duration
+                hideContent('.course-start-g', shadow);
+                hideContent('.course-end-g', shadow);
+                // Update link text
+                linkText = 'Learn more →'
+            } else {
+                // Set course duration
+                setContent('.course-start', this.start, shadow);
+                setContent('.course-end', this.end, shadow);
+                // Hide course time
+                hideContent('.course-time-g', shadow);
+                // Update link text
+                linkText = 'Register →'
+            }
+
+            // Set course link
+            setLink('.course-link', this.link, this.name, linkText, shadow);
+
         }
     }
 

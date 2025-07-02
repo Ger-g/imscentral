@@ -36,6 +36,7 @@ form {
     height: 3em;
     background-color: white;
     display: flex;
+    padding-right: 0.2em;
 }
 
 form div {
@@ -46,6 +47,10 @@ form div {
     align-items: center;
     gap: 0em;
     border: lightgray solid 2px;
+}
+
+form div > img {
+    padding: 0.1em 0.5em;
 }
 
 form input {
@@ -61,27 +66,11 @@ input {
     padding: 0.4em 0em;
 }
 
-.search-bar-focused {
-    border-color: #42a7ec;
-}
-
-form div > img {
-    padding: 0.1em 0.5em;
-}
-
 .masthead {
     position: relative;
     display: flex;
     justify-content: space-between;
     height: 3em;
-}
-
-#search-icon {
-    width: 1.4em;
-}
-
-#clear-icon {
-    cursor: pointer;
 }
 
 .logo {
@@ -101,6 +90,19 @@ form div > img {
     display: flex;
     flex-flow: row nowrap;
     width: 40%;
+}
+
+#search-icon {
+    width: 1.4em;
+}
+
+#clear-icon {
+    cursor: pointer;
+    display: none;
+}
+
+.search-bar-focused {
+    border-color: #42a7ec;
 }
 
 .hamburger-menu {
@@ -153,14 +155,13 @@ form div > img {
 
 .dropdown-menu {
     background-color: #282828;
-    height: 0em;
+    max-height: 0;
     z-index: 120;
     transition: all 0.3s ease;
     overflow: hidden;
     position: absolute;
-    transition: height 0.35s ease;
-    interpolate-size: allow-keywords;
-}
+    transition: all 0.35s linear;
+} 
 
 .dropdown-menu a p {
     font-size: 0.8125em;
@@ -171,7 +172,7 @@ form div > img {
 }
 
 .show-menu {
-    height: auto;
+    max-height: 60em;
 }
 
 .menu {
@@ -234,10 +235,4 @@ form div > img {
     top: 0.3125em;
     width: auto;
     z-index: 3000;
-}
-
-@media  screen and (max-width: 89em) {
-    .show-menu {
-        /* height: 42em; */
-    }
 }

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<!-- Basic meta -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="geo.country" content="ZZ" />
+	<meta name="dcterms.rights" content="� Copyright IBM Corp. 2020" />
+	<meta name="dcterms.date" content="2020-07-18" />
+	<meta name="keywords" content="IMS Central, IMS Developer, IMS" />
+	<meta name="robots" content="index, follow" />
+
+	<!-- Favicon -->
+	<link id="favicon"
+	rel="shortcut icon"
+	type="image/x-icon"
+	href="wp-content/IMS_logo_small.png">
+
+	<!-- Page title -->
+	<title>IMS Arcade</title>
+
+	<!-- Meta -->
+	<link rel="canonical" href="ims-arcade.html" />
+
+	<!-- Sheets -->
+	<!-- Imported styling -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<!-- Migrated stylesheets -->
+	<link rel='stylesheet' id='dwboomer-style-css'  href='wp-content/themes/boomer-v18/style.css' type='text/css' media='all' />
+	<link rel="stylesheet" href="wp-includes/css/www.css" />
+	<!-- Pure CSS -->
+	<link rel="stylesheet" href="wp-includes/css/pure.css">
+	<link rel="stylesheet" href="wp-includes/css/grids-responsive-min.css">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="wp-includes/css/homepage.css">
+	<link rel="stylesheet" href="wp-includes/css/nav.css">
+	<link rel="stylesheet" href="wp-includes/css/dropnav.css">
+	<link rel="stylesheet" href="wp-includes/css/page.css">
+	<link href="wp-includes/css/pages/education.css" rel="stylesheet">
+
+	<!-- Hotjar Tracking Code for ibm.com/demos &  githhub -->
+	<script>
+		(function(h,o,t,j,a,r){
+			h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+			h._hjSettings={hjid:132193,hjsv:6};
+			a=o.getElementsByTagName('head')[0];
+			r=o.createElement('script');r.async=1;
+			r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+			a.appendChild(r);
+		})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+	</script>
+
+	<!-- Additional styling for content after navigation -->
+	<script src="wp-includes/js/jquery.min.js"></script>
+
+	<!-- TipueSearch -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="jekyll-tipue-search/assets/tipuesearch/tipuesearch_content.js"></script>
+	<script src="jekyll-tipue-search/assets/tipuesearch/tipuesearch_set.js"></script>
+	<script src="jekyll-tipue-search/assets/tipuesearch/tipuesearch.min.js"></script>
+
+	<!-- delayed search -->
+	<script src="jekyll-tipue-search/assets/tipuesearch/delayedsearch.js"></script>
+
+	<!-- Web components -->
+	<script src="web-components/nav-header/nav-header.js" type="module"></script>
+	<script src="web-components/hero-section/hero-section.js" type="module"></script>
+	<script src="web-components/jump-links/jump-links.js" type="module"></script>
+	<script src="web-components/course-card/course-card.js" type="module"></script>
+    <script src="web-components/footer/footer.js" type="module"></script>
+
+	<!-- H5P -->
+    <script type="text/javascript" src="h5p-player/main.bundle.js" charset="UTF-8"></script>
+
+	<!-- Multiple choice set -->
+	<link href="multi-choice-set/multi-choice-set.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://1.www.s81c.com/common/carbon/plex/sans.css" />
+	<script type="module" src="https://1.www.s81c.com/common/carbon/web-components/version/v2.37.0/button.min.js"></script>
+	<script type="module" src="https://1.www.s81c.com/common/carbon/web-components/version/v2.37.0/checkbox.min.js"></script>
+	<script defer src="multi-choice-set/multi-choice-set.js"></script>
+</head>
+
+<!-- MASTHEAD_SITENAV_BEGIN -->
+<body id="ibm-com" class="ibm-com ibm-type">
+	<nav-header></nav-header>
+
+	<div id="content" class="main-content">
+		<!-- MAIN CONTENT -->
+		<main id="main">
+			<!-- =========================== Hero =========================== -->
+			<hero-section
+				name="IMS arcade"
+				image="wp-content/icons/icon_education.svg" 
+				section="Learn"
+				desc="Test your IMS knowledge and learn about the latest IMS topics."
+			></hero-section>
+
+			<!-- =========================== Jump links =========================== -->
+			<jump-links
+				links="Multiple choice set, Multiple choice question, Flashcards, Crossword, Drag the word, Hotspots"
+			></jump-links>
+
+			<!-- =========================== Multiple choice set =========================== -->
+			<section id="multiple-choice-set" class="white-bg card-section">
+				<h2>Multiple choice set</h2>
+				<p>This activity uses JS/HTML/CSS.</p>
+				<div class="activity">
+					<div class="quiz">
+						<p id="question-index"></p>
+						<h2 id="question">Question</h2>
+						<cds-checkbox-group orientation="vertical" id="answer-btns">
+							<cds-checkbox class="btn">Checkbox label</cds-checkbox>
+							<cds-checkbox class="btn">Checkbox label</cds-checkbox>
+							<cds-checkbox class="btn">Checkbox label</cds-checkbox>
+							<cds-checkbox class="btn">Checkbox label</cds-checkbox>
+						</cds-checkbox-group>
+						<cds-button id="next-btn">Next</cds-button>
+					</div>
+				</div>
+			</section>
+
+			<!-- =========================== Multiple choice question =========================== -->
+			<section id="multiple-choice-question" class="gray-bg card-section">
+				<h2>Multiple choice question</h2>
+				<p>Activity <strong>h5p-multi-choice</strong> can be created with the h5p-cli tool and loaded into IMS Central using the h5p-standalone player. This displays a single multiple choice question.</p>
+				<p><strong>*</strong> Activity <strong>h5p-question-set</strong>, which displays a set of multiple choice questions via h5p, can be created with the h5p-cli tool, but throws errors when loaded into IMS Central using the h5p-standalone player.</p>
+				<div id="h5p-container-mc" style="width: 100%"></div>
+				<script>
+					document.addEventListener('DOMContentLoaded', function () {
+					const el = document.getElementById('h5p-container-mc');
+					const options = {
+						h5pJsonPath: 'h5p-player/h5p-content01', // Path to the extracted H5P content
+						frameJs: 'h5p-player/frame.bundle.js', // Path to player's frame.bundle.js
+						frameCss: 'h5p-player/styles/h5p.css', // Path to player's h5p.css
+					};
+					new H5PStandalone.H5P(el, options);
+					});
+				</script>
+			</section>
+
+			<!-- =========================== Flashcards =========================== -->
+			<section id="flashcards" class="white-bg card-section">
+				<h2>Flashcards</h2>
+				<p>Activity <strong>h5p-flascards</strong> can be created with the h5p-cli tool and loaded into IMS Central using the h5p-standalone player.</p>
+				<div id="h5p-container-fc" style="width: 100%"></div>
+				<script>
+					document.addEventListener('DOMContentLoaded', function () {
+					const el = document.getElementById('h5p-container-fc');
+					const options = {
+						h5pJsonPath: 'h5p-player/h5p-content-flashcards', // Path to the extracted H5P content
+						frameJs: 'h5p-player/frame.bundle.js', // Path to player's frame.bundle.js
+						frameCss: 'h5p-player/styles/h5p.css', // Path to player's h5p.css
+					};
+					new H5PStandalone.H5P(el, options);
+					});
+				</script>
+			</section>
+
+			<!-- =========================== Crossword =========================== -->
+			<section id="crossword" class="gray-bg card-section">
+				<h2>Crossword</h2>
+				<p>Activity <strong>h5p-crossword</strong> can be created with the h5p-cli tool and loaded into IMS Central using the h5p-standalone player.</p>
+				<div id="h5p-container-cw" style="width: 100%"></div>
+				<script>
+					document.addEventListener('DOMContentLoaded', function () {
+					const el = document.getElementById('h5p-container-cw');
+					const options = {
+						h5pJsonPath: 'h5p-player/h5p-content-crossword', // Path to the extracted H5P content
+						frameJs: 'h5p-player/frame.bundle.js', // Path to player's frame.bundle.js
+						frameCss: 'h5p-player/styles/h5p.css', // Path to player's h5p.css
+					};
+					new H5PStandalone.H5P(el, options);
+					});
+				</script>
+			</section>
+
+			<!-- =========================== Drag the word =========================== -->
+			<section id="drag-the-word" class="white-bg card-section">
+				<h2>Drag the word</h2>
+				<p>Activity <strong>h5p-drag-test</strong> can be created with the h5p-cli tool, but displays styling issues. It can be loaded into IMS Central using the h5p-standalone player, but styling issues remain present.</p>
+				<div id="h5p-container-dw" style="width: 100%"></div>
+				<script>
+					document.addEventListener('DOMContentLoaded', function () {
+					const el = document.getElementById('h5p-container-dw');
+					const options = {
+						h5pJsonPath: 'h5p-player/h5p-content-dragword', // Path to the extracted H5P content
+						frameJs: 'h5p-player/frame.bundle.js', // Path to player's frame.bundle.js
+						frameCss: 'h5p-player/styles/h5p.css', // Path to player's h5p.css
+					};
+					new H5PStandalone.H5P(el, options);
+					});
+				</script>
+			</section>
+
+			<!-- =========================== Hotspots =========================== -->
+			<section id="hotspots" class="gray-bg card-section">
+				<h2>Hotspots</h2>
+				<p>Activity <strong>h5p-image-hotspots</strong> can be created with the h5p-cli tool, but throws errors (image loading, h5p-text library) when loaded into IMS Central using the h5p-standalone player.</p>
+				<div id="h5p-container-hs" style="width: 100%"></div>
+				<script>
+					document.addEventListener('DOMContentLoaded', function () {
+					const el = document.getElementById('h5p-container-hs');
+					const options = {
+						h5pJsonPath: 'h5p-player/h5p-content-hotspots', // Path to the extracted H5P content
+						frameJs: 'h5p-player/frame.bundle.js', // Path to player's frame.bundle.js
+						frameCss: 'h5p-player/styles/h5p.css', // Path to player's h5p.css
+					};
+					new H5PStandalone.H5P(el, options);
+					});
+				</script>
+			</section>
+		</main>
+	</div>
+
+	<!-- Footer -->
+	<imscentral-footer></imscentral-footer>
+</body>
+</html>

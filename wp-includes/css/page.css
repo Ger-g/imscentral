@@ -5,20 +5,20 @@
   --white: #fff;
   --black: #1c1c1c;
   --blue: #0f62fe;
-    /* Background Color */
-    --bg-light-gray: #F9F9F9;
-    --bg-gray: #f4f4f4;
-    --bg-dark-gray-01: #1c1c1c;
-    --bg-dark-gray-02: #2c2c2c;
-    --bg-dark-blue: #003A6D;
-    /* Button Color */
-    --btn-prim: #0f62fe;
-    --btn-prim-hover: #0050e6;
-    --btn-secnd: #6f6f6f;
-    --btn-scnd-hover: #5e5e5e;
-    /* Font Color */
-    --font-light-blue: #78A9FF;
-    --font-dark-blue: #0141B7;
+  /* Background Color */
+  --bg-light-gray: #f9f9f9;
+  --bg-gray: #f4f4f4;
+  --bg-dark-gray-01: #1c1c1c;
+  --bg-dark-gray-02: #2c2c2c;
+  --bg-dark-blue: #003a6d;
+  /* Button Color */
+  --btn-prim: #0f62fe;
+  --btn-prim-hover: #0050e6;
+  --btn-secnd: #6f6f6f;
+  --btn-scnd-hover: #5e5e5e;
+  /* Font Color */
+  --font-light-blue: #78a9ff;
+  --font-dark-blue: #0141b7;
 
   /* Weight */
   --bold: 900;
@@ -45,19 +45,37 @@
 /* p - 18px */
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-body, body .pure-g, body .pure-g [class*="pure-u"] {
-    font-family: "ibm-plex-sans", "Helvetica Neue", Arial, sans-serif;
+body,
+body .pure-g,
+body .pure-g [class*="pure-u"] {
+  font-family: "ibm-plex-sans", "Helvetica Neue", Arial, sans-serif;
 }
 
 li {
   font-size: var(--plex-18);
+  font-family: "ibm-plex-sans", "Helvetica Neue", Arial, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, p {
- font-family: "ibm-plex-sans", "Helvetica Neue", Arial, sans-serif;
+li span,
+li a {
+  font-size: var(--plex-16);
+}
+
+ol > li::before {
+  font-family: "ibm-plex-sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "ibm-plex-sans", "Helvetica Neue", Arial, sans-serif;
 }
 
 h2 {
@@ -104,7 +122,8 @@ a {
   color: black;
 }
 
-.white-bg h3, .white-bg h4 {
+.white-bg h3,
+.white-bg h4 {
   color: var(--black);
 }
 
@@ -118,30 +137,31 @@ a {
   color: var(--black);
 }
 
-  .gray-bg a, .light-gray-bg a {
-    color: var(--blue);
-  }
+.gray-bg a,
+.light-gray-bg a {
+  color: var(--blue);
+}
 
-  .gray-bg h3, .gray-bg h4, .light-gray-bg h3, .light-gray-bg h4 {
-    color: var(--black);
-  }
+.gray-bg h3,
+.gray-bg h4,
+.light-gray-bg h3,
+.light-gray-bg h4 {
+  color: var(--black);
+}
 
 .dark-gray-bg {
   background-color: var(--bg-dark-gray-02);
   color: var(--white);
 }
 
-  .dark-gray-bg p {
-    color: var(--white);
-  }
+.dark-gray-bg p {
+  color: var(--white);
+}
 
-  .dark-gray-bg a {
-    color: var(--font-light-blue);
-  }
 
-  .dark-gray-bg h4 {
-    font-size: var(--plex-24) !important;
-  }
+.dark-gray-bg h4 {
+  font-size: var(--plex-24) !important;
+}
 
 .black-bg {
   background-color: var(--black);
@@ -153,9 +173,10 @@ a {
   color: var(--white);
 }
 
-  .blue-bg a, .black-bg a {
-    color: var(--font-light-blue);
-  }
+.blue-bg a,
+.black-bg a {
+  color: var(--font-light-blue);
+}
 
 /* Homepage backgrounds */
 .learn-home-bg {
@@ -177,9 +198,10 @@ a {
   background-position: 35% 100%;
 }
 
-  .learn-home-bg a, .engage-home-bg a {
-    color: var(--font-dark-blue);
-  }
+.learn-home-bg a,
+.engage-home-bg a {
+  color: var(--font-dark-blue);
+}
 
 /* Blur background */
 .blur-bg {
@@ -291,9 +313,9 @@ a {
 /* Content containers */
 /* -------------------------------------------------------- */
 /* Targets all sections after hero */
-.main-content section:not(:first-child) {
+.main-content section:not(:first-child):not(.cta-banner) {
   padding: 4em;
-} 
+}
 
 .section-header {
   padding-right: 2em;
@@ -321,10 +343,18 @@ a {
 .pure-g-pad-v > div {
   padding: 2em 4em 2em 0em;
 }
+/* For pure grid units requiring wider padding */
+.pure-g-pad-wd > div {
+  padding: 3em 3em 0em 0em;
+}
 
 /* For individual pure grid units requiring paddings */
 .pure-pad {
   padding: 1.2em;
+}
+
+.pure-pad-v {
+  padding: 1.2em 0;
 }
 
 .pure-pad-r {
@@ -345,7 +375,7 @@ a {
 }
 
 .inline-g h2 {
-  color:var(--blue);
+  color: var(--blue);
 }
 
 .inline-g p {
@@ -360,6 +390,13 @@ a {
   align-items: center;
 }
 
+.vertical-g {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.5em;
+  align-items: flex-start;
+}
+
 /* Format horizontal divider */
 .hr-container {
   padding: 2em 0em 3em 0em;
@@ -367,8 +404,8 @@ a {
 
 /* Call to action for new courses */
 .cta {
-  display: flex; 
-  flex-flow: row nowrap; 
+  display: flex;
+  flex-flow: row nowrap;
   gap: 2em;
 }
 
@@ -387,10 +424,10 @@ a {
 }
 
 .quote q {
-  font-family: Georgia, 'Times New Roman', Times, serif !important;
-	float: left;
-	line-height: 1.4em;
-	font-size: var(--plex-28);
+  font-family: Georgia, "Times New Roman", Times, serif !important;
+  float: left;
+  line-height: 1.4em;
+  font-size: var(--plex-28);
   padding: 0.5em 0em;
 }
 
@@ -450,16 +487,16 @@ a {
 /* GIF */
 /* -------------------------------------------------------- */
 .gif {
-    position: relative;
+  position: relative;
 }
 
 .gif a {
-    width: 100%;
+  width: 100%;
 }
 
 .gif img {
-    width: 100%;
-    max-width: 40em;
+  width: 100%;
+  max-width: 40em;
 }
 
 .gif-cover {
@@ -467,7 +504,7 @@ a {
   opacity: 1;
   background-size: contain;
   background-repeat: no-repeat;
-  transition: .4s ease all;
+  transition: 0.4s ease all;
 }
 
 .gif-cover:hover {
@@ -481,18 +518,22 @@ a {
   opacity: 0;
   background-size: contain;
   background-repeat: no-repeat;
-  transition: .4s ease all;
+  transition: 0.4s ease all;
 }
 
 .gif-video:hover {
   opacity: 1;
   /* transform: scale(1.03); */
 }
+
+.gif-pad {
+  padding: 1em 0;
+}
 /* -------------------------------------------------------- */
 
 /* Banner */
 /* -------------------------------------------------------- */
-.home-banner {
+.cta-banner {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -500,24 +541,33 @@ a {
   background-color: #0072c3;
 }
 
-.home-banner div {
+.cta-banner div {
   display: flex;
   align-items: center;
   gap: 1em;
 }
 
-.home-banner > div:first-of-type {
+.cta-banner > div:first-of-type {
   margin-right: auto;
 }
 
-.home-banner a {
+.cta-banner h4 {
+  padding: 0;
+  margin: 0;
+}
+
+.cta-banner a {
   color: var(--white);
   font-weight: bold;
   font-size: var(--plex-20);
 }
 
-.home-banner .icon-sm {
+.cta-banner .icon-sm {
   margin-bottom: 0;
+}
+
+.cta-gold-banner {
+  padding: 1em 4em;
 }
 
 /* Custom styling */
@@ -544,6 +594,11 @@ a {
   padding: 1em;
 }
 
+.img-md {
+  width: 100%;
+  padding: 1em 0;
+}
+
 /* Index hero */
 .homepage-hero {
   display: flex;
@@ -566,24 +621,33 @@ a {
 /* Media queries */
 /* -------------------------------------------------------- */
 /* 425px and below screen sizes */
-@media  screen and (max-width: 27em) {
+@media screen and (max-width: 27em) {
   /* Call to action for new courses */
   .cta {
     flex-flow: row wrap;
   }
+
+  /* For individual pure grid units requiring paddings */
+  .pure-pad {
+    padding: 1.2em 0em;
+  }
+
+  .pure-pad-r {
+    padding: 1.2em 0em;
+  }
 }
 
 /* 768px and below screen sizes */
-@media  screen and (max-width: 48em) {
+@media screen and (max-width: 48em) {
   /* Decrease header size for smaller screens */
   .main-content h2 {
     font-size: var(--plex-28);
   }
 
   /* Decrease section padding for smaller screens */
-  .main-content section:not(:first-child) {
+  .main-content section:not(:first-child):not(.cta-banner) {
     padding: 2em;
-  } 
+  }
 
   /* Decrease card section padding for smaller screens */
   .card-section {
@@ -592,11 +656,13 @@ a {
 
   /* Decrease padding for smaller screens */
   .pure-g-pad > div {
-    padding: 0.4em;
+    padding: 1em 0;
   }
-
   .pure-g-pad-v > div {
-    padding: 0.4em;
+    padding: 1em 0;
+  }
+  .pure-g-pad-wd > div {
+    padding: 2em 0.4em 0em 0em;
   }
 
   /* Decrease highlight link padding for smaller screens */
@@ -636,13 +702,21 @@ a {
     padding: 2em;
   }
 
-  /* For individual pure grid units requiring paddings */
-  .pure-pad-r {
-    padding: 1.2em;
+  .cta-banner {
+    gap: 1.5em;
+  }
+
+  .cta-gold-banner div {
+    flex-flow: column nowrap;
+    align-items: flex-start;
+  }
+
+  .cta-gold-banner {
+    padding: 2em;
   }
 }
 
-/* 1024px and 768px screen sizes */
+/* 768px to 1024px screen sizes */
 @media screen and (min-width: 48em) and (max-width: 64em) {
   .pure-u-xl-11-24 > .gif {
     display: block;
@@ -653,7 +727,7 @@ a {
 }
 
 /* 1024px and above screen sizes */
-@media  screen and (min-width: 64em) {
+@media screen and (min-width: 64em) {
   /* Resize quote block to full height for larger screens */
   .quote-blk {
     height: 100%;
@@ -664,9 +738,13 @@ a {
     height: 100%;
     margin: 1em 1em 0em 1em;
   }
+
+  .img-md {
+    width: 100%;
+    max-height: 17em;
+    padding: 0;
+    object-fit: cover;
+    object-position: bottom;
+  }
 }
 /* -------------------------------------------------------- */
-
-
-
-

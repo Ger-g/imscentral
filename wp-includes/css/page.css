@@ -341,7 +341,7 @@ a {
 }
 /* For pure grid units requiring vertical padding only */
 .pure-g-pad-v > div {
-  padding: 2em 4em 2em 0em;
+  padding: 2em 2em 2em 0em;
 }
 /* For pure grid units requiring wider padding */
 .pure-g-pad-wd > div {

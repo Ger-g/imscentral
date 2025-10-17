@@ -15,8 +15,8 @@ const questions = [
     answers: [
       { text: "The version of the application in use", correct: false },
       { text: "IMS JCL overrides", correct: true },
-      { text: "RACF definitions", correct: true }, // true
-      { text: "IMS command options", correct: true }, // true
+      { text: "RACF definitions", correct: true }, 
+      { text: "IMS command options", correct: true }, 
     ],
   },
   {
@@ -25,7 +25,7 @@ const questions = [
     answers: [
       { text: "SAF", correct: false },
       { text: "Encryption", correct: false },
-      { text: "Parameters within the PSB generation", correct: true }, // true
+      { text: "Parameters within the PSB generation", correct: true }, 
       { text: "Installation exit routines", correct: true },
     ],
   },

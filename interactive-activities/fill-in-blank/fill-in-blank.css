@@ -1,5 +1,4 @@
 .game-container {
-    text-align: center;
     background-color: #fff;
     padding: 2rem;
 }
@@ -12,11 +11,12 @@
 
 .drop-zone {
     display: inline-block;
-    width: 80px; /* Adjust based on expected word length */
+    width: 100px; /* Adjust based on expected word length */
     height: 30px;
     border-bottom: 2px dashed #ccc;
     margin: 0 5px;
     vertical-align: middle;
+    text-align: center;
 }
 
 .word-bank {

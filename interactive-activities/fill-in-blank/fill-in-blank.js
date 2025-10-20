@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let zoneArr;
 
   // Define the words to be dragged and shuffled
-  const words = ["fox", "dog", "cow"];
-  const correctWords = ["fox", "dog"];
+  const words = ["IMS catalog", "PDS", "PDSE", "IMS directory", "ACBLIB"];
+  const correctWords = ["IMS catalog", "IMS directory", "PDSE"];
   const sentenceText = "The quick brown _*_ jumps over the lazy _*_.";
 
   let draggedItem = null;

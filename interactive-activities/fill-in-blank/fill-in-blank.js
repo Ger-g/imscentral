@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   const sentence = document.querySelector(".sentence");
   const wordBank = document.getElementById("word-bank");
-  const dropZones = document.querySelectorAll(".drop-zone");
   const checkBtn = document.getElementById("check-btn");
   const feedback = document.getElementById("feedback");
+  let dropZones = document.querySelectorAll(".drop-zone");
+  let zoneArr;
 
   // Define the words to be dragged and shuffled
   const words = ["fox", "dog", "cow"];
@@ -19,14 +20,19 @@ document.addEventListener("DOMContentLoaded", () => {
     attemptComplete = false;
     // Clear word bank
     wordBank.innerHTML = "";
-    // Set sentence text
-    // sentenceWithBlanks = sentenceText.replaceAll(
-    //   "_*_",
-    //   '<span class="drop-zone"></span>'
-    // );
-    // sentence.innerHTML = sentenceWithBlanks;
-    // Set button text
 
+    // Set sentence text
+    sentenceWithBlanks = sentenceText.replaceAll(
+      "_*_",
+      '<span class="drop-zone"></span>'
+    );
+    // sentence.innerHTML = sentenceWithBlanks;
+    // zoneArr = sentence.querySelectorAll("span");
+    // let dropZones = zoneArr;
+    // console.log(zoneArr);
+    // console.log(dropZones);
+
+    // Set button text
     checkBtn.textContent = "Check";
 
     // Add words to word bank
@@ -46,8 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     feedback.textContent = "";
   }
 
-  // Add event listener for when user starts dragging element
-  wordBank.addEventListener("dragstart", (e) => {
+  function dragStarted(e) {
     // Check if dragged item is item from word bank
     if (e.target.classList.contains("word-item")) {
       draggedItem = e.target;
@@ -58,59 +63,54 @@ document.addEventListener("DOMContentLoaded", () => {
         e.target.classList.add("dragging");
       }, 0);
     }
-  });
+  }
 
-  wordBank.addEventListener("dragover", (e) => {
-    e.preventDefault(); // Allow drop
-  });
-
-  wordBank.addEventListener("drop", (e) => {
+  function dropWord(e, zone) {
     e.preventDefault();
     //   If the element is a dragged element from the word bank and the zone is empty, add the element to the zone
-    if (draggedItem) {
-      wordBank.appendChild(draggedItem);
-      // The item is no longer in the word bank, so it is placed in a drop zone
+    if (zone) {
+      if (draggedItem && zone.textContent === "") {
+        zone.appendChild(draggedItem);
+        // The item is no longer in the word bank, so it is placed in a drop zone
+      }
+    } else {
+      if (draggedItem) {
+        wordBank.appendChild(draggedItem);
+        // The item is no longer in the word bank, so it is placed in a drop zone
+      }
     }
-  });
+  }
 
-  // Add event listener for when user stops dragging element
-  document.addEventListener("dragend", (e) => {
+  function dragEnded(e) {
     // If element is from the word bank, remove word from draggedItem variable once dragging has ended
     if (draggedItem) {
       draggedItem.classList.remove("dragging");
       draggedItem = null;
     }
-  });
+  }
+
+  // Add event listener for when user starts dragging element
+  wordBank.addEventListener("dragstart", (e) => {dragStarted(e)});
+
+  // Allow drop on drag over
+  wordBank.addEventListener("dragover", (e) => { e.preventDefault()});
+
+  wordBank.addEventListener("drop", (e) => {dropWord(e)});
+
+  // Add event listener for when user stops dragging element
+  document.addEventListener("dragend", (e) => {dragEnded(e)});
 
   dropZones.forEach((zone) => {
-    zone.addEventListener("dragstart", (e) => {
-        // Check if dragged item is item from word bank
-        if (e.target.classList.contains("word-item")) {
-        draggedItem = e.target;
-        // Add the word to the data transfer object to show the user what element is being dragged
-        e.dataTransfer.setData("text/plain", e.target.dataset.word);
-        console.log("dragging: " + e.target.dataset.word);
-        // Dragging class added to element
-        setTimeout(() => {
-            e.target.classList.add("dragging");
-        }, 0);
-        }
-    })
+    zone.addEventListener("dragstart", (e) => {dragStarted(e)})
 
-    // Add event listener for when element is dragged over zone
+    // Add event listener for when element is dragged over zone, allow drop
     zone.addEventListener("dragover", (e) => {
-      e.preventDefault(); // Allow drop
+      console.log("allow drop");
+      e.preventDefault();
     });
 
     // Add event listener for when dragged element is dropped on valid zone
-    zone.addEventListener("drop", (e) => {
-      e.preventDefault();
-      //   If the element is a dragged element from the word bank and the zone is empty, add the element to the zone
-      if (draggedItem && zone.textContent === "") {
-        zone.appendChild(draggedItem);
-        // The item is no longer in the word bank, so it is placed in a drop zone
-      }
-    });
+    zone.addEventListener("drop", (e) => {dropWord(e, zone)});
   });
 
   //   Check answers

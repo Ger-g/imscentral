@@ -1,67 +1,77 @@
 .game-container {
-    background-color: #fff;
-    padding: 2rem;
+  background-color: #fff;
+  padding: 2rem;
 }
 
 .sentence {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    line-height: 2;
+  margin-bottom: 2rem;
+  line-height: 2;
+  font-size: 1.5em;
 }
 
 .drop-zone {
-    display: inline-block;
-    width: 120px; /* Adjust based on expected word length */
-    height: 30px;
-    border-bottom: 2px dashed #ccc;
-    margin: 0 5px;
-    vertical-align: middle;
-    text-align: center;
+  display: inline-block;
+  width: 140px; /* Adjust based on expected word length */
+  height: 30px;
+  border-bottom: 2px dashed #ccc;
+  margin: 0 5px;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bold;
+}
+
+.show-soln {
+  color: black !important;
 }
 
 .word-bank {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 2rem;
-    border-top: 2px solid #eee;
-    padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+  border-top: 2px solid #eee;
+  padding-top: 1rem;
 }
 
 .word-item {
-    font-weight: bold;
-    color: black;
-    border-radius: 5px;
-    cursor: grab;
-    user-select: none; /* Prevents accidental text selection */
+  font-weight: bold;
+  font-size: 1.125em;
+  color: black;
+  border-radius: 5px;
+  cursor: grab;
+  user-select: none; /* Prevents accidental text selection */
 }
 
 .word-item.dragging {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
-#check-btn {
-    margin-top: 2rem;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    color: white;
-    border: none;
-    border-radius: 5px;
+.buttons {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 2em;
+}
+
+.buttons > * {
+  font-size: 1.125em;
+  padding: 0.75rem 1.5rem 0.75em 0;
+}
+
+#show-ans-btn {
+  display: none;
 }
 
 .feedback {
-    margin-top: 1rem;
-    font-weight: bold;
-    font-size: 1.2rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .correct-ans {
-    color: #1f933a;
-    font-weight: bold;
+  color: #1f933a;
 }
 
 .incorrect-ans {
-    color: #dc3545;
+  color: #dc3545;
 }

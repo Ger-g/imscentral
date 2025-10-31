@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const sentence = document.querySelector(".sentence");
   const wordBank = document.getElementById("word-bank");
   const checkBtn = document.getElementById("check-btn");
+  const showAnsBtn = document.getElementById("show-ans-btn");
   const feedback = document.getElementById("feedback");
   let dropZones = document.querySelectorAll(".drop-zone");
   let zoneArr;
@@ -50,6 +51,9 @@ document.addEventListener("DOMContentLoaded", () => {
       zone.innerHTML = "";
     });
     feedback.textContent = "";
+
+    // Reveal show answers button
+    showAnsBtn.style.display = "none";
   }
 
   function dragStarted(e) {
@@ -90,27 +94,38 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Add event listener for when user starts dragging element
-  wordBank.addEventListener("dragstart", (e) => {dragStarted(e)});
+  wordBank.addEventListener("dragstart", (e) => {
+    dragStarted(e);
+  });
 
   // Allow drop on drag over
-  wordBank.addEventListener("dragover", (e) => { e.preventDefault()});
+  wordBank.addEventListener("dragover", (e) => {
+    e.preventDefault();
+  });
 
-  wordBank.addEventListener("drop", (e) => {dropWord(e)});
+  wordBank.addEventListener("drop", (e) => {
+    dropWord(e);
+  });
 
   // Add event listener for when user stops dragging element
-  document.addEventListener("dragend", (e) => {dragEnded(e)});
+  document.addEventListener("dragend", (e) => {
+    dragEnded(e);
+  });
 
   dropZones.forEach((zone) => {
-    zone.addEventListener("dragstart", (e) => {dragStarted(e)})
+    zone.addEventListener("dragstart", (e) => {
+      dragStarted(e);
+    });
 
     // Add event listener for when element is dragged over zone, allow drop
     zone.addEventListener("dragover", (e) => {
-      console.log("allow drop");
       e.preventDefault();
     });
 
     // Add event listener for when dragged element is dropped on valid zone
-    zone.addEventListener("drop", (e) => {dropWord(e, zone)});
+    zone.addEventListener("drop", (e) => {
+      dropWord(e, zone);
+    });
   });
 
   //   Check answers
@@ -119,34 +134,55 @@ document.addEventListener("DOMContentLoaded", () => {
     if (attemptComplete === false) {
       let allCorrect = true;
       let correctWordIndex = 0;
+      let correctWordCounter = 0;
       dropZones.forEach((zone) => {
         const droppedWord = zone.querySelector(".word-item");
         const correctWord = correctWords[correctWordIndex];
         correctWordIndex++;
         // Check if word has been added to blank and if dropped word is the correct word
         if (droppedWord && droppedWord.dataset.word === correctWord) {
-            // dropped word and correct word match
-            droppedWord.classList.add("correct-ans");
-        } else {
+          // dropped word and correct word match
+          droppedWord.classList.add("correct-ans");
+          correctWordCounter++;
+        } else if (droppedWord) {
           allCorrect = false;
           droppedWord.classList.add("incorrect-ans");
+        } else {
+          allCorrect = false;
         }
       });
 
-      if (allCorrect) {
-        feedback.textContent = "Correct! All sentences completed.";
-        feedback.classList.remove("incorrect-ans");
-        feedback.classList.add("correct-ans");
-      } else {
-        feedback.textContent = "Incorrect. Please try again.";
-        feedback.classList.remove("correct-ans");
-        feedback.classList.add("incorrect-ans");
-      }
+      // Display final score
+      let finalScore =
+        "Score: " + correctWordCounter + "/" + correctWords.length;
+      feedback.textContent = finalScore;
+      // Set attempt to complete to reset game when button clicked
       attemptComplete = true;
+      // Reveal show answers button
+      showAnsBtn.style.display = "block";
       // Set button text
       checkBtn.textContent = "Retry";
     } else {
       initializeGame();
+    }
+  });
+
+  showAnsBtn.addEventListener("click", () => {
+    if (attemptComplete === true) {
+      let correctWordIndex = 0;
+      // Show sentence with correct answers
+      dropZones.forEach((zone) => {
+        const correctWord = correctWords[correctWordIndex];
+        const droppedWord = zone.querySelector(".word-item");
+        if (droppedWord) {
+          droppedWord.innerHTML = correctWord;
+          droppedWord.classList.add("show-soln");
+        } else {
+          zone.innerHTML = correctWord;
+        }
+
+        correctWordIndex++;
+      });
     }
   });
 

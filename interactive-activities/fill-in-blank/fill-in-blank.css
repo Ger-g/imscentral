@@ -11,7 +11,7 @@
 
 .drop-zone {
     display: inline-block;
-    width: 100px; /* Adjust based on expected word length */
+    width: 120px; /* Adjust based on expected word length */
     height: 30px;
     border-bottom: 2px dashed #ccc;
     margin: 0 5px;
@@ -30,6 +30,7 @@
 }
 
 .word-item {
+    font-weight: bold;
     color: black;
     border-radius: 5px;
     cursor: grab;
@@ -57,7 +58,8 @@
 }
 
 .correct-ans {
-    color: #28a745;
+    color: #1f933a;
+    font-weight: bold;
 }
 
 .incorrect-ans {

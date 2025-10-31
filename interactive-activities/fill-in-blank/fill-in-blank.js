@@ -123,14 +123,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const droppedWord = zone.querySelector(".word-item");
         const correctWord = correctWords[correctWordIndex];
         correctWordIndex++;
-        // console.log(droppedWord.dataset.word + " - " + correctWord)
         // Check if word has been added to blank and if dropped word is the correct word
         if (droppedWord && droppedWord.dataset.word === correctWord) {
             // dropped word and correct word match
+            droppedWord.classList.add("correct-ans");
         } else {
           allCorrect = false;
+          droppedWord.classList.add("incorrect-ans");
         }
-        // console.log("correct: " + allCorrect);
       });
 
       if (allCorrect) {

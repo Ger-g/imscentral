@@ -15,8 +15,7 @@
       id="favicon"
       rel="shortcut icon"
       type="image/x-icon"
-      href="wp-content/IMS_logo_small.png"
-    />
+      href="wp-content/IMS_logo_small.png" />
 
     <!-- Page title -->
     <title>IMS Arcade</title>
@@ -28,8 +27,7 @@
     <!-- Imported styling -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <!-- Migrated stylesheets -->
     <link
@@ -37,8 +35,7 @@
       id="dwboomer-style-css"
       href="wp-content/themes/boomer-v18/style.css"
       type="text/css"
-      media="all"
-    />
+      media="all" />
     <link rel="stylesheet" href="wp-includes/css/www.css" />
     <!-- Pure CSS -->
     <link rel="stylesheet" href="wp-includes/css/pure.css" />
@@ -81,61 +78,53 @@
     <!-- Web components -->
     <script
       src="web-components/nav-header/nav-header.js"
-      type="module"
-    ></script>
+      type="module"></script>
     <script
       src="web-components/hero-section/hero-section.js"
-      type="module"
-    ></script>
+      type="module"></script>
     <script
       src="web-components/jump-links/jump-links.js"
-      type="module"
-    ></script>
+      type="module"></script>
     <script
       src="web-components/course-card/course-card.js"
-      type="module"
-    ></script>
+      type="module"></script>
     <script src="web-components/footer/footer.js" type="module"></script>
 
     <!-- H5P -->
     <script
       type="text/javascript"
       src="h5p-player/main.bundle.js"
-      charset="UTF-8"
-    ></script>
+      charset="UTF-8"></script>
 
     <!-- Multiple choice set -->
     <link
       href="interactive-activities/multi-choice-set/multi-choice-set.css"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link
       rel="stylesheet"
-      href="https://1.www.s81c.com/common/carbon/plex/sans.css"
-    />
+      href="https://1.www.s81c.com/common/carbon/plex/sans.css" />
     <script
       type="module"
-      src="https://1.www.s81c.com/common/carbon/web-components/version/v2.37.0/button.min.js"
-    ></script>
+      src="https://1.www.s81c.com/common/carbon/web-components/version/v2.37.0/button.min.js"></script>
     <script
       type="module"
-      src="https://1.www.s81c.com/common/carbon/web-components/version/v2.37.0/checkbox.min.js"
-    ></script>
-    <script
+      src="https://1.www.s81c.com/common/carbon/web-components/version/v2.37.0/checkbox.min.js"></script>
+    <!-- <script
       defer
       src="interactive-activities/multi-choice-set/multi-choice-set.js"
-    ></script>
+    ></script> -->
+    <script
+      defer
+      src="interactive-activities/multi-choice-set/multi-choice-set-2.js"></script>
 
     <!-- Fill in the blanks activity -->
     <link
       href="interactive-activities/fill-in-blank/fill-in-blank.css"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link />
     <script
       defer
-      src="interactive-activities/fill-in-blank/fill-in-blank.js"
-    ></script>
+      src="interactive-activities/fill-in-blank/fill-in-blank.js"></script>
   </head>
 
   <!-- MASTHEAD_SITENAV_BEGIN -->
@@ -150,16 +139,25 @@
           name="IMS arcade"
           image="wp-content/icons/icon_education.svg"
           section="Learn"
-          desc="Test your IMS knowledge and learn about the latest IMS topics."
-        ></hero-section>
+          desc="Test your IMS knowledge and learn about the latest IMS topics."></hero-section>
 
         <!-- =========================== Jump links =========================== -->
         <jump-links
-          links="Multiple choice set, Multiple choice question, Flashcards, Crossword, Drag the word, Hotspots"
-        ></jump-links>
+          links="Multiple choice set, Multiple choice question, Flashcards, Crossword, Drag the word, Hotspots"></jump-links>
+
+        <!-- =========================== Multiple choice set 2 - submit answers at end =========================== -->
+        <section id="multiple-choice-set-2" class="white-bg card-section">
+          <h2>Multiple choice set #2</h2>
+          <p>This activity uses JS/HTML/CSS.</p>
+          <div class="activity">
+            <h3 id="feedback"></h3>
+            <div id="mc-quiz" class="quiz"></div>
+            <cds-button id="next-btn">Next</cds-button>
+          </div>
+        </section>
 
         <!-- =========================== Multiple choice set =========================== -->
-        <section id="multiple-choice-set" class="white-bg card-section">
+        <!-- <section id="multiple-choice-set" class="white-bg card-section">
           <h2>Multiple choice set</h2>
           <p>This activity uses JS/HTML/CSS.</p>
           <div class="activity">
@@ -175,7 +173,7 @@
               <cds-button id="next-btn">Next</cds-button>
             </div>
           </div>
-        </section>
+        </section> -->
 
         <!-- =========================== Multiple choice question =========================== -->
         <section id="multiple-choice-question" class="gray-bg card-section">

@@ -69,7 +69,7 @@ function showQuestion(index) {
 
   // Create question element and attach to group
   const question = document.createElement("h2");
-  question.id = "question";
+  question.id = questionGroup.id + "_" + "question";
   question.innerHTML =
     newQuestion + "/" + questions.length + "<br/>" + currQuestion.question;
   questionGroup.appendChild(question);

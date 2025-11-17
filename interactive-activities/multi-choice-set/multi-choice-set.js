@@ -15,8 +15,8 @@ const questions = [
     answers: [
       { text: "The version of the application in use", correct: false },
       { text: "IMS JCL overrides", correct: true },
-      { text: "RACF definitions", correct: true }, 
-      { text: "IMS command options", correct: true }, 
+      { text: "RACF definitions", correct: true },
+      { text: "IMS command options", correct: true },
     ],
   },
   {
@@ -25,77 +25,108 @@ const questions = [
     answers: [
       { text: "SAF", correct: false },
       { text: "Encryption", correct: false },
-      { text: "Parameters within the PSB generation", correct: true }, 
+      { text: "Parameters within the PSB generation", correct: true },
       { text: "Installation exit routines", correct: true },
     ],
   },
 ];
 
-const question = document.getElementById("question");
-const answerBtn = document.getElementById("answer-btns");
+const quiz = document.getElementById("mc-quiz");
 const nextBtn = document.getElementById("next-btn");
+const feedback = document.getElementById("feedback");
 
 let currQuestionIndex = 0;
 let score = 0;
-let submitState = "submit";
+let setComplete = false;
 
 /**
- * Initializes the quiz by setting the current question index to 0,
- * resetting the score to 0, updating the submit button text to "Submit",
- * setting the submit state to "submit", and displaying the first question.
+ * Initializes the quiz
  */
 function startQuiz() {
-    currQuestionIndex = 0;
-    score = 0;
-    nextBtn.innerHTML = "Submit";
-    submitState = "submit";
-    showQuestion();
+  currQuestionIndex = 0;
+  score = 0;
+  setComplete = false;
+
+  feedback.innerHTML = "";
+  nextBtn.innerHTML = "Next";
+
+  showQuestion(currQuestionIndex);
 }
 
 /**
- * Gets each answer of the current question and create a checkbox button.
+ * Show question and answers
  */
-function showQuestion() {
-    resetState();
-    // Get current question based on current index
-    let currQuestion = questions[currQuestionIndex];
-    // Update question with correct question number
-    let newQuestion = currQuestionIndex + 1;
-    question.innerHTML = newQuestion + "/" + questions.length + "<br/>" + currQuestion.question;
+function showQuestion(index) {
+  // Get current question based on current index
+  let currQuestion = questions[index];
+  // Update question with correct question number
+  let newQuestion = index + 1;
 
-    // Button id
-    let btnId = 0;
-    // For each answer of current question...
-    currQuestion.answers.forEach(answer => {
-        // Create new button
-        const btn = document.createElement("cds-checkbox");
-        // Set id and increment
-        btn.id = btnId;
-        btnId++;
-        // Populate answer text
-        btn.innerHTML = answer.text;
-        btn.classList.add('btn');
-        // Add button to answer button div
-        answerBtn.appendChild(btn);
+  // Create question group and attach to quiz
+  const questionGroup = document.createElement("div");
+  questionGroup.id = "group" + index;
+  quiz.appendChild(questionGroup);
 
-        // Set dataset property custom attribute correct to true if answer is correct
-        if (answer.correct) {
-            btn.dataset.correct = answer.correct;
-        }
-        
-        // Event listener for checkbox change
-        btn.addEventListener('cds-checkbox-changed', selectButton);
-    })
-}
+  // Create question element and attach to group
+  const question = document.createElement("h2");
+  question.id = questionGroup.id + "_" + "question";
+  question.innerHTML =
+    newQuestion + "/" + questions.length + "<br/>" + currQuestion.question;
+  questionGroup.appendChild(question);
 
-/**
- * Resets the question state by clearing all child nodes of the element with the id 'answerBtn'
- * before adding the question answers
- */
-function resetState() {
-    while (answerBtn.firstChild) {
-        answerBtn.removeChild(answerBtn.firstChild);
+  // Create answer group and attach to group
+  const ansGroup = document.createElement("cds-checkbox-group");
+  ansGroup.orientation = "vertical";
+  ansGroup.classList.add("answer-btns");
+  questionGroup.appendChild(ansGroup);
+
+  // Button id
+  let btnId = 0;
+  // For each answer of current question...
+  currQuestion.answers.forEach((answer) => {
+    // Create new button
+    const btn = document.createElement("cds-checkbox");
+    // Set id and increment
+    btn.id = questionGroup.id + "_" + btnId;
+    btnId++;
+    // Populate answer text
+    btn.innerHTML = answer.text;
+    btn.classList.add("btn");
+    // Add button to answer button group
+    ansGroup.appendChild(btn);
+
+    // Set dataset property custom attribute correct to true if answer is correct
+    if (answer.correct) {
+      btn.dataset.correct = answer.correct;
     }
+
+    // Event listener for checkbox change
+    btn.addEventListener("cds-checkbox-changed", selectButton);
+  });
+}
+
+/**
+ * Hide question group
+ */
+function hideQuestionGroup(index) {
+  const questionGroup = document.getElementById("group" + index);
+  questionGroup.style.display = "none";
+}
+
+/**
+ * Show question group
+ */
+function showQuestionGroup(index) {
+  const questionGroup = document.getElementById("group" + index);
+  questionGroup.style.display = "block";
+}
+
+/**
+ * Remove question group
+ */
+function removeQuestionGroup(index) {
+  const questionGroup = document.getElementById("group" + index);
+  questionGroup.remove();
 }
 
 /**
@@ -103,74 +134,86 @@ function resetState() {
  */
 function selectButton(e) {
   const selectedBtn = e.target;
-  selectedBtn.classList.toggle('selected');
+  selectedBtn.classList.toggle("selected");
 }
 
 /**
- * When button is selected, toggle 'selected' class
+ * Calculate the score for question
  */
-function showAnswer() {
-    let tempScore = 0;
-    let totalScore = 0;
-    let incorrectAnswer = false;
-    Array.from(answerBtn.children).forEach(btn => {
-      // btn.classList.add('disable');
-      if (btn.classList.contains('selected')) {
-        if (btn.dataset.correct === "true") {
-            btn.classList.add('correct');
-            tempScore++;
-        } else {
-            btn.classList.add('incorrect');
-            incorrectAnswer = true;
-        }
-      }
+function calculateAnswer(index) {
+  let tempScore = 0; // Stores whether the answer for current checkbox is correct
+  let totalScore = 0; // Stores total number of checkboxes needed to be checked for entire question to be correct
+  let incorrectAnswer = false;
+  let group = document.getElementById("group" + index);
+  let answerBtn = group.getElementsByClassName("answer-btns");
+  let btnContainer = answerBtn[0];
 
+  // Iterate through answers
+  Array.from(btnContainer.children).forEach((btn) => {
+    // If answer was selected, update checkbox class based on if answer is correct
+    if (btn.classList.contains("selected")) {
       if (btn.dataset.correct === "true") {
-          btn.classList.add('correct');
-          totalScore++;
-      } 
-      btn.disabled = true;
-    });
-    
-    if (totalScore === tempScore && !incorrectAnswer) {
-      score++;
+        btn.classList.add("correct");
+        tempScore++;
+      } else {
+        btn.classList.add("incorrect");
+        incorrectAnswer = true;
+      }
     }
-    console.log(score);
-    
-    submitState = "next";
+
+    if (btn.dataset.correct === "true") {
+      btn.classList.add("correct");
+      totalScore++;
+    }
+    btn.disabled = true;
+  });
+
+  // If number of selected answers is equivalent to total number of correct answers and no incorrect answers were selected, increase the player's score
+  if (totalScore === tempScore && !incorrectAnswer) {
+    score++;
+  }
 }
 
 function showScore() {
-    resetState();
-    question.innerHTML = "You scored " + score + " out of " + questions.length + ".";
-    nextBtn.innerHTML = "Restart";
+  feedback.innerHTML =
+    "You scored " + score + " out of " + questions.length + ".";
+  nextBtn.innerHTML = "Restart";
 }
 
 function handleNextBtn() {
+  // If the quiz has not been completed...
+  if (setComplete === false) {
+    // Hide the current question
+    hideQuestionGroup(currQuestionIndex);
+    // Calcuate the score based on the current question
+    calculateAnswer(currQuestionIndex);
+
     currQuestionIndex++;
+    // If there are more questions to be answered...
     if (currQuestionIndex < questions.length) {
-        submitState = "submit";
-        nextBtn.innerHTML = "Submit";
-        showQuestion();
+      // Show the next question
+      showQuestion(currQuestionIndex);
     } else {
-        submitState = "next";
-        showScore();
+      // Show all questions and their correct answers
+      for (let i = 0; i < questions.length; i++) {
+        showQuestionGroup(i);
+      }
+      // Show the score
+      showScore();
+      setComplete = true;
     }
+    // If the quiz is complete...
+  } else {
+    for (let i = 0; i < questions.length; i++) {
+      // Remove all questions
+      removeQuestionGroup(i);
+    }
+    // Restart the quiz
+    startQuiz();
+  }
 }
 
-nextBtn.addEventListener('click', () => {
-    if (submitState == "submit") {
-      showAnswer();
-      nextBtn.innerHTML = "Next";
-      nextBtn.kind = 'secondary';
-    } else if (submitState == "next") {
-      nextBtn.kind = 'primary';
-      if (currQuestionIndex < questions.length) {
-          handleNextBtn();
-      } else {
-          startQuiz();
-      }
-    }
-})
+// Add event listener to next button
+nextBtn.addEventListener("click", () => handleNextBtn());
 
 startQuiz();

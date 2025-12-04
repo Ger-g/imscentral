@@ -7414,7 +7414,7 @@
                         window.location.protocol +
                         "//" +
                         window.location.host +
-                        "/" +
+                        "/imscentral/" +
                         r),
                     r + "/" + e
                   );

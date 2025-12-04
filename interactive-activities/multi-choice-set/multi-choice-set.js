@@ -1,32 +1,55 @@
 // Questions
 const questions = [
   {
-    question: "Which of one of these items cannot be secured by IMS?",
+    question:
+      "Which IMS region type would you use to run an application that is written in Java?",
     answers: [
-      { text: "Transactions", correct: false },
-      { text: "Commands", correct: false },
-      { text: "Data sets", correct: false },
-      { text: "Mobile applications", correct: true },
+      { text: "BMP", correct: false },
+      { text: "IFP", correct: false },
+      { text: "MPR", correct: false },
+      { text: "JBP", correct: true },
     ],
   },
   {
     question:
-      "Security levels can be affected by the following IMS elements? Select all that apply.",
+      "Which of these items can you add to a DL/I call to filter which specific instance of a segment you want to find to perform functions against?",
     answers: [
-      { text: "The version of the application in use", correct: false },
-      { text: "IMS JCL overrides", correct: true },
-      { text: "RACF definitions", correct: true },
-      { text: "IMS command options", correct: true },
+      { text: "PCB", correct: false },
+      { text: "AIB", correct: false },
+      { text: "Segment search argument (SSA)", correct: true },
+      { text: "COUNT parameter", correct: false },
+    ],
+  },
+  {
+    question: "What is a dependent segment?",
+    answers: [
+      { text: "A root segment", correct: false },
+      { text: "Any segment that is not the root segment", correct: true },
+      { text: "A parent segment only", correct: false },
+      { text: "None of these", correct: false },
     ],
   },
   {
     question:
-      "Which of these security facilities are provided by the IMS product. Select all that apply.",
+      "Data Language/One (DL/I) is a data management facility that serves as an interface between what two items?",
     answers: [
-      { text: "SAF", correct: false },
-      { text: "Encryption", correct: false },
-      { text: "Parameters within the PSB generation", correct: true },
-      { text: "Installation exit routines", correct: true },
+      { text: "An application program and Java applications", correct: false },
+      { text: "An application program and an IMS database", correct: true },
+      { text: "An IMS database and the z/OS operating system", correct: false },
+      {
+        text: "An application program and IMS Transaction Manager",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question:
+      "Which type of pointer allows a Fast Path DEDB to get direct access to the middle of long twin chain? ",
+    answers: [
+      { text: "Hierarchical pointer", correct: false },
+      { text: "Physical child pointer", correct: false },
+      { text: "Logical parent pointer", correct: false },
+      { text: "Subset pointer", correct: true },
     ],
   },
 ];

@@ -1,44 +1,48 @@
 // Questions
 const questions = [
   {
-    question:
-      "Which IMS region type would you use to run an application that is written in Java?",
+    question: "What are the advantages of having a database system?  ",
     answers: [
-      { text: "BMP", correct: false },
-      { text: "IFP", correct: false },
-      { text: "MPR", correct: false },
-      { text: "JBP", correct: true },
-    ],
-  },
-  {
-    question:
-      "What can you add to a DL/I call to find a specific instance of a segment?",
-    answers: [
-      { text: "PCB", correct: false },
-      { text: "AIB", correct: false },
-      { text: "Segment search argument (SSA)", correct: true },
-      { text: "COUNT parameter", correct: false },
-    ],
-  },
-  {
-    question: "What is a dependent segment?",
-    answers: [
-      { text: "A root segment", correct: false },
-      { text: "Any segment that is not the root segment", correct: true },
-      { text: "A parent segment only", correct: false },
-      { text: "None of these", correct: false },
-    ],
-  },
-  {
-    question:
-      "Data Language/One (DL/I) is a data management facility that serves as an interface between what two items?",
-    answers: [
-      { text: "An application program and Java applications", correct: false },
-      { text: "An application program and an IMS database", correct: true },
-      { text: "An IMS database and the z/OS operating system", correct: false },
+      { text: "Centralized files for all applications", correct: false },
       {
-        text: "An application program and IMS Transaction Manager",
+        text: "Elimination of much duplicated space and effort",
         correct: false,
+      },
+      {
+        text: "Single information source provides complete, accurate information processing",
+        correct: false,
+      },
+      { text: "All of these", correct: true },
+    ],
+  },
+  {
+    question: "Which of these items is not stored in the IMS catalog?",
+    answers: [
+      { text: "ACBLIB", correct: true },
+      { text: "Metadata related to the PSB", correct: false },
+      { text: "Time stamps", correct: false },
+      { text: "Metadata related to the DBD", correct: false },
+    ],
+  },
+  {
+    question: "Which of the following DL/I calls are not logged?",
+    answers: [
+      { text: "Insert", correct: false },
+      { text: "Get", correct: true },
+      { text: "Replace", correct: false },
+      { text: "Delete", correct: false },
+    ],
+  },
+  {
+    question:
+      "Each segment that is defined to an IMS database must contain which of these items?",
+    answers: [
+      { text: "The function code", correct: false },
+      { text: "The PCB address", correct: false },
+      { text: "Working storage", correct: false },
+      {
+        text: "All of these",
+        correct: true,
       },
     ],
   },
@@ -46,10 +50,10 @@ const questions = [
     question:
       "Which type of pointer allows a Fast Path DEDB to get direct access to the middle of long twin chain? ",
     answers: [
-      { text: "Hierarchical pointer", correct: false },
-      { text: "Physical child pointer", correct: false },
-      { text: "Logical parent pointer", correct: false },
-      { text: "Subset pointer", correct: true },
+      { text: "A qualified call", correct: false },
+      { text: "A non-SSA call", correct: false },
+      { text: "An unqualified call", correct: false },
+      { text: "None of these", correct: true },
     ],
   },
 ];

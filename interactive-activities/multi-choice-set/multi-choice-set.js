@@ -63,13 +63,21 @@ const questions = [
     question:
       "By designating an IMS secondary index as a sparse index, how is IMS performance improved?",
     answers: [
-      { text: "Reduces size of the secondary index on disk", correct: true },
-      { text: "Increases the number of pointer segments", correct: false },
+      { 
+        text: "Reduces size of the secondary index on disk", 
+        correct: true,
+      },
+      { 
+        text: "Increases the number of pointer segments", 
+        correct: false 
+      },
       {
         text: "Reduces IMS index maintenance, so there is no overhead associated with creating useless index entries",
         correct: true,
       },
-      { text: "Reduces program complexity", correct: false },
+      { 
+        text: "Reduces program complexity", 
+        correct: false },
     ],
   },
   {

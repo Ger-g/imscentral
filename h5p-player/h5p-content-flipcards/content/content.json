@@ -2,23 +2,23 @@
   "mode": "normal",
   "dialogs": [
     {
-      "text": "<p>What is stored in the primary index of a HIDAM and PHIDAM database?</p>",
-      "answer": "<p>The keys of the root segments in the database</p>",
+      "text": "<h3 style=\"position: absolute; top: -80px;\">Question</h3><p>What is stored in the primary index of a HIDAM and PHIDAM database?</p>",
+      "answer": "<h3 style=\"position: absolute; top: -80px;\">Answer</h3><p>The keys of the root segments in the database</p>",
       "tips": {}
     },
     {
-      "text": "<p>True or false: After you define physical databases through the DBDGEN process, you must also perform a DBDGEN for a logical database.</p>",
-      "answer": "<p>True</p>",
+      "text": "<h3 style=\"position: absolute; top: -80px;\">Question</h3><p>True or false: After you define physical databases through the DBDGEN process, you must also perform a DBDGEN for a logical database.</p>",
+      "answer": "<h3 style=\"position: absolute; top: -80px;\">Answer</h3><p>True</p>",
       "tips": {}
     },
     {
-      "text": "<p>What are the pointers used in secondary indexes?</p>",
-      "answer": "<p>pointer, target, and source</p>",
+      "text": "<h3 style=\"position: absolute; top: -80px;\">Question</h3><p>What are the pointers used in secondary indexes?</p>",
+      "answer": "<h3 style=\"position: absolute; top: -80px;\">Answer</h3><p>pointer, target, and source</p>",
       "tips": {}
     },
     {
-      "text": "<p>What's the main difference between a call that uses a secondary index and one that does not?</p>",
-      "answer": "<p>For the call to use the secondary index, it must reference a PCB with the PROCSEQ= parameter.</p>",
+      "text": "<h3 style=\"position: absolute; top: -80px;\">Question</h3><p>What's the main difference between a call that uses a secondary index and one that does not?</p>",
+      "answer": "<h3 style=\"position: absolute; top: -80px;\">Answer</h3><p>For the call to use the secondary index, it must reference a PCB with the PROCSEQ= parameter.</p>",
       "tips": {}
     }
   ],
